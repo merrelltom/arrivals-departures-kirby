@@ -14,16 +14,18 @@ if ( isset( $_POST['arrival_or_departure'])) {
     $payload_array["name"] = filter_input(INPUT_POST, "ad_name");
     $date = "";
     $year = strval(filter_input(INPUT_POST, "ad_year"));
-    if ( isset( $_POST["ad_day"])) {
+    $month = filter_input(INPUT_POST, "ad_month");
+    $day = filter_input(INPUT_POST, "ad_day");
+    if ( $day != 0 ) {
         $year = substr($year, 2, 2);
-        $day = sprintf('%02d', filter_input(INPUT_POST, "ad_day"));
+        $day = sprintf('%02d', $day);
         $date .= (strval($day) . "-");
-        if ( isset( $_POST["ad_month"]) ) {
-            $month = filter_input(INPUT_POST, "ad_month");
+        if ( $month != 0 ) {
+            $month = sprintf('%02d', $month);
             $date .= strval($month) . "-";
         }
     } else {
-        if ( isset( $_POST["ad_month"]) ) {
+        if ( $month != 0 ) {
             $month = $months[filter_input(INPUT_POST, "ad_month")];
             $date .= $month . "-";
         }
