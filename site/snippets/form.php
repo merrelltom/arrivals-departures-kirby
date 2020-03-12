@@ -48,7 +48,7 @@ $form = $site->children()->findByURI('submission-form');
                     <legend class="visuallyhidden">
                         <?php if($form->nameInstructions()): $form->nameInstructions()->kt(); endif;?>?>
                     </legend>
-                    <input id="ad_name" type="text" placeholder="Enter Name..." required/>
+                    <input id="ad_name" name="ad_name" type="text" placeholder="Enter Name..." required/>
                     <?php if($form->nameInstructions()):?>
                     <div aria-hidden="true" class="small-text">
                         <?= $form->nameInstructions()->kt();?>
@@ -62,9 +62,9 @@ $form = $site->children()->findByURI('submission-form');
                         <h3 class="fieldset-title">Date</h3>
                         <?php if($form->dateInstructions()): $form->dateInstructions()->kt(); endif;?>?>
                     </legend>
-                    <input id="ad_day" type="number" min="1" max="31" placeholder="Day"/> <label class="visuallyhidden" for="ad_day">Day</label>
-                    <input id="ad_month" type="number" min="1" max="12" placeholder="Month"/> <label class="visuallyhidden" for="ad_month">Month</label>
-                    <input id="ad_year" type="number" placeholder="Year" required/> <label class="visuallyhidden" for="ad_day">Year</label>
+                    <input id="ad_day" name="ad_day" type="number" min="1" max="31" placeholder="Day"/> <label class="visuallyhidden" for="ad_day">Day</label>
+                    <input id="ad_month" name="ad_month" type="number" min="1" max="12" placeholder="Month"/> <label class="visuallyhidden" for="ad_month">Month</label>
+                    <input id="ad_year" name="ad_year" type="number" placeholder="Year" required/> <label class="visuallyhidden" for="ad_day">Year</label>
                     
                     <?php if($form->dateInstructions()):?>
                     <div aria-hidden="true" class="small-text">
@@ -79,7 +79,7 @@ $form = $site->children()->findByURI('submission-form');
                         <?php if($form->locationInstructions()): $form->locationInstructions()->kt(); endif;?>?>
                     </legend>
                     <input id="ad_location" type="text" placeholder="Enter Location..." />
-                    <input id="latlng" type="text" name="geo" value="" disabled="true" class="visuallyhidden">
+                    <input id="latlng" name="latlng" type="text" name="geo" value="" disabled="true" class="visuallyhidden">
                     <?php if($form->locationInstructions()):?>
                     <div aria-hidden="true" class="small-text">
                         <?= $form->locationInstructions()->kt();?>
@@ -92,7 +92,7 @@ $form = $site->children()->findByURI('submission-form');
                     <legend class="visuallyhidden">
                         <?php if($form->emailInstructions()): $form->emailInstructions()->kt(); endif;?>?>
                     </legend>
-                    <input id="email" type="email" placeholder="Enter Email..."/>
+                    <input id="email" name="email" type="email" placeholder="Enter Email..."/>
                     <?php if($form->emailInstructions()):?>
                     <div aria-hidden="true" class="small-text">
                         <?= $form->emailInstructions()->kt();?>

@@ -1,17 +1,49 @@
 <?php
 snippet('oauth');
 
-if ( isset( $_POST['name'] ) && isset( $_POST['email'] ) ) {
-    $name = $_POST['name'];
-    $date = $_POST['date'];
-    $geo = $_POST['geo'];
-    $email = $_POST['email'];
-    $payload = json_encode($_POST);
+$months = array("JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEPT", "OCT", "NOV", "DEC" );
+
+if ( isset( $_POST['arrival_or_departure'])) {
+    if ( filter_input(INPUT_POST, "arrival_or_departure") == "arrival") {
+        $endpoint = "arrivals";
+    } elseif (filter_input(INPUT_POST, "arrival_or_departure") == "departure") {
+        $endpoint = "departures";
+    }
+    
+    $payload_array = array ();
+    $payload_array["name"] = filter_input(INPUT_POST, "ad_name");
+    $date = "";
+    $year = strval(filter_input(INPUT_POST, "ad_year"));
+    if ( isset( $_POST["ad_day"])) {
+        $year = substr($year, 2, 2);
+        $day = sprintf('%02d', filter_input(INPUT_POST, "ad_day"));
+        $date .= (strval($day) . "-");
+        if ( isset( $_POST["ad_month"]) ) {
+            $month = filter_input(INPUT_POST, "ad_month");
+            $date .= strval($month) . "-";
+        }
+    } else {
+        if ( isset( $_POST["ad_month"]) ) {
+            $month = $months[filter_input(INPUT_POST, "ad_month")];
+            $date .= $month . "-";
+        }
+    }
+    $date .= $year;
+    $payload_array["date"] = $date;
+    
+     if ( isset( $_POST['geo'] )) {
+         $payload_array["geo"] = filter_input(INPUT_POST, "latlng");
+     }
+    if ( isset( $_POST['email'] )){
+        $payload_array["email"] = filter_input(INPUT_POST, "email");
+    }
+    
+    $payload = json_encode($payload_array);
     
     $token = getToken();
     
     // Prepare new cURL resource
-    $ch = curl_init('http://localhost:44444/arrivals');
+    $ch = curl_init('http://localhost:44444/'.$endpoint);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLINFO_HEADER_OUT, true);
     curl_setopt($ch, CURLOPT_POST, true);
@@ -32,4 +64,3 @@ if ( isset( $_POST['name'] ) && isset( $_POST['email'] ) ) {
     curl_close($ch);
     echo($result);
 }
-?>
