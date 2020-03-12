@@ -43,7 +43,7 @@ if ( isset( $_POST['arrival_or_departure'])) {
     $token = getToken();
     
     // Prepare new cURL resource
-    $ch = curl_init('http://localhost:44444/'.$endpoint);
+    $ch = curl_init('http://134.209.184.8:44444/'.$endpoint);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLINFO_HEADER_OUT, true);
     curl_setopt($ch, CURLOPT_POST, true);
