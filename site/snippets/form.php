@@ -71,8 +71,31 @@ $form = $site->children()->findByURI('submission-form');
                         <h3 class="fieldset-title">Date</h3>
                         <?php if($form->dateInstructions()): $form->dateInstructions()->kt(); endif;?>?>
                     </legend>
-                    <input id="ad_day" name="ad_day" type="number" min="1" max="31" placeholder="Day"/> <label class="visuallyhidden" for="ad_day">Day</label>
-                    <input id="ad_month" name="ad_month" type="number" min="1" max="12" placeholder="Month"/> <label class="visuallyhidden" for="ad_month">Month</label>
+                    <select id="ad_day" name="ad_day" type="number" min="1" max="31" placeholder="Day"> 
+                        <option value="0">Day</option>
+                        <?php for($i = 01; $i < 32; $i++){?>
+                            <option value="<?= $i;?>"><?= $i;?></option>
+                        <?php }?>
+                        
+                        
+                    </select>
+                    <label class="visuallyhidden" for="ad_day">Day</label>
+                    <select id="ad_month" name="ad_month" placeholder="Month"> 
+                        <option value="0">Month</option>
+                        <option value="1">January</option>
+                        <option value="2">February</option>
+                        <option value="3">March</option>
+                        <option value="4">April</option>
+                        <option value="5">May</option>
+                        <option value="6">June</option>
+                        <option value="7">July</option>
+                        <option value="8">August</option>
+                        <option value="9">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
+                    </select>
+                    <label class="visuallyhidden" for="ad_month">Select Month</label>
                     <input id="ad_year" name="ad_year" type="number" placeholder="Year" required/> <label class="visuallyhidden" for="ad_day">Year</label>
                     
                     <?php if($form->dateInstructions()):?>

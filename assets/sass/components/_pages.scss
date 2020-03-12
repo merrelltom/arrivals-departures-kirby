@@ -116,6 +116,13 @@ BOARDS
     display: block;
     padding: 8px 5px 5px 8px;
     word-break: break-all;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 1px;
+
+	box-shadow: 
+
+		0 .06em 0 rgba(150, 150, 150, .1); 
 }
 
 .names-list-item .name{

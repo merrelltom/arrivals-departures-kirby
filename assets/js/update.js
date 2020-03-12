@@ -10,7 +10,8 @@
   }); 
  
   socket.on('new_arrival', function(data) {
-    resetContainers();
+            console.log(data);
+    resetArrivals();
 	data.forEach(function(item) {
         var date = item["date"].split("");
         var name = item["name"].split("");
@@ -29,12 +30,18 @@
   });
 
   socket.on('new_departure', function(data) {
-    resetContainers();
+    resetDepartures();
 	data.forEach(function(item) {
         var date = item["date"].split("");
         var name = item["name"].split("");
-        date.forEach(addDate("d"));
-        name.forEach(addName("d"));
+        date.forEach(function(item){
+            document.getElementById('d-board-date-'+board_line).innerHTML +='<span class="letter-'+ letter_no +'">'+ item + '</span>';
+            letter_no +=1;   
+        });
+        name.forEach(function(item){
+            document.getElementById('d-board-name-'+board_line).innerHTML +='<span class="letter-'+ letter_no +'">'+ item + '</span>';
+            letter_no +=1;
+        });
 	    board_line += 1;
 	});
      board_line = 1;
@@ -42,9 +49,21 @@
   });
 
 
-function resetContainers() {
-    let dateContainers = document.getElementsByClassName("date");
-    let nameContainers = document.getElementsByClassName("name");
+function resetArrivals() {
+    let dateContainers = document.querySelectorAll('#arrivals-board .date');
+    let nameContainers = document.querySelectorAll('#arrivals-board .name');
+    console.log(dateContainers);
+    for (item of dateContainers){
+        item.innerHTML = '';
+    }
+    for (item of nameContainers){
+        item.innerHTML = '';
+    }   
+}
+
+function resetDepartures() {
+    let dateContainers = document.querySelectorAll('#departures-board .date');
+    let nameContainers = document.querySelectorAll('#departures-board .name');
     console.log(dateContainers);
     for (item of dateContainers){
         item.innerHTML = '';

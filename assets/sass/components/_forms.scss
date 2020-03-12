@@ -44,6 +44,7 @@ input:focus{
 .form input{
     font-size: 1.125rem;
     max-width:500px;
+    vertical-align: baseline;
 }
 
 .form .small-text{
@@ -52,7 +53,7 @@ input:focus{
 
 #ad_day, #ad_month, #ad_year{
     width:31.5%;
-    text-align: center;
+    text-align: left;
     max-width:158px;
 }
 
@@ -307,4 +308,34 @@ SHORT FORM
         height:35px;
         font-size:1rem;
     }
+}
+
+
+
+/*  
+================================================================
+CUSTOM SELECT
+================================================================  
+*/
+
+select {
+    background: transparent;
+    text-align:left;
+    text-align-last:left;
+    color:#888;
+    height:46px;
+    border: 1px solid black;
+    width:100%;
+    padding: 2px 1rem 0 ;
+    font-size: 1.125rem;
+    font-family: "New Rail Alphabet", sans-serif;
+    margin:0;
+    margin-top:-1px;
+    margin-bottom:1.5rem;
+    outline: none;
+    border-radius: 0px;
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;       /* Remove default arrow */
+//   background-image: url(...);   /* Add custom arrow */
 }

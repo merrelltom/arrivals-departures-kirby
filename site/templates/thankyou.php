@@ -66,3 +66,5 @@ if ( isset( $_POST['arrival_or_departure'])) {
     curl_close($ch);
     echo($result);
 }
+
+print_r($_POST);

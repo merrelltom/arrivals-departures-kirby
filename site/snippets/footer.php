@@ -33,9 +33,7 @@
 </footer>
 
 <section id="form-overlay" class="form-overlay" aria-hidden="true">
-    <div class="wrapper">
         <?php snippet('form');?>
-    </div>
 </section>
 
 
