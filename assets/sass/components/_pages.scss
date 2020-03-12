@@ -161,4 +161,29 @@ BOARDS LETTER ANIMATIONS
 
 
 
+/*  
+================================================================
+FORM OVERLAY
+================================================================  
+*/
+
+.form--open{
+    .form-overlay{
+        left:0;
+        transition: left 300ms 50ms ease-in-out;
+    }
+}
+
+.form-overlay{
+    position: fixed;
+    overflow-y: scroll;
+    top:0;
+    left:100vw;
+    width:100vw;
+    height:100vh;
+    transition: left 300ms 50ms ease-in-out;
+    background:white;
+    z-index:40;
+}
+
 

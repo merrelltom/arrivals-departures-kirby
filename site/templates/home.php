@@ -9,7 +9,7 @@
                         <?= $page->introductionBanner();?>
                     </div>
                     <div class="button-container col-xs-12 col-md-4 col-md-offset-1">
-                        <button class="sm-button">Add a name to the boards</button>
+                        <button class="sm-button" data-link="<?= $site->url();?>/submission-form" onclick="toggleForm(this);">Add a name to the boards</button>
                     </div>
                 </div>
             </div>
@@ -54,7 +54,7 @@
             <div class="wrapper">
                 <div class="row">
                     <div class="button-container col-xs-12 col-md-5 col-md-offset-4">
-                        <button class="sm-button">Add a name to the boards</button>
+                        <button class="sm-button" onclick="toggleForm();">Add a name to the boards</button>
                     </div>
                     <div class="button-container col-xs-12 col-md-3">
                         <button class="sm-button">Share</button>

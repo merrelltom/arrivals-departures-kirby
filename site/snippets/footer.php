@@ -6,7 +6,7 @@
                 <div class="footer-content">
                     <p class="footer-text"><?= $site->footerCallToAction();?></p>
                     <div class="button-container">
-                        <button class="sm-button">Add a name to the boards</button>
+                        <button class="sm-button" onclick="toggleForm()">Add a name to the boards</button>
                     </div>
                 </div>
             </div>
@@ -31,6 +31,13 @@
         </div>
     </div>
 </footer>
+
+<section id="form-overlay" class="form-overlay" aria-hidden="true">
+    <div class="wrapper">
+        <?php snippet('form');?>
+    </div>
+</section>
+
 
 <div class="overlay-mask"> </div>
 

@@ -7,9 +7,18 @@ $form = $site->children()->findByURI('submission-form');
 
 ?>
 
+    <header class="header wrapper">
+        <div class="row">
+            <h1 class="site-title col-xs-12 col-lg-8">
+                <a class="logo" title="Arrivals + Departures" href="<?= $site->url() ?>">Arrivals +<br>Departures</a>
+            </h1>
+        </div>
+    </header>
+      
+    <main class="main">
+        <div class="wrapper">
 
-
- <section class="form-intro row">
+            <section class="form-intro row">
                 <div class="col-xs-12 col-md-9">
                     <h2 class="section-title form-title"><?= $form->title();?></h2>
                     <div class="body-text">
@@ -111,3 +120,6 @@ $form = $site->children()->findByURI('submission-form');
                 </div>
                 
             </form>
+            
+        </div>
+</main>

@@ -24,21 +24,7 @@
 
   <div class="page">
       
-    <header class="header wrapper">
-        <div class="row">
-            <h1 class="site-title col-xs-12 col-lg-8">
-                <a class="logo" title="Arrivals + Departures" href="<?= $site->url() ?>">Arrivals +<br>Departures</a>
-            </h1>
-        </div>
-    </header>
-      
-    <main class="main">
-        <div class="wrapper">
-           <?php snippet('form');?>
-        </div>  
-    </main>
-      
-      
+   <?php snippet('form');?>
 
 <?php 
 //    $MAPS_API_KEY = apache_getenv("MAPS_API_KEY");
