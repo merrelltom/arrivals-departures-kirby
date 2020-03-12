@@ -34,8 +34,13 @@
 
 <div class="overlay-mask"> </div>
 
+<?= js('https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js') ?>
 <?= js('assets/js/plugins.js') ?>
 <?= js('assets/js/script.js') ?>
+
+<?php if ($page->isHomePage()):?>
+    <?= js('assets/js/update.js') ?>
+<?php endif;?>
 
 </body>
 </html>

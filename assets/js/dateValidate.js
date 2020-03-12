@@ -24,4 +24,3 @@ function dateString(day, month, year) {
     return date;
 }
 
-

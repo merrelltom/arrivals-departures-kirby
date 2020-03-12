@@ -27,20 +27,7 @@
                         <span class="board-column-heading" >Date</span><span class="board-column-heading">Name</span>
                     </div>
                     <ol class="names-list">
-                        <?php for ($x = 0; $x <= 5; $x++) {?>
-                            <li class="names-list-item">
-                                <div class="board-item-wrapper">
-                                    <span class="date col-md-3">
-                                        <span>0</span><span>1</span><span>-</span><span>0</span><span>9</span><span>-</span><span>2</span><span>0</span>
-                                    </span>
-                                </div>
-                                <div class="board-item-wrapper">
-                                    <span class="name col-md-9">
-                                        <?php for ($y = 0; $y <= 24; $y++) {?><span>X</span><?php }?>
-                                    </span>
-                                </div>
-                            </li>   
-                        <?php }?>
+                        <?php snippet('arrivals-board');?>
                     </ol>
                 
                 </article>
@@ -54,12 +41,7 @@
                         <span class="board-column-heading" >Date</span><span class="board-column-heading">Name</span>
                     </div>
                     <ol class="names-list">
-                        <?php for ($x = 0; $x <= 5; $x++) {?>
-                            <li class="names-list-item">
-                                <div class="board-item-wrapper"><span class="date col-md-3">01-09-20</span></div>
-                                <div class="board-item-wrapper"><span class="name col-md-9">XXXXXXXXXXXXXXXXXXXX</span></div>
-                            </li> 
-                        <?php }?>
+                       <?php snippet('departures-board');?>
                     </ol>
                 
                 </article>
