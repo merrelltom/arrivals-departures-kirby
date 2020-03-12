@@ -34,10 +34,18 @@
 
 <div class="overlay-mask"> </div>
 
+
+<?php 
+//    $MAPS_API_KEY = apache_getenv("MAPS_API_KEY");
+    $MAPS_API_KEY = "AIzaSyCoQFtkyedEhPeVuqXPqe392JalVMftDw4";
+?>
+
 <?= js('https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js') ?>
 <?= js('assets/js/plugins.js') ?>
 <?= js('assets/js/script.js') ?>
-<?= js('assets/js/dateValidate.js') ?>
+<script src="https://maps.googleapis.com/maps/api/js?key=<?php echo $MAPS_API_KEY; ?>&libraries=places&callback=initAutocomplete"
+   async defer></script>
+<?= js('assets/js/formValidate.js') ?>
 
 <?php if ($page->isHomePage()):?>
     <?= js('assets/js/update.js') ?>
