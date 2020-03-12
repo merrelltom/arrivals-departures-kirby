@@ -1,0 +1,83 @@
+title: Default Page
+icon: 📝
+
+status:
+  draft: true
+  unlisted:
+    label: Hidden Page
+    text: The page is not listed in the main menu
+  listed:
+    label: Menu Page
+    text: The page is listed in the main menu
+
+
+pages: false
+
+tabs:
+
+  # content tab
+  content:
+    label: Content
+    icon: text
+    columns:
+
+      # intro one
+      column2:
+        width: 2/2
+        sections:
+          content2:
+            type: fields
+            fields:
+                introTextOne:
+                    label: Intro Text One
+                    type: textarea
+                    size: medium
+                    buttons: false
+                blocks:
+                    label: Page Blocks
+                    type: builder
+                    columns: 1 # Optional. If set to 2 or more, the builder blocks will be placed in a grid.
+                    max: 10 # Optional. Limits the number of builder blocks that can be added.
+                    fieldsets:
+                        quote: 
+                            name: Text Block
+                            label: Text Block {{title}} 
+                            preview: # Optional. If defined, a preview of the fieldset can be rendered by the specified snippet from within the snippets folder.
+                                snippet: blocks/quote
+                                css: /assets/css/blocks/quote.css
+                            defaultView: preview # Optional. If the value "preview" is set, the block will show the preview when the page is loaded in the panel. If the value is a tab name, the respective tab is preselected when the page is loaded. Newly created blocks ignore this value and have the edit mode or the first tab preselected.
+                            fields:
+                                title:
+                                    label: Title
+                                    type: text
+                                    width: 2/4
+                                introduction:
+                                    label: Introduction
+                                    type: textarea
+                                    size: medium
+                                    width: 2/4
+
+  # seo tab
+  seo:
+    label: SEO
+    icon: search
+    fields:
+      seoTitle:
+        label: SEO Title
+        type: text
+      seoDescription:
+        label: SEO Description
+        type: text
+
+  # Files tab
+  filesTab:
+    label: Files
+    icon: add
+    sections:
+      filesSection:
+        headline: Files
+        type: files
+        layout: cards
+        size: small
+        template: default
+

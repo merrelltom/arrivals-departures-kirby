@@ -1,0 +1,139 @@
+title: Home
+icon: 📝
+
+status:
+  draft: true
+  unlisted:
+    label: Hidden Page
+    text: The page is not listed in the main menu
+  listed:
+    label: Menu Page
+    text: The page is listed in the main menu
+
+
+pages: false
+
+tabs:
+
+  # content tab
+  content:
+    label: Content
+    icon: text
+    columns:
+
+      # intro one
+      column2:
+        width: 2/2
+        sections:
+          content2:
+            type: fields
+            fields:
+                introductionBanner:
+                    label: Introduction Banner
+                    type: textarea
+                    size: medium
+                    buttons: false
+                image01mobile:
+                    label: Image 01 (mobile)
+                    type: files
+                    max: 1
+                    width: 1/2
+                    layout: cards
+                    uploads:
+                      template: image
+                    image:
+                      ratio: 1/1
+                image01desktop:
+                    label: Image 01 (desktop)
+                    type: files
+                    max: 1
+                    width: 1/2
+                    layout: cards
+                    uploads:
+                      template: image
+                    image:
+                      ratio: 2/1
+                aboutTitle:
+                    label: About Title
+                    type: text
+                    width: 1/2
+                blocks:
+                    label: Page Blocks
+                    type: builder
+                    width: 1/2
+                    columns: 1
+                    max: 10 
+                    fieldsets:
+                        largeText: 
+                            name: Large Text Block
+                            label: Large Text Block
+                            fields:
+                                largeTextContent:
+                                    label: Text
+                                    type: textarea
+                                    size: medium
+                                    buttons: false
+                        smallText: 
+                            name: Small Text Block
+                            label: Small Text Block
+                            fields:
+                                smallTextContent:
+                                    label: Text
+                                    type: textarea
+                                    size: medium
+                                    buttons: true
+                image02mobile:
+                    label: Image 02 (mobile)
+                    type: files
+                    max: 1
+                    width: 1/2
+                    layout: cards
+                    uploads:
+                      template: image
+                    image:
+                      ratio: 1/1
+                image02desktop:
+                    label: Image 02 (desktop)
+                    type: files
+                    max: 1
+                    width: 1/2
+                    layout: cards
+                    uploads:
+                      template: image
+                    image:
+                      ratio: 2/1
+                programmeTitle:
+                    label: Programme Title
+                    type: text
+                    width: 1/2
+                programmeIntro: 
+                    label: Programme Intro
+                    type: textarea
+                    size: medium
+                    width: 1/2
+                    buttons: false
+                                    
+  # seo tab
+  seo:
+    label: SEO
+    icon: search
+    fields:
+      seoTitle:
+        label: SEO Title
+        type: text
+      seoDescription:
+        label: SEO Description
+        type: text
+
+  # Files tab
+  filesTab:
+    label: Files
+    icon: add
+    sections:
+      filesSection:
+        headline: Files
+        type: files
+        layout: cards
+        size: small
+        template: image
+

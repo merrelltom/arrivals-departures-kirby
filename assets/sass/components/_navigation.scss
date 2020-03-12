@@ -1,0 +1,121 @@
+button.menu-button{
+    position: fixed;
+    top:0;
+    right:0;
+    padding:20px;
+    width:76px;
+    z-index: 40;
+    border: none;
+    svg{
+        width:100%;
+    }
+}
+
+button.menu-button:hover, button.menu-button:focus {
+    background: transparent;
+}
+
+.menu-fill{
+    fill: $lightBlack;
+}
+
+.menu-button-inner{
+    width:36px;
+    height: 36px;
+    border-radius: 18px;
+    background: $lightBlack;
+    padding-top:9px;
+    text-align: center;
+    transition: all 200ms ease-in-out;
+}
+
+.menu-button-bar{
+    width: 24px;
+    height: 2px;
+    border-radius: 1px;
+    background: white;
+    display: block;
+    margin: 3px auto 3px;
+    transition: all 200ms ease-in-out;
+}
+
+.menu--open .menu-button-bar{
+    background: $yellow;
+}
+
+.menu--open .menu-button-inner{
+    transform: rotate(-45deg);
+    transition: all 200ms ease-in-out;
+}
+
+.menu--open .menu-button-bar:nth-child(1){
+    transform: translate3d(0, 5px, 0) rotate(-90deg);
+    transition: all 200ms ease-in-out;
+}
+
+.menu--open .menu-button-bar:nth-child(2){
+    opacity: 0;
+    transition: all 200ms ease-in-out;
+}
+
+.menu--open .menu-button-bar:nth-child(3){
+    transform: translate3d(0, -5px, 0) rotate(0deg);
+    transition: all 200ms ease-in-out;
+}
+
+
+.main-menu{
+    position: fixed;
+    top:0;
+    right:-100vw;
+    width:100vw;
+    height:100vh;
+    overflow-y: scroll;
+    background: $yellow;
+    padding: 100px 20px 20px;
+    z-index: 30;
+    transition: right 300ms ease-in-out;
+}
+
+.main-menu a{
+    width:100%;
+    display: block;
+    font-size: 1.5rem;
+    padding: 15px 0 10px;
+    border-bottom: 1px solid black;
+}
+
+.main-menu li:last-child a{
+    border-bottom: none;
+    margin-bottom: 2em;
+}
+
+
+/*  
+================================================================
+STATES
+================================================================  
+*/
+
+.overlay-mask{
+    top:100vh;
+    background:rgba(255,255,255,.75);
+    width:100vw;
+    height:100vh;
+    position: fixed;
+    left:0;
+    z-index:25;
+    transition:  opacity 300ms ease-in-out;
+    opacity: 0;
+}
+
+.menu--open .overlay-mask{
+    top:0;
+    opacity: 1;
+    transition: opacity 150ms ease-in-out;
+}
+
+.menu--open .main-menu{
+    right:0;
+    transition: right 300ms 50ms ease-in-out;
+}

@@ -1,0 +1,51 @@
+title: Site
+unlisted: true
+
+columns:
+ - width: 1/3
+     sections:
+      pages:
+        type: pages
+        headline: Menu Pages
+        status: listed
+ - width: 1/3
+     sections:
+      hidden:
+        type: pages
+        headline: Unlisted Pages
+        status: unlisted
+ - width: 1/3
+     sections:
+      drafts:
+        type: pages
+        headline: Drafts
+        status: draft
+ - width: 2/2
+   fields:
+    footer:
+     label: Site Footer
+     type: headline
+     numbered: false
+     width: 2/2
+    footerTitle:
+     label: Footer Title
+     type: text
+    footerCallToAction:
+     label: Call to action
+     type: textarea
+     buttons: false
+    footerNavigation:
+     label: Footer Navigation
+     type: pages
+    mailingListSignUpTitle:
+     label: Mailing List Sign Up Title
+     type: text
+    mailingListSignUpText:
+     label: Mailing List Sign Up Text
+     type: textarea
+     buttons: false
+    mailingListSignUpURL:
+     label: Mailing List Sign Up URL
+     type: text
+     buttons: false
+     help: 'Used to generate the mailchimp sign up form'

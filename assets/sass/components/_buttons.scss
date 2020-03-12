@@ -1,0 +1,57 @@
+.button-container{
+    max-width: 450px;
+}
+
+button {
+    display: inline-block;
+    border: 1px solid black;
+    padding: 1rem 2rem;
+    margin: 0;
+    text-decoration: none;
+    background: transparent;
+    color: #000;
+    font-family: "New Rail Alphabet", arial, sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out, 
+                transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+button:hover,
+button:focus {
+    background: $yellow;
+}
+
+button:focus {
+    outline: none;
+    border: 2px solid black;
+}
+
+.bg-yellow{
+    button:hover,
+    button:focus {
+        background: #fff;
+    }
+}
+
+button:active {
+    transform: scale(0.99);
+}
+
+
+.lg-button{
+    width: 100%;
+    height:46px;
+    border-radius: 23px;
+}
+
+.sm-button{
+    width: 100%;
+    height:36px;
+    border-radius: 18px;
+    font-size: .875rem;
+    padding: .5rem 1rem;
+}

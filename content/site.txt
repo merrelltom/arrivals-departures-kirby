@@ -1,0 +1,34 @@
+Title: Arrivals + Departures
+
+----
+
+Footertitle: Get Involved
+
+----
+
+Footercalltoaction: Officiati doluptatios ea doluptate omnia volestis unt, optatius eosapient, quat.
+
+----
+
+Footernavigation:
+
+- about
+- programme
+- faqs
+- map
+- resources
+- arrivalsanddepartures
+- archive
+- privacy-policy
+
+----
+
+Mailinglistsignuptitle: Stay In Touch
+
+----
+
+Mailinglistsignuptext: Sign up to our mailing list:
+
+----
+
+Mailinglistsignupurl: 
