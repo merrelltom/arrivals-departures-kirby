@@ -62,5 +62,5 @@ foreach ($dep_geo as $dep_row) {
   $newnode->setAttribute("type", 'departure');
 }
 
-return $dom->saveXML();
+echo $dom->saveXML();
 
