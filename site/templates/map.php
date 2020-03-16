@@ -40,7 +40,7 @@ $MAPS_API_KEY = apache_getenv("MAPS_API_KEY"); ?>
           zoom: 2
         });
         var infoWindow = new google.maps.InfoWindow;
-          downloadUrl('./get_map', function(data) {
+          downloadUrl('http://134.209.184.8/get_map', function(data) {
             var xml = data.responseXML;
             var markers = xml.documentElement.getElementsByTagName('marker');
             Array.prototype.forEach.call(markers, function(markerElem) {
