@@ -27,8 +27,7 @@
    <?php snippet('form');?>
 
 <?php 
-//    $MAPS_API_KEY = apache_getenv("MAPS_API_KEY");
-    $MAPS_API_KEY = "AIzaSyCoQFtkyedEhPeVuqXPqe392JalVMftDw4";
+    $MAPS_API_KEY = apache_getenv("MAPS_API_KEY");
 ?>
 
 <?= js('https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js') ?>

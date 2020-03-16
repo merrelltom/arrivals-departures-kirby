@@ -1,10 +1,8 @@
 <?php
 
 function getToken() {
-//    $CLIENT_ID = apache_getenv("CLIENT_ID");
-//    $CLIENT_SECRET = apache_getenv("CLIENT_SECRET");
-    $CLIENT_SECRET= "I_zIQNI4M28PcdSmXhwDM2gZrheKlVWL9nDLrqTH_HzBo0vjPbeZzASfTHrjIBS8";
-    $CLIENT_ID= "lY2opWmKfPVcvgoyG33lppe0a5ASDsVY";
+    $CLIENT_ID = apache_getenv("CLIENT_ID");
+    $CLIENT_SECRET = apache_getenv("CLIENT_SECRET");
     $curl = curl_init();
 
     curl_setopt_array($curl, array(

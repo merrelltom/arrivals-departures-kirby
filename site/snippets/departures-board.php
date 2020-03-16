@@ -9,8 +9,7 @@ $token = getToken();
 $curl = curl_init();
 curl_setopt_array($curl, [
     CURLOPT_RETURNTRANSFER => 1,
-//    CURLOPT_URL => 'http://localhost:44444/arrivals/webBoard',
-    CURLOPT_URL =>  'http://134.209.184.8:44444/departures/webBoard',
+    CURLOPT_URL => 'http://localhost:44444/arrivals/webBoard',
     CURLOPT_ENCODING => "",
     CURLOPT_MAXREDIRS => 10,
     CURLOPT_TIMEOUT => 30,
