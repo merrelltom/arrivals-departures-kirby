@@ -3,9 +3,9 @@ return [
     'debug' => true,
     'routes' => [
   [
-    'pattern' => 'sitemap.xml',
+    'pattern' => 'get_map.xml',
     'action'  => function() {
-        $content = snippet('get_map');
+        $content = snippet('get_map', true);
 
         // return response with correct header type
         return new Kirby\Cms\Response($content, 'application/xml');
@@ -14,7 +14,7 @@ return [
   [
     'pattern' => 'sitemap',
     'action'  => function() {
-      return go('sitemap.xml', 301);
+      return go('get_map.xml', 301);
     }
   ]
 ]
