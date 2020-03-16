@@ -67,8 +67,8 @@ foreach ($arr_geo as $arr_row) {
 //  $newnode->setAttribute("type", 'arrival');
     
   echo '<marker ';
-  echo 'name="' . parseToXML($row['name']) . '" ';
-  echo 'date="' . parseToXML($row['date']) . '" ';
+  echo 'name="' . parseToXML($arr_row['name']) . '" ';
+  echo 'date="' . parseToXML($arr_row['date']) . '" ';
   $latlng = explode(',',  $arr_row['geo']);
   echo 'lat="' . $latlng[0] . '" ';
   echo 'lng="' . $latlng[1] . '" ';
@@ -87,9 +87,9 @@ foreach ($dep_geo as $dep_row) {
 //  $newnode->setAttribute("lng", $latlng[1]);
 //  $newnode->setAttribute("type", 'departure');
   echo '<marker ';
-  echo 'name="' . parseToXML($row['name']) . '" ';
-  echo 'date="' . parseToXML($row['date']) . '" ';
-  $latlng = explode(',',  $arr_row['geo']);
+  echo 'name="' . parseToXML($dep_row['name']) . '" ';
+  echo 'date="' . parseToXML($dep_row['date']) . '" ';
+  $latlng = explode(',',  $dep_row['geo']);
   echo 'lat="' . $latlng[0] . '" ';
   echo 'lng="' . $latlng[1] . '" ';
   echo 'type="departure" ';
