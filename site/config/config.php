@@ -1,6 +1,8 @@
 <?php
-c::set('panel.install', true);
 return [
-    'debug' => true
+    'debug' => true,
+     'panel' =>[
+      'install' => true
+    ] 
 ];
 ?>
