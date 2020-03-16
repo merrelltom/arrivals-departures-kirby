@@ -1,9 +1,9 @@
 
 <?php snippet('header');
 $MAPS_API_KEY = apache_getenv("MAPS_API_KEY"); ?>
-
+    <div id="map-wrapper">
     <div id="map" style="height: 100%"></div>
-
+    </div>
     <script>
       var customLabel = {
         arrival: {
