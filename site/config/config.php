@@ -5,7 +5,7 @@ return [
   [
     'pattern' => 'get_map.xml',
     'action'  => function() {
-        $content = snippet('get_map', true);
+        $content = snippet('get_map',[], true);
 
         // return response with correct header type
         return new Kirby\Cms\Response($content, 'application/xml');
