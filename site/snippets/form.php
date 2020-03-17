@@ -58,7 +58,7 @@ $form = $site->children()->findByURI('submission-form');
                         <?php if($form->nameInstructions()): $form->nameInstructions()->kt(); endif;?>?>
                     </legend>
                     <input id="ad_name" name="ad_name" type="text" placeholder="Enter Name..." 
-                           pattern="[A-Za-z- ]{24}" title="Max. 24 characters , letters and hyphens only" required/>
+                           pattern="[A-Za-z- ]{1,24}" title="Max. 24 characters , letters and hyphens only" required/>
                     <?php if($form->nameInstructions()):?>
                     <div aria-hidden="true" class="small-text">
                         <?= $form->nameInstructions()->kt();?>
