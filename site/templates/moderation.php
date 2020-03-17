@@ -4,7 +4,7 @@
     $update_type = filter_input(INPUT_POST, "type");
     $action = filter_input(INPUT_POST, "update");
     $id = filter_input(INPUT_POST, "ID");?>
-    <div>
+    <div class="mod-result">
     <?php if ($update_type == 'arrival'){
         snippet('arrivals-update', ['token'=>$token, 'action'=>$action, 'ID'=>$id]);
     } elseif ($update_type == 'departure'){
