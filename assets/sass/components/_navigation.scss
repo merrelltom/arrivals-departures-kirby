@@ -109,7 +109,7 @@ STATES
     opacity: 0;
 }
 
-.menu--open .overlay-mask{
+.menu--open .overlay-mask, .form--open .overlay-mask{
     top:0;
     opacity: 1;
     transition: opacity 150ms ease-in-out;
