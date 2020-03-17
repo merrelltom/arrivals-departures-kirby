@@ -66,11 +66,13 @@
         </section>
         
         <section class="image-section page-section">
-        <?php 
-            $desktop01 = $page->image01desktop()->toFile();
-            if($mobile01 = $page->image01mobile()->toFile()){
-            ?>
-                <picture class=" ">
+            <div class="wrapper">
+                <div class="row">
+                <?php 
+                    $desktop01 = $page->image01desktop()->toFile();
+                    if($mobile01 = $page->image01mobile()->toFile()){
+                    ?>
+                <picture class="col-xs-12">
                     <img class="lazyload" data-srcset="
                     <?= $mobile01->thumb(array('width' => 320))->url();?> 320w, 
                     <?= $mobile01->thumb(array('width' => 640))->url();?> 640w, 
@@ -81,6 +83,9 @@
                      sizes="(min-width: 640px) 100vw" >
                 </picture>
             <?php }?>
+                </div>
+            </div>
+
         </section>
         
         <section class="about-section page-section">
@@ -99,11 +104,13 @@
         </section>
         
         <section class="image-section page-section">
-        <?php 
-            $desktop02 = $page->image02desktop()->toFile();
-            if($mobile02 = $page->image02mobile()->toFile()){
-            ?>
-                <picture class=" ">
+            <div class="wrapper">
+                <div class="row">
+                <?php 
+                    $desktop02 = $page->image02desktop()->toFile();
+                    if($mobile02 = $page->image02mobile()->toFile()){
+                    ?>
+                <picture class="col-xs-12">
                     <img class="lazyload" data-srcset="
                     <?= $mobile02->thumb(array('width' => 320))->url();?> 320w, 
                     <?= $mobile02->thumb(array('width' => 640))->url();?> 640w, 
@@ -114,6 +121,9 @@
                      sizes="(min-width: 640px) 100vw" >
                 </picture>
             <?php }?>
+                </div>
+            </div>
+
         </section>
 
         <section class="page-section">

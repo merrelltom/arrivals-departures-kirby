@@ -67,7 +67,7 @@ $months = array("JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEPT", 
 
        // Redirect to this page.
         if($result["moderated"] == 0){
-            header("Location: " . $site->children()->findByURI('moderation')->url());
+            header("Location: " . $site->children()->findByURI('moderation-message')->url());
         }else{
             header("Location: " . $site->children()->findByURI('thank-you')->url());
         }
