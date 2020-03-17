@@ -33,7 +33,7 @@ $months = array("JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEPT", 
             $date .= $year;
             $payload_array["date"] = $date;
 
-             if ( isset( $_POST['geo'] )) {
+             if ( isset( $_POST['latlng'] )) {
                  $payload_array["geo"] = filter_input(INPUT_POST, "latlng");
              }
             if ( isset( $_POST['email'] )){
