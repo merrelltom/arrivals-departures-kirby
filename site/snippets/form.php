@@ -97,7 +97,8 @@ $form = $site->children()->findByURI('submission-form');
                         <option value="12">December</option>
                     </select>
                     <label class="visuallyhidden" for="ad_month">Select Month</label>
-                    <input id="ad_year" name="ad_year" type="text" placeholder="Year" pattern="[0-9]{4}" required/> <label class="visuallyhidden" for="ad_day">Year</label>
+                    <input id="ad_year" name="ad_year" type="text" placeholder="Year" 
+                           pattern="[0-9]{4}" title="Four digit date" required/> <label class="visuallyhidden" for="ad_day">Year</label>
                     
                     <?php if($form->dateInstructions()):?>
                     <div aria-hidden="true" class="small-text">
