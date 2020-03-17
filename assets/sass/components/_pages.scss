@@ -149,7 +149,7 @@ BOARDS
         }
         @for $i from 0 through 224{
           .letter-#{$i + 1}{
-            animation-delay:1s + $i/6;
+            animation-delay:1s + $i/12;
           }
         }
     }
@@ -174,10 +174,14 @@ FORM OVERLAY
 ================================================================  
 */
 
+.form-container{
+    max-width: 550px;
+}
+
 .form--open{
     .form-overlay{
-        left:0;
-        transition: left 300ms 50ms ease-in-out;
+        right:0;
+        transition: right 300ms 50ms ease-in-out;
     }
 }
 
@@ -185,10 +189,10 @@ FORM OVERLAY
     position: fixed;
     overflow-y: scroll;
     top:0;
-    left:100vw;
+    right:-100vw;
     width:100vw;
     height:100vh;
-    transition: left 300ms 50ms ease-in-out;
+    transition: right 300ms 50ms ease-in-out;
     background:white;
     z-index:40;
 }

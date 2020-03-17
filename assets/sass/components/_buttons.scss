@@ -1,5 +1,5 @@
 .button-container{
-    max-width: 450px;
+    max-width: 500px;
 }
 
 button {
@@ -15,7 +15,9 @@ button {
     cursor: pointer;
     text-align: center;
     transition: background 250ms ease-in-out, 
+                color 250ms ease-in-out, 
                 transform 150ms ease;
+                
     -webkit-appearance: none;
     -moz-appearance: none;
 }
@@ -23,22 +25,29 @@ button {
 button:hover,
 button:focus {
     background: $yellow;
+    transition: background 250ms ease-in-out, 
+                transform 150ms ease;
 }
 
 button:focus {
     outline: none;
-    border: 2px solid black;
+    border: 1px solid black;
+    background: black;
+    color:white;
 }
 
 .bg-yellow{
     button:hover,
     button:focus {
-        background: #fff;
+        background: black;
+        color:$yellow;
+    transition: background 250ms ease-in-out,  
+                color 150ms ease;
     }
 }
 
 button:active {
-    transform: scale(0.99);
+    background: rgb(20,20,20);
 }
 
 
