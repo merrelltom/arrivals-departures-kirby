@@ -6,4 +6,3 @@
     <?php snippet('departures-moderation') ?> 
 
     </main>
-<?php snippet('footer') ?>
