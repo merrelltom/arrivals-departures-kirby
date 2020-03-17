@@ -3,9 +3,9 @@
     $token = getToken();
 ?>
     
-    <main class="main"> 
+<main class="main"> 
 
     <?php snippet('arrivals-moderation') ?> 
     <?php snippet('departures-moderation') ?> 
 
-    </main>
+</main>
