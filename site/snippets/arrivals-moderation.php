@@ -3,9 +3,6 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-include 'oauth.php';
-$token = getToken();
-
 
 $curl = curl_init();
 curl_setopt_array($curl, [
@@ -28,7 +25,8 @@ foreach ($results as $result) { ?>
     <div id="board-line-<?php echo($board_line);?>">
         <span><?php echo($result["date"]);?></span>
         <span><?php echo($result["name"]);?></span>
-        <form method="post" action="arrival-update.php">
+        <form method="post" action="./moderation">
+            <input type="hidden" value="arrival" name="type" id="type">
             <input type="hidden" value="<?php echo($result["ID"]);?>" name="ID" id="ID">
             <input type="radio" id="accept" name="update" value="accept">
             <label for="accept">Accept</label>
