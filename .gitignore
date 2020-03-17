@@ -39,3 +39,10 @@ Icon
 # License
 # ---------------
 /site/config/.license
+
+
+# OAUTH ETC
+# ---------------
+/site/snippets/oauth.php
+/site/snippets/arrivals-board.php
+/site/snippets/departures-board.php

@@ -64,7 +64,16 @@ if ( isset( $_POST['arrival_or_departure'])) {
      
     // Close cURL session handle
     curl_close($ch);
-    echo($result);
+
+    if($result["moderated"] == 0){
+        
+        echo 'rejected';
+        
+    }else{
+        
+        echo 'thanks';
+    }
+    
+
 }
 
-print_r($_POST);
