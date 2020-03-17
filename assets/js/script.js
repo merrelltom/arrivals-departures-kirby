@@ -20,6 +20,6 @@ function toggleForm(e) {
     }else{
         tm_body.classList.add("form--open");
         tm_form.setAttribute('aria-hidden', 'false');
-        history.pushState(null, null, linkUrl);
+//        history.pushState(null, null, linkUrl);
     }
 }

@@ -9,6 +9,16 @@ LAYOUT
     padding-top: 20px;
 }
 
+body{
+    display: flex;
+    flex-flow: column;
+    min-height: 100vh;
+}
+
+.page{
+    flex:1;
+}
+
 .main{
     padding: 60px 0 60px;
 }

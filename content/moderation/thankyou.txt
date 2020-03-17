@@ -1,0 +1,17 @@
+Title: Moderation
+
+----
+
+Thankyoutext: You submission is awaiting moderation before it will appear on the boards. If you supplied an email address you will receive a notification when your name is live on the boards.
+
+----
+
+Seotitle: 
+
+----
+
+Seodescription: 
+
+----
+
+Moderationtext: 

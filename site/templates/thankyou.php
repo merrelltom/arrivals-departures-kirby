@@ -1,79 +1,53 @@
-<?php
-snippet('oauth');
+<!doctype html>
+<html lang="en">
+<head>
 
-$months = array("JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEPT", "OCT", "NOV", "DEC" );
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-if ( isset( $_POST['arrival_or_departure'])) {
-    if ( filter_input(INPUT_POST, "arrival_or_departure") == "arrival") {
-        $endpoint = "arrivals";
-    } elseif (filter_input(INPUT_POST, "arrival_or_departure") == "departure") {
-        $endpoint = "departures";
-    }
-    
-    $payload_array = array ();
-    $payload_array["name"] = filter_input(INPUT_POST, "ad_name");
-    $date = "";
-    $year = strval(filter_input(INPUT_POST, "ad_year"));
-    $month = filter_input(INPUT_POST, "ad_month");
-    $day = filter_input(INPUT_POST, "ad_day");
-    if ( $day != 0 ) {
-        $year = substr($year, 2, 2);
-        $day = sprintf('%02d', $day);
-        $date .= (strval($day) . "-");
-        if ( $month != 0 ) {
-            $month = sprintf('%02d', $month);
-            $date .= strval($month) . "-";
-        }
-    } else {
-        if ( $month != 0 ) {
-            $month = $months[filter_input(INPUT_POST, "ad_month")];
-            $date .= $month . "-";
-        }
-    }
-    $date .= $year;
-    $payload_array["date"] = $date;
-    
-     if ( isset( $_POST['geo'] )) {
-         $payload_array["geo"] = filter_input(INPUT_POST, "latlng");
-     }
-    if ( isset( $_POST['email'] )){
-        $payload_array["email"] = filter_input(INPUT_POST, "email");
-    }
-    
-    $payload = json_encode($payload_array);
-    
-    $token = getToken();
-    
-    // Prepare new cURL resource
-    $ch = curl_init('http://134.209.184.8:44444/'.$endpoint);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLINFO_HEADER_OUT, true);
-    curl_setopt($ch, CURLOPT_POST, true);
-    curl_setopt($ch, CURLOPT_POSTFIELDS, $payload);
-     
-    // Set HTTP Header for POST request 
-    curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-        'Content-Type: application/json',
-        'Content-Length: ' . strlen($payload),
-        "authorization: Bearer " . $token
-        )
-    );
-     
-    // Submit the POST request
-    $result = json_decode(curl_exec($ch), true);
-     
-    // Close cURL session handle
-    curl_close($ch);
+  <?php if($page->seoTitle()->isNotEmpty()):?>
+  <title><?= $page->seoTitle();?></title>
+  <?php else : ?>
+  <title><?= $site->title() ?> | <?= $page->title() ?></title>
+  <?php endif;?>  
 
-    if($result["moderated"] == 0){
-        
-        echo 'rejected';
-        
-    }else{
-        
-        echo 'thanks';
-    }
-    
+  <?php if($page->seoDescription()->isNotEmpty()):?>
+  <meta name="description" content="<?= $page->seoDescription();?>">
+  <?php else : ?>
+  <meta name="description" content="<?= $site->seoDescription();?>">
+  <?php endif;?>  
 
-}
+  <?= css(['assets/css/style-1.0.css', '@auto']) ?>
 
+</head>
+<body>
+
+  <div class="page">
+      
+        <header class="header wrapper">
+            <div class="row">
+                <h1 class="site-title col-xs-12 col-lg-8">
+                    <a class="logo" title="Arrivals + Departures" href="<?= $site->url() ?>">Arrivals +<br>Departures</a>
+                </h1>
+            </div>
+        </header>
+        <main class="main">
+            <div class="wrapper">
+
+                <section class="form-intro row">
+                    <div class="col-xs-12 col-md-9">
+                        <h2 class="section-title form-title">Thank You</h2>
+                        <div class="body-text">
+                            <?= $page->thankYouText()->kt();?>
+                            <p>#arrivalsanddepartures</p>
+                        </div>
+                    </div>
+                    <div class="button-container col-xs-12 col-md-4 ">
+                        <a class="lg-button button" href="<?= $site->url();?>">Back to homepage</a>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+<?php snippet('footer');?>

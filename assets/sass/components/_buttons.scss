@@ -2,10 +2,10 @@
     max-width: 500px;
 }
 
-button {
+button, a.button {
     display: inline-block;
     border: 1px solid black;
-    padding: 1rem 2rem;
+    padding: 0 2rem 0;
     margin: 0;
     text-decoration: none;
     background: transparent;
@@ -22,14 +22,14 @@ button {
     -moz-appearance: none;
 }
 
-button:hover,
-button:focus {
+button:hover, a.button:hover,
+button:focus, a.button:focus {
     background: $yellow;
     transition: background 250ms ease-in-out, 
                 transform 150ms ease;
 }
 
-button:focus {
+button:focus, a.button:focus{
     outline: none;
     border: 1px solid black;
     background: black;
@@ -46,7 +46,7 @@ button:focus {
     }
 }
 
-button:active {
+button:active,  a.button:active {
     background: rgb(20,20,20);
 }
 
@@ -55,12 +55,13 @@ button:active {
     width: 100%;
     height:46px;
     border-radius: 23px;
+    line-height:46px;
 }
 
 .sm-button{
     width: 100%;
     height:36px;
+    line-height:36px;
     border-radius: 18px;
     font-size: .875rem;
-    padding: .5rem 1rem;
 }

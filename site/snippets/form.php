@@ -19,15 +19,15 @@ $form = $site->children()->findByURI('submission-form');
         <div class="wrapper">
 
             <section class="form-intro row">
-                <div class="col-xs-12 col-md-9">
+                <div class="col-xs-12 ">
                     <h2 class="section-title form-title"><?= $form->title();?></h2>
                     <div class="body-text">
                         <?= $form->introductionText()->kt();?>
                     </div>
                 </div>
             </section>
-            <form class="row form" action="<?= $site->children()->findByURI('thank-you')->url();?>" method="post" id="name-submission-form" name="name-submission-form" validate>
-                <fieldset class="form-item col-xs-12 col-md-9">
+            <form class="row form" action="<?= $site->children()->findByURI('submit')->url();?>" method="post" id="name-submission-form" name="name-submission-form" validate>
+                <fieldset class="form-item col-xs-12">
                     <h3 class="fieldset-title" aria-hidden="true">Arrival or Departure?</h3>
                     <legend class="visuallyhidden">
                         <h3 class="fieldset-title">Arrival or Departure?</h3>
@@ -52,7 +52,7 @@ $form = $site->children()->findByURI('submission-form');
                     <?php endif;?>
                 </fieldset>
                 
-                <fieldset class="form-item col-xs-12 col-md-9">
+                <fieldset class="form-item col-xs-12">
                     <label class="fieldset-title" for="ad_name">Name</label>
                     <legend class="visuallyhidden">
                         <?php if($form->nameInstructions()): $form->nameInstructions()->kt(); endif;?>?>
@@ -65,7 +65,7 @@ $form = $site->children()->findByURI('submission-form');
                     <?php endif;?>
                 </fieldset>
             
-                <fieldset class="form-item col-xs-12 col-md-9">
+                <fieldset class="form-item col-xs-12">
                     <h3 class="fieldset-title" aria-hidden="true">Date</h3>
                     <legend class="visuallyhidden">
                         <h3 class="fieldset-title">Date</h3>
@@ -105,7 +105,7 @@ $form = $site->children()->findByURI('submission-form');
                     <?php endif;?>
                 </fieldset>
                 
-                <fieldset class="form-item col-xs-12 col-md-9">
+                <fieldset class="form-item col-xs-12">
                     <label class="fieldset-title" for="ad_location">Location <small class="small">(Optional)</small></label>
                     <legend class="visuallyhidden">
                         <?php if($form->locationInstructions()): $form->locationInstructions()->kt(); endif;?>?>
@@ -119,7 +119,7 @@ $form = $site->children()->findByURI('submission-form');
                     <?php endif;?>
                 </fieldset>
                 
-                <fieldset class="form-item col-xs-12 col-md-9">
+                <fieldset class="form-item col-xs-12">
                     <label class="fieldset-title" for="email">Email <small class="small">(Optional)</small></label>
                     <legend class="visuallyhidden">
                         <?php if($form->emailInstructions()): $form->emailInstructions()->kt(); endif;?>?>

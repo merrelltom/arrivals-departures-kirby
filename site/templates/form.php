@@ -25,6 +25,8 @@
   <div class="page">
       
    <?php snippet('form');?>
+      
+  </div>
 
 <?php 
     $MAPS_API_KEY = apache_getenv("MAPS_API_KEY");
