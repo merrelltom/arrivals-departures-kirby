@@ -60,7 +60,7 @@ if ( isset( $_POST['arrival_or_departure'])) {
     );
      
     // Submit the POST request
-    $result = curl_exec($ch);
+    $result = json_decode(curl_exec($ch), true);
      
     // Close cURL session handle
     curl_close($ch);
