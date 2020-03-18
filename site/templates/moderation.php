@@ -1,9 +1,9 @@
 <?php snippet('header'); 
     snippet('oauth');
     $token = getToken();
-//    $update_type = filter_input(INPUT_POST, "type");
-//    $action = filter_input(INPUT_POST, "update");
-//    $id = filter_input(INPUT_POST, "ID");?>
+    $update_type = filter_input(INPUT_POST, "type");
+    $action = filter_input(INPUT_POST, "update");
+    $id = filter_input(INPUT_POST, "ID");?>
     <div class="mod-result">
     <?php // if ($update_type == 'arrival'){
 //        snippet('arrivals-update', ['token'=>$token, 'action'=>$action, 'ID'=>$id]);
