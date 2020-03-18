@@ -111,7 +111,7 @@
                                   <tbody>
                                     <tr>
                                       <td style="font-family: sans-serif; font-size: 0.875rem; vertical-align: top; background-color: #F1F900; border-radius: 18px; padding-left: 30px"> 
-                                          <p>An interactive public installation about birth, <br>death and the journey in between <br>by YARA + DAVINA</p>
+                                          <p>An interactive public installation about birth, death and the journey in between by YARA + DAVINA</p>
                                       </td>
                                     </tr>
                                   </tbody>
