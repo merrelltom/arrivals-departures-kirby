@@ -1,0 +1,54 @@
+title: Venue
+icon: 📝
+
+pages: true
+    create: event
+
+tabs:
+
+  # content tab
+  content:
+    label: Content
+    icon: text
+    columns:
+
+      # intro one
+      column2:
+        width: 1/2
+        sections:
+          texts:
+            type: fields
+            fields:
+                displayTitle:
+                    label: Display Title
+                    type: text
+                    buttons: false
+                displayDates:
+                    label: Dates
+                    type: text
+                    buttons: false
+                
+  # seo tab
+  seo:
+    label: SEO
+    icon: search
+    fields:
+      seoTitle:
+        label: SEO Title
+        type: text
+      seoDescription:
+        label: SEO Description
+        type: text
+
+  # Files tab
+  filesTab:
+    label: Files
+    icon: add
+    sections:
+      filesSection:
+        headline: Files
+        type: files
+        layout: cards
+        size: small
+        template: image
+

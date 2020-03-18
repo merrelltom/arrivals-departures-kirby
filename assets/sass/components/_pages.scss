@@ -208,3 +208,26 @@ FORM OVERLAY
 }
 
 
+/*  
+================================================================
+VENUE LIST
+================================================================  
+*/
+
+.venue-list li{
+    padding: 20px 0px 18px;
+    border-top: 1px solid black;
+    font-size: 1.5rem;
+    a{
+        display: flex;
+        width:100%;
+        .name{
+            
+            padding-left:15px;
+        }
+        .arrow{
+            width:30px;
+            line-height: 1.3;
+        }
+    }
+}

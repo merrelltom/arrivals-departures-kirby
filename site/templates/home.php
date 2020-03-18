@@ -134,8 +134,26 @@
                         <div class="introduction">
                             <?= $page->programmeIntro()->kt();?>
                         </div>
-                        
                     </div>
+                    <?php   
+                        $venues = $site->children()->findByURI('programme')->children();
+                        if($venues):
+                    ?>
+                    <div class="section-content col-xs-12 col-md-8 col-md-offset-4">
+                        <ul class="venue-list">
+                            <?php foreach($venues as $venue):?>
+                                <li class="venue-list-item">
+                                    <a href="<?= $venue->url();?>">
+                                        <div aria-hidden="true" class="arrow">></div>
+                                        <div class="name"><?= $venue->title() . '<br>' . $venue->displayDates();?></div>
+                                    </a>
+                                </li>
+                            <?php endforeach;?>
+                        </ul>
+                    </div>
+                    <?php
+                        endif;
+                    ?>
                 </div>
             </div>
         </section>
