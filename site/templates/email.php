@@ -111,7 +111,7 @@
                                   <tbody>
                                     <tr>
                                       <td style="font-family: sans-serif; font-size: 0.875rem; vertical-align: top; background-color: #F1F900; border-radius: 18px; padding-left: 30px"> 
-                                          <p>An interactive public installation about birth, death and the journey in between by YARA + DAVINA</p>
+                                          <p>An interactive public installation about birth, <br>death and the journey in between <br>by YARA + DAVINA</p>
                                       </td>
                                     </tr>
                                   </tbody>
@@ -124,7 +124,7 @@
                     </tr>
                     <!--text area-->
                     <tr>
-                      <td style="font-family: sans-serif; font-size: 14px; vertical-align: top; padding: 20px;">
+                      <td style="font-family: sans-serif; font-size: 14px; vertical-align: top; padding: 80px 20px;">
                         <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">Hi there,</p>
                         <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">Sometimes you just want to send a simple HTML email with a simple design and clear call to action. This is it.</p>
                       </td>
