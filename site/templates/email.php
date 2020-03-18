@@ -102,13 +102,13 @@
                   <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;">
                     <!--icon -->
                     <tr>
-                        <td style="font-family: sans-serif; font-size: 24px; vertical-align: top;">
+                        <td style="font-family: sans-serif; font-size: 20px; vertical-align: top;font-weight: bold; padding: 0px 20px;">
                             <p>ARRIVALS +<br>DEPARTURES </p>
                         </td>
                     </tr>
                     <!--text area-->
                     <tr>
-                      <td style="font-family: sans-serif; font-size: 14px; vertical-align: top; padding: 80px 20px;font-weight: bold; padding: 0px 20px;">
+                      <td style="font-family: sans-serif; font-size: 14px; vertical-align: top; padding: 80px 20px;">
                         <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">Hi there,</p>
                         <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">Sometimes you just want to send a simple HTML email with a simple design and clear call to action. This is it.</p>
                       </td>
