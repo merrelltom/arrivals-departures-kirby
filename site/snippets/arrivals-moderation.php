@@ -20,15 +20,16 @@ $results = json_decode(curl_exec($curl), true);
 curl_close($curl);
 
 $board_line = 1;
-echo("<h1>Arrivals:</h1>");
 if (count($results) == 0) {
-    echo("<div>No Arrivals to moderate</div>");
- }
+    echo("<div class='row'><h2>No Arrivals to moderate</h2></div>");
+ }else{
+    echo("<div class='row'><h2>Arrivals:</h2></div>");
+}
 foreach ($results as $result) { ?>
-    <div id="board-line-<?php echo($board_line);?>">
-        <span><?php echo($result["date"]);?></span>
-        <span><?php echo($result["name"]);?></span>
-        <form method="post" action="./moderation">
+    <div class="row" id="board-line-<?php echo($board_line);?>">
+        <span class="col-xs-12 col-md-2"><?php echo($result["date"]);?></span>
+        <span class="col-xs-12 col-md-4"><?php echo($result["name"]);?></span>
+        <form class="col-xs-12 col-md-6" method="post" action="./moderation">
             <input type="hidden" value="arrival" name="type" id="type">
             <input type="hidden" value="<?php echo($result["ID"]);?>" name="ID" id="ID">
             <input type="radio" id="accept" name="update" value="accept">
