@@ -73,7 +73,7 @@
                     if($mobile01 = $page->image01mobile()->toFile()){
                     ?>
                 <picture class="col-xs-12">
-                    <img class="lazyload" data-srcset="
+                    <img class=" " srcset="
                     <?= $mobile01->thumb(array('width' => 320))->url();?> 320w, 
                     <?= $mobile01->thumb(array('width' => 640))->url();?> 640w, 
                     <?= $desktop01->thumb(array('width' => 960))->url();?> 960w, 
@@ -111,7 +111,7 @@
                     if($mobile02 = $page->image02mobile()->toFile()){
                     ?>
                 <picture class="col-xs-12">
-                    <img class="lazyload" data-srcset="
+                    <img class=" " srcset="
                     <?= $mobile02->thumb(array('width' => 320))->url();?> 320w, 
                     <?= $mobile02->thumb(array('width' => 640))->url();?> 640w, 
                     <?= $desktop02->thumb(array('width' => 960))->url();?> 960w, 
