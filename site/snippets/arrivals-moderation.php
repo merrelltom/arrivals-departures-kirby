@@ -21,9 +21,9 @@ curl_close($curl);
 
 $board_line = 1;
 echo("<h1>Arrivals:</h1>");
-if (count($results) == 0) {?>
-    <div>No Arrivals to moderate</div>
-<?php}
+if (count($results) == 0) {
+    echo("<div>No Arrivals to moderate</div>");
+ }
 foreach ($results as $result) { ?>
     <div id="board-line-<?php echo($board_line);?>">
         <span><?php echo($result["date"]);?></span>
