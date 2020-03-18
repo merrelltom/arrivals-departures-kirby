@@ -100,7 +100,7 @@
               <tr>
                 <td class="wrapper" style="font-family: sans-serif; font-size: 14px; vertical-align: top; box-sizing: border-box;">
                   <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;">
-                    <!--yellow top table w/ info-->
+                    <!--yellow top table w/ -->
                     <tr>
                       <td style="font-family: sans-serif; font-size: 14px; vertical-align: top;">
                         <table border="0" cellpadding="0" cellspacing="0" class="btn btn-primary" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; box-sizing: border-box;">
@@ -111,7 +111,7 @@
                                   <tbody>
                                     <tr>
                                       <td style="font-family: sans-serif; font-size: 0.875rem; vertical-align: top; background-color: #F1F900; border-radius: 18px; padding-left: 30px"> 
-                                          <a href="http://htmlemail.io" target="_blank" style="display: inline-block; color: #000; background-color: #F1F900; border: solid 1px #000; border-radius: 18px; box-sizing: border-box; cursor: pointer; text-decoration: none; font-size: 0.875rem; margin: 0; padding: 0.4rem 2rem 0.3rem; text-transform: capitalize; border-color: #000;">Call To Action</a> </td>
+                                          </td>
                                     </tr>
                                   </tbody>
                                 </table>
@@ -139,7 +139,7 @@
                                   <tbody>
                                     <tr>
                                       <td style="font-family: sans-serif; font-size: 0.875rem; vertical-align: top; background-color: #F1F900; border-radius: 18px; padding-left: 30px"> 
-
+                                          <a href="http://htmlemail.io" target="_blank" style="display: inline-block; color: #000; background-color: #F1F900; border: solid 1px #000; border-radius: 18px; box-sizing: border-box; cursor: pointer; text-decoration: none; font-size: 0.875rem; margin: 0; padding: 0.4rem 2rem 0.3rem; text-transform: capitalize; border-color: #000;">Call To Action</a> </td>
                                     </tr>
                                   </tbody>
                                 </table>
