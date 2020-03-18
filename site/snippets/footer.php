@@ -6,7 +6,7 @@
                 <div class="footer-content">
                     <p class="footer-text"><?= $site->footerCallToAction();?></p>
                     <div class="button-container">
-                        <button class="sm-button" onclick="toggleForm()">Add a name to the boards</button>
+                        <button class="sm-button" onclick="toggleForm(this);">Add a name to the boards</button>
                     </div>
                 </div>
             </div>
@@ -37,7 +37,7 @@
 </section>
 
 
-<div class="overlay-mask"> </div>
+<div class="overlay-mask" onclick="hideOverlay();"> </div>
 
 
 <?php 

@@ -119,3 +119,7 @@ STATES
     right:0;
     transition: right 300ms 50ms ease-in-out;
 }
+
+.menu--open, .form--open{
+    overflow: hidden;
+}

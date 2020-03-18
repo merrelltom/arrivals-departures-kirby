@@ -35,7 +35,7 @@
                         <li><?= $item->title()->link() ?></li>
                     <?php endforeach ?>
                 </ul>
-                <button class="lg-button lg-hide">Add a name to the boards</button>
+                <button class="lg-button lg-hide" onclick="toggleForm(this);">Add a name to the boards</button>
             </nav>  
         </div>
     </header>
