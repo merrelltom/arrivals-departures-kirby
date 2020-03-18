@@ -5,11 +5,11 @@
     $action = filter_input(INPUT_POST, "update");
     $id = filter_input(INPUT_POST, "ID");?>
     <div class="mod-result">
-    <?php if ($update_type == 'arrival'){
-        snippet('arrivals-update', ['token'=>$token, 'action'=>$action, 'ID'=>$id]);
-    } elseif ($update_type == 'departure'){
-        snippet('departures-update', ['token'=>$token, 'action'=>$action, 'ID'=>$id]);
-    } ?>
+    <?php // if ($update_type == 'arrival'){
+//        snippet('arrivals-update', ['token'=>$token, 'action'=>$action, 'ID'=>$id]);
+//    } elseif ($update_type == 'departure'){
+//        snippet('departures-update', ['token'=>$token, 'action'=>$action, 'ID'=>$id]);
+//    } ?>
     </div>
 <main class="main"> 
     <?php snippet('arrivals-moderation', ['token'=>$token]) ?> 
