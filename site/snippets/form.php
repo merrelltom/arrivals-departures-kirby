@@ -57,7 +57,8 @@ $form = $site->children()->findByURI('submission-form');
                     <legend class="visuallyhidden">
                         <?php if($form->nameInstructions()): $form->nameInstructions()->kt(); endif;?>?>
                     </legend>
-                    <input id="ad_name" name="ad_name" type="text" placeholder="Enter Name..." required/>
+                    <input id="ad_name" name="ad_name" type="text" placeholder="Enter Name..." 
+                           pattern="[A-Za-z- ]{1,24}" title="Max. 24 characters , letters and hyphens only" required/>
                     <?php if($form->nameInstructions()):?>
                     <div aria-hidden="true" class="small-text">
                         <?= $form->nameInstructions()->kt();?>
@@ -96,7 +97,8 @@ $form = $site->children()->findByURI('submission-form');
                         <option value="12">December</option>
                     </select>
                     <label class="visuallyhidden" for="ad_month">Select Month</label>
-                    <input id="ad_year" name="ad_year" type="number" placeholder="Year" required/> <label class="visuallyhidden" for="ad_day">Year</label>
+                    <input id="ad_year" name="ad_year" type="text" placeholder="Year" 
+                           pattern="[0-9]{4}" title="Four digit date" required/> <label class="visuallyhidden" for="ad_day">Year</label>
                     
                     <?php if($form->dateInstructions()):?>
                     <div aria-hidden="true" class="small-text">
