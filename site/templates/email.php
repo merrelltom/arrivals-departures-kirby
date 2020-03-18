@@ -102,9 +102,31 @@
                   <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;">
                     <!--icon -->
                     <tr>
-                        <td style="font-family: sans-serif; font-size: 20px; vertical-align: top;font-weight: bold; padding: 0px 20px;">
+                        <td style="font-family: sans-serif; font-size: 24px; vertical-align: top;font-weight: bold; padding: 0px 20px;">
                             <p>ARRIVALS +<br>DEPARTURES </p>
                         </td>
+                    </tr>
+                    <!--yellow top table w/ -->
+                    <tr>
+                      <td style="font-family: sans-serif; font-size: 14px; vertical-align: top;">
+                        <table border="0" cellpadding="0" cellspacing="0" class="btn btn-primary" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; box-sizing: border-box;">
+                          <tbody>
+                            <tr>
+                              <td align="left" style="font-family: sans-serif; font-size: 14px; vertical-align: top;">
+                                <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; padding: 30px 0 50px; background-color: #f1f900;">
+                                  <tbody>
+                                    <tr>
+                                      <td style="font-family: sans-serif; font-size: 0.875rem; vertical-align: top; background-color: #F1F900; border-radius: 18px; padding-left: 30px"> 
+                                          <p>An interactive public installation about birth, death and the journey in between by YARA + DAVINA</p>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
                     </tr>
                     <!--text area-->
                     <tr>
