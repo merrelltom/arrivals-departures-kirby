@@ -122,7 +122,7 @@
                           <tbody>
                             <tr>
                               <td align="left" style="font-family: sans-serif; font-size: 14px; vertical-align: top;">
-                                <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; padding: 30px 0 50px; background-color: #f1f900;">
+                                <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; padding: 30px 0 30px; background-color: #f1f900;">
                                   <tbody>
                                     <tr>
                                       <td style="font-family: sans-serif; font-size: 0.875rem; font-weight: lighter; vertical-align: top; background-color: #F1F900; border-radius: 18px; padding: 0 30px 50px"> 
