@@ -106,33 +106,13 @@
                             <p>ARRIVALS +<br>DEPARTURES </p>
                         </td>
                     </tr>
-                    <!--yellow top table w/ -->
-                    <tr>
-                      <td style="font-family: sans-serif; font-size: 14px; vertical-align: top;">
-                        <table border="0" cellpadding="0" cellspacing="0" class="btn btn-primary" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; box-sizing: border-box;">
-                          <tbody>
-                            <tr>
-                              <td align="left" style="font-family: sans-serif; font-size: 14px; vertical-align: top;">
-                                <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; padding: 10px 0 20px; background-color: #f1f900;">
-                                  <tbody>
-                                    <tr>
-                                      <td style="font-family: sans-serif; font-size: 0.875rem; vertical-align: top; background-color: #F1F900; border-radius: 18px; padding-left: 30px"> 
-                                          <p>An interactive public installation about birth, death and the journey in between by YARA + DAVINA</p>
-                                      </td>
-                                    </tr>
-                                  </tbody>
-                                </table>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </td>
-                    </tr>
                     <!--text area-->
                     <tr>
                       <td style="font-family: sans-serif; font-size: 14px; vertical-align: top; padding: 80px 20px;">
                         <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">Hi there,</p>
-                        <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">Sometimes you just want to send a simple HTML email with a simple design and clear call to action. This is it.</p>
+                        <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">
+                            This text will be pulled from Kirby dpending on the email.
+                        </p>
                       </td>
                     </tr>
                     <!--yellow bottom table w/link-->
@@ -146,7 +126,11 @@
                                   <tbody>
                                     <tr>
                                       <td style="font-family: sans-serif; font-size: 0.875rem; vertical-align: top; background-color: #F1F900; border-radius: 18px; padding-left: 30px"> 
-                                          <a href="http://arrivalsanddepartures.net" target="_blank" style="display: inline-block; color: #000; background-color: #F1F900; border: solid 1px #000; border-radius: 18px; box-sizing: border-box; cursor: pointer; text-decoration: none; font-size: 0.875rem; margin: 0; padding: 0.4rem 2rem 0.3rem; text-transform: capitalize; border-color: #000;">Go to the online arrivals and departures boards</a> </td>
+                                          <p>An interactive public installation about birth, death and the journey in between by YARA + DAVINA</p>
+                                      </td>
+                                      <td style="font-family: sans-serif; font-size: 0.875rem; vertical-align: top; background-color: #F1F900; border-radius: 18px; padding-left: 30px"> 
+                                          <a href="http://www.arrivalsanddepartures.net" target="_blank" style="display: inline-block; color: #000; background-color: #F1F900; border: solid 1px #000; border-radius: 18px; box-sizing: border-box; cursor: pointer; text-decoration: none; font-size: 0.875rem; margin: 0; padding: 0.4rem 2rem 0.3rem; text-transform: capitalize; border-color: #000;">Go to the online arrivals and departures boards</a>
+                                      </td>
                                     </tr>
                                   </tbody>
                                 </table>
