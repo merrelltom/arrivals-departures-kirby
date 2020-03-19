@@ -130,7 +130,7 @@
                                       </td>
                                     </tr>
                                     <tr>
-                                      <td style="font-family: sans-serif; font-size: 0.875rem; vertical-align: top; background-color: #F1F900; border-radius: 18px; padding-left: 30px"> 
+                                      <td style="font-family: sans-serif; font-size: 0.875rem; vertical-align: top; background-color: #F1F900; border-radius: 18px; padding: 0 30px 50px"> 
                                           <a href="http://www.arrivalsanddepartures.net" target="_blank" style="display: inline-block; color: #000; background-color: #F1F900; border: solid 1px #000; border-radius: 18px; box-sizing: border-box; cursor: pointer; text-decoration: none; font-size: 0.875rem; margin: 0; padding: 0.4rem 2rem 0.3rem; text-transform: capitalize; border-color: #000;">Go to the online arrivals and departures boards</a>
                                       </td>
                                     </tr>
