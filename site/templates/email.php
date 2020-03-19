@@ -94,25 +94,48 @@
 
             <!-- START CENTERED WHITE CONTAINER -->
             <span class="preheader" style="color: transparent; display: none; height: 0; max-height: 0; max-width: 0; opacity: 0; overflow: hidden; mso-hide: all; visibility: hidden; width: 0;">This is preheader text. Some clients will show this text as a preview.</span>
-            <table class="main" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; background: #ffffff; border-radius: 3px;">
+            <table class="main" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; background: #ffffff; border-radius: 3px; border-spacing: 0px;">
 
               <!-- START MAIN CONTENT AREA -->
               <tr>
-                <td class="wrapper" style="font-family: sans-serif; font-size: 14px; vertical-align: top; box-sizing: border-box; padding: 20px;">
+                <td class="wrapper" style="font-family: sans-serif; font-size: 14px; vertical-align: top; box-sizing: border-box;">
                   <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;">
+                    <!--icon -->
+                    <tr>
+                        <td style="font-family: sans-serif; font-size: 24px; vertical-align: top;font-weight: bold; padding: 0px 20px;">
+                            <p style="border-bottom: 1px solid black;margin: 0;padding: 24px 0;">
+                                <img src="http://134.209.184.8/assets/images/Arrivals+Departures_logo-1_email.png" alt="ARRIVALS +DEPARTURES">
+                                
+                            </p>
+                        </td>
+                    </tr>
+                    <!--text area-->
+                    <tr>
+                      <td style="font-family: sans-serif; font-size: 14px; vertical-align: top; padding: 80px 20px;">
+                        <p style="font-family: sans-serif; font-size: 14px; font-weight: lighter; margin: 0; Margin-bottom: 15px;">Hi there,</p>
+                        <p style="font-family: sans-serif; font-size: 14px; font-weight: lighter; margin: 0; Margin-bottom: 15px;">
+                            This text will be pulled from Kirby dpending on the email.
+                        </p>
+                      </td>
+                    </tr>
+                    <!--yellow bottom table w/link-->
                     <tr>
                       <td style="font-family: sans-serif; font-size: 14px; vertical-align: top;">
-                        <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">Hi there,</p>
-                        <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">Sometimes you just want to send a simple HTML email with a simple design and clear call to action. This is it.</p>
                         <table border="0" cellpadding="0" cellspacing="0" class="btn btn-primary" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; box-sizing: border-box;">
                           <tbody>
                             <tr>
-                              <td align="left" style="font-family: sans-serif; font-size: 14px; vertical-align: top; padding-bottom: 15px;">
-                                <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; padding: 20px 0; background-color: #f1f900;">
+                              <td align="left" style="font-family: sans-serif; font-size: 14px; vertical-align: top;">
+                                <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; padding: 30px 0 50px; background-color: #f1f900;">
                                   <tbody>
                                     <tr>
+                                      <td style="font-family: sans-serif; font-size: 0.875rem; font-weight: lighter; vertical-align: top; background-color: #F1F900; border-radius: 18px; padding: 0 30px 30px"> 
+                                          <p>An interactive public installation about birth, death and the journey in between by YARA + DAVINA</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
                                       <td style="font-family: sans-serif; font-size: 0.875rem; vertical-align: top; background-color: #F1F900; border-radius: 18px; padding-left: 30px"> 
-                                          <a href="http://htmlemail.io" target="_blank" style="display: inline-block; color: #000; background-color: #F1F900; border: solid 1px #000; border-radius: 18px; box-sizing: border-box; cursor: pointer; text-decoration: none; font-size: 0.875rem; margin: 0; padding: 0.4rem 2rem 0.3rem; text-transform: capitalize; border-color: #000;">Call To Action</a> </td>
+                                          <a href="http://www.arrivalsanddepartures.net" target="_blank" style="display: inline-block; color: #000; background-color: #F1F900; border: solid 1px #000; border-radius: 18px; box-sizing: border-box; cursor: pointer; text-decoration: none; font-size: 0.875rem; margin: 0; padding: 0.4rem 2rem 0.3rem; text-transform: capitalize; border-color: #000;">Go to the online arrivals and departures boards</a>
+                                      </td>
                                     </tr>
                                   </tbody>
                                 </table>
@@ -120,8 +143,6 @@
                             </tr>
                           </tbody>
                         </table>
-                        <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">This is a really simple email template. Its sole purpose is to get the recipient to click the button with no distractions.</p>
-                        <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">Good luck! Hope it works.</p>
                       </td>
                     </tr>
                   </table>
@@ -136,7 +157,6 @@
               <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;">
                 <tr>
                   <td class="content-block" style="font-family: sans-serif; vertical-align: top; padding-bottom: 10px; padding-top: 10px; font-size: 12px; color: #999999; text-align: center;">
-                    <span class="apple-link" style="color: #999999; font-size: 12px; text-align: center;">Company Inc, 3 Abbey Road, San Francisco CA 94102</span>
                     <br> Don't like these emails? <a href="http://i.imgur.com/CScmqnj.gif" style="text-decoration: underline; color: #999999; font-size: 12px; text-align: center;">Unsubscribe</a>.
                   </td>
                 </tr>
