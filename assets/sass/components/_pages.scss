@@ -27,6 +27,11 @@ body{
     padding: $flexboxgrid-outer-margin 0 $flexboxgrid-outer-margin;
 }
 
+.page-banner{
+    padding: $flexboxgrid-outer-margin 0 $flexboxgrid-outer-margin;
+    margin: $flexboxgrid-outer-margin 0 $flexboxgrid-outer-margin;
+}
+
 .border-top{
     border-top: 1px solid black;
 }

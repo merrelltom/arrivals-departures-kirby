@@ -1,1 +1,63 @@
 Title: About
+
+----
+
+Pagetitle: About
+
+----
+
+Pageintroduction: Arrivals + Departures is an interactive public installation about birth, death and the journey in between by YARA + DAVINA.
+
+----
+
+Blocks:
+
+- 
+  imagemobile:
+    - departures-6000x4000_2_mobile.jpg
+  imagedesktop:
+    - departures-6000x4000_2.jpg
+  _key: fullWidthImageBlock
+  _uid: fullWidthImageBlock_1584548460527_245
+- 
+  smalltextcontent: |
+    Taking the recognisable form of a station or airport arrivals and departures board, the artwork invites the public to share the names of people who have arrived and departed as a way to celebrate a birth or commemorate a death.
+    
+    From April 2020, you can make a contribution of a name directly via this website.  Every name will appear on either the arrival or departure board at one of the sites below and on this website.  Each name will move down the display list as further names are added and will then move into the archive here.
+    
+    You may also submit a name at each location whilst the Arrivals & Departures boards are on public view.  A steward will be available at specific times (see xxxx) to support your submission.
+    
+    Integral to the artwork is a programme of events, talks and workshops inviting the public to explore a range of issues associated with commemorating new life and parenthood, acknowledging our own mortality, death and grieving - subjects that need to be spoken about more to help us live well.
+  _key: smallTextBlock
+  _uid: smallTextBlock_1584547830804_180
+- 
+  bannercontent: >
+    Officiati doluptatios ea doluptate omnia
+    volestis unt, optatius eosapient, quat.
+    Officiati.
+  _key: addNameBannerBlock
+  _uid: addNameBannerBlock_1584549546136_332
+
+----
+
+Programmetitle: Programme
+
+----
+
+Programmeintro: Arrivals + Departures Boards will be travelling to different sites and festivals across the UK from April 2020.
+
+----
+
+Seotitle: 
+
+----
+
+Seodescription: 
+
+----
+
+Image02mobile: 
+
+----
+
+Image02desktop: 

@@ -114,3 +114,7 @@ PARAGRAPHS
 .small-text p{
     font-size: 1rem;
 }
+
+.page-section p:last-child{
+    padding-bottom: 0;
+}

@@ -25,20 +25,14 @@ Abouttitle: About
 Blocks:
 
 - 
-  largetextcontent: >
-    Arrivals + Departures is an interactive
-    public installation about birth, death
-    and the journey in between by YARA +
-    DAVINA.
-  _key: largeText
-  _uid: largeText_1583792607583_155
-- 
-  smalltextcontent: |
+  largetextcontent: |
+    Arrivals + Departures is an interactive public installation about birth, death and the journey in between by YARA + DAVINA.
+    
     Taking the recognisable form of a station or airport arrivals and departures board, the artwork invites the public to share the names of people who have arrived and departed as a way to celebrate a birth or commemorate a death.
     
     (link: about text: > Read more about the project)
-  _key: smallText
-  _uid: smallText_1583792754428_203
+  _key: largeText
+  _uid: largeText_1583792607583_155
 
 ----
 
