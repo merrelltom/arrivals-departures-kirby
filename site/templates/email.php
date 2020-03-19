@@ -103,7 +103,10 @@
                     <!--icon -->
                     <tr>
                         <td style="font-family: sans-serif; font-size: 24px; vertical-align: top;font-weight: bold; padding: 0px 20px;">
-                            <p style="border-bottom: 1px solid black;margin: 0;padding: 24px 0;">ARRIVALS +<br>DEPARTURES </p>
+                            <p style="border-bottom: 1px solid black;margin: 0;padding: 24px 0;">
+                                <img src="http://134.209.184.8/assets/images/Arrivals+Departures_logo-1.png" alt="ARRIVALS +<br>DEPARTURES">
+                                
+                            </p>
                         </td>
                     </tr>
                     <!--text area-->
