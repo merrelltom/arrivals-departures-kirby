@@ -119,7 +119,7 @@ if ($type == 'confirm') {
   </table>
   <script>
     function myFunction(e) {
-      console.log(e);
+      console.log(e.val);
       //document.getElementById("demo").innerHTML = "Hello World";
     }
     </script>
