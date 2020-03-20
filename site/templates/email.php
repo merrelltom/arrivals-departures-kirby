@@ -108,7 +108,7 @@
   </table>
   <script>
     function replaceText(e) {
-      var c = document.getElementById('texts');
+      var c = document.getElementById('texts').children;
       console.log(c);
       var i;
       for (i = 0; i < c.length; i++) {
