@@ -1,3 +1,11 @@
+<?php 
+$type = filter_input(INPUT_GET, "type");
+$text = '';
+if ($type == 'confirm') {
+    $text =  $page->confirmtext()->kt();
+}
+
+?>
 <!doctype html>
 <html>
   <head>
@@ -112,9 +120,8 @@
                     <!--text area-->
                     <tr>
                       <td style="font-family: sans-serif; font-size: 14px; vertical-align: top; padding: 80px 20px;">
-                        <p style="font-family: sans-serif; font-size: 14px; font-weight: lighter; margin: 0; Margin-bottom: 15px;">Hi there,</p>
                         <p style="font-family: sans-serif; font-size: 14px; font-weight: lighter; margin: 0; Margin-bottom: 15px;">
-                            This text will be pulled from Kirby dpending on the email.
+                        <?php echo($text); ?>
                         </p>
                       </td>
                     </tr>
