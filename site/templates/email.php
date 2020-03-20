@@ -148,7 +148,7 @@
                             <span id='display' style="display:none;">
                                 <?php echo($page->displaytext()->kt()); ?></span>
                             <span id='reject' style="display:none;"
-                                <?php echo($page->rejecttext()->kt()); ?></span>>
+                                <?php echo($page->rejecttext()->kt()); ?></span>
                            </div>
                         <!--not in email-->
                         </p>
