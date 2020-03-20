@@ -18,7 +18,7 @@ sections:
     fields:
       confirmtext:
         label: Confirmation Email Text
-        type: textare
+        type: textarea
       displaytext:
         label: Display Email Text
         type: textarea
