@@ -1,16 +1,3 @@
-<?php 
-$type = filter_input(INPUT_GET, "type");
-$text = '';
-if ($type == 'confirm') {
-    $text =  $page->confirmtext()->kt();
-} elseif ($type == 'moderate') {
-    $text =  $page->moderationtext()->kt();
-} elseif ($type == 'display') {
-    $text =  $page->displaytext()->kt();
-} elseif ($type == 'reject') {
-    $text =  $page->rejecttext()->kt();
-}
-?>
 <!doctype html>
 <html>
   <head>
@@ -103,24 +90,24 @@ if ($type == 'confirm') {
      <form>
         <tr> 
             <td>
-              <h1 style='font-size: 0.9em' onclick="myFunction('confirm')">Confirmation Email</h1>
+              <h1 style='font-size: 0.9em' onclick="replaceText('confirm')">Confirmation Email</h1>
             </td>
             <td>
-              <h1 style='font-size: 0.9em' onclick="myFunction('moderate')">Moderation Email</h1>
+              <h1 style='font-size: 0.9em' onclick="replaceText('moderate')">Moderation Email</h1>
             </td>
             <td>
-              <h1 style='font-size: 0.9em' onclick="myFunction('display')">Display Email</h1>
+              <h1 style='font-size: 0.9em' onclick="replaceText('display')">Display Email</h1>
             </td>
             <td>
-              <h1 style='font-size: 0.9em' onclick="myFunction('reject')">Rejection Email</h1>
+              <h1 style='font-size: 0.9em' onclick="replaceText('reject')">Rejection Email</h1>
             </td>
         </tr>
       </form>
   </table>
   <script>
-    function myFunction(e) {
+    function replaceText(e) {
       console.log(e);
-      //document.getElementById("demo").innerHTML = "Hello World";
+      document.getElementById(e).style.display = 'block';
     }
     </script>
    <!--not in email-->
@@ -152,7 +139,18 @@ if ($type == 'confirm') {
                     <tr>
                       <td style="font-family: sans-serif; font-size: 14px; vertical-align: top; padding: 80px 20px;">
                         <p style="font-family: sans-serif; font-size: 14px; font-weight: lighter; margin: 0; Margin-bottom: 15px;">
-                        <?php echo($text); ?>
+                        <!--not in email-->
+                           <div id='texts'>
+                            <p id='confirm' style="display:none;">
+                                <?php echo($page->confirmtext()->kt()); ?></p>
+                            <p id='moderate' style="display:none;">
+                                <?php echo($page->moderationtext()->kt()); ?></p>
+                            <p id='display' style="display:none;">
+                                <?php echo($page->displaytext()->kt()); ?></p>
+                            <p id='reject' style="display:none;">
+                                <?php echo($page->rejecttext()->kt()); ?></p>
+                           </div>
+                        <!--not in email-->
                         </p>
                       </td>
                     </tr>
