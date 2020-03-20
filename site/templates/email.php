@@ -103,20 +103,26 @@ if ($type == 'confirm') {
      <form>
         <tr> 
             <td>
-              <button style="margin: auto;" type="button" id="confirm">Confirmation Email</button>
+              <button style="margin: auto;" type="button" value="confirm" onclick="myFunction()">Confirmation Email</button>
             </td>
             <td>
-              <button style="margin: auto;" type="button" id="moderate">Moderation Email</button>
+              <button style="margin: auto;" type="button" value="moderate" onclick="myFunction()">Moderation Email</button>
             </td>
             <td>
-              <button style="margin: auto;" type="button" id="display">Display Email</button>
+              <button style="margin: auto;" type="button" value="display" onclick="myFunction()">Display Email</button>
             </td>
             <td>
-              <button style="margin: auto;" type="button" id="reject">Rejection Email</button>
+              <button style="margin: auto;" type="button" value="reject" onclick="myFunction()">Rejection Email</button>
             </td>
         </tr>
       </form>
   </table>
+  <script>
+    function myFunction(e) {
+      console.log(e);
+      //document.getElementById("demo").innerHTML = "Hello World";
+    }
+    </script>
    <!--not in email-->
   <body class="" style="background-color: #f6f6f6; font-family: sans-serif; -webkit-font-smoothing: antialiased; font-size: 14px; line-height: 1.4; margin: 0; padding: 0; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
      <table border="0" cellpadding="0" cellspacing="0" class="body" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; background-color: #f6f6f6;">
