@@ -100,8 +100,8 @@ if ($type == 'confirm') {
   </head>
   <!--not in email-->
   <table>
-      <tr>          
-        <form>
+     <form>
+        <tr>          
             <td>
               <label for="confirm">Confirmation Email</label>
             </td>
@@ -114,6 +114,7 @@ if ($type == 'confirm') {
             <td>
               <label for="reject">Rejection Email</label>
             </td>
+        </tr><tr> 
             <td>
               <input type="radio" name="choice" id="confirm">
             </td>
@@ -126,7 +127,8 @@ if ($type == 'confirm') {
             <td>
               <input type="radio" name="choice" id="reject">
             </td>
-        </form>
+        </tr>
+      </form>
   </table>
    <!--not in email-->
   <body class="" style="background-color: #f6f6f6; font-family: sans-serif; -webkit-font-smoothing: antialiased; font-size: 14px; line-height: 1.4; margin: 0; padding: 0; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
