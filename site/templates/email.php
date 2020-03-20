@@ -101,31 +101,18 @@ if ($type == 'confirm') {
   <!--not in email-->
   <table style="margin: 0 auto; max-width: 580px; width: 580px;">
      <form>
-        <tr>          
-            <td style="margin: 10px;">
-              <label for="confirm">Confirmation Email</label>
-            </td>
-            <td style="margin: 10px;">
-              <label for="moderate">Moderation Email</label>
-            </td>
-            <td style="margin: 10px;">
-              <label for="display">Display Email</label>
-            </td>
-            <td style="margin: 10px;">
-              <label for="reject">Rejection Email</label>
-            </td>
-        </tr><tr> 
+        <tr> 
             <td>
-              <input style="margin: auto;" type="radio" name="choice" id="confirm">
+              <button style="margin: auto;" type="button" id="confirm">Confirmation Email</button>
             </td>
             <td>
-              <input style="margin: auto;" type="radio" name="choice" id="moderate">
+              <button style="margin: auto;" type="button" id="moderate">Moderation Email</button>
             </td>
             <td>
-              <input style="margin: auto;" type="radio" name="choice" id="display">
+              <button style="margin: auto;" type="button" id="display">Display Email</button>
             </td>
             <td>
-              <input style="margin: auto;" type="radio" name="choice" id="reject">
+              <button style="margin: auto;" type="button" id="reject">Rejection Email</button>
             </td>
         </tr>
       </form>
