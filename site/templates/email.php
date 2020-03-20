@@ -103,10 +103,10 @@ if ($type == 'confirm') {
       <tr>
         <td>
           <form>
-              <tr><label for="confirm">Confirmation Email</label><input type="radio" id="confirm"></tr>
-              <tr><label for="moderate">Moderation Email</label><input type="radio" id="moderate"></tr>
-              <tr><label for="display">Display Email</label><input type="radio" id="display"></tr>
-              <tr><label for="reject">Rejection Email</label><input type="radio" id="reject"></tr>
+              <tr><label for="confirm">Confirmation Email</label><input type="radio" name="choice" id="confirm"></tr>
+              <tr><label for="moderate">Moderation Email</label><input type="radio" name="choice" id="moderate"></tr>
+              <tr><label for="display">Display Email</label><input type="radio" name="choice" id="display"></tr>
+              <tr><label for="reject">Rejection Email</label><input type="radio" name="choice" id="reject"></tr>
           </form>
         </td>
         <td style="font-family: sans-serif; font-size: 14px; vertical-align: top;">&nbsp;</td>
