@@ -103,23 +103,23 @@ if ($type == 'confirm') {
      <form>
         <tr> 
             <td>
-              <h1 value="confirm" onclick="myFunction(this)">Confirmation Email</h1>
+              <h1 style='font-size: 8px' onclick="myFunction('confirm')">Confirmation Email</h1>
             </td>
             <td>
-              <h1 value="moderate" onclick="myFunction(this)">Moderation Email</h1>
+              <h1 style='font-size: 8px' onclick="myFunction('moderate')">Moderation Email</h1>
             </td>
             <td>
-              <h1 value="display" onclick="myFunction(this)">Display Email</h1>
+              <h1 style='font-size: 8px' onclick="myFunction('display')">Display Email</h1>
             </td>
             <td>
-              <h1 value="reject" onclick="myFunction(this)">Rejection Email</h1>
+              <h1 style='font-size: 8px' onclick="myFunction('reject')">Rejection Email</h1>
             </td>
         </tr>
       </form>
   </table>
   <script>
     function myFunction(e) {
-      console.log(e.value);
+      console.log(e);
       //document.getElementById("demo").innerHTML = "Hello World";
     }
     </script>
