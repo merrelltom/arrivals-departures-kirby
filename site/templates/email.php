@@ -141,14 +141,14 @@
                         <p style="font-family: sans-serif; font-size: 14px; font-weight: lighter; margin: 0; Margin-bottom: 15px;">
                         <!--not in email-->
                            <div id='texts'>
-                            <p id='confirm' style="display:none;">
-                                <?php echo($page->confirmtext()->kt()); ?></p>
-                            <p id='moderate' style="display:none;">
-                                <?php echo($page->moderationtext()->kt()); ?></p>
-                            <p id='display' style="display:none;">
-                                <?php echo($page->displaytext()->kt()); ?></p>
-                            <p id='reject' style="display:none;">
-                                <?php echo($page->rejecttext()->kt()); ?></p>
+                            <span id='confirm' style="display:none;">
+                                <?php echo($page->confirmtext()->kt()); ?></span>
+                            <span id='moderate' style="display:none;">
+                                <?php echo($page->moderationtext()->kt()); ?></span>
+                            <span id='display' style="display:none;">
+                                <?php echo($page->displaytext()->kt()); ?></span>
+                            <span id='reject' style="display:none;"
+                                <?php echo($page->rejecttext()->kt()); ?></span>>
                            </div>
                         <!--not in email-->
                         </p>
