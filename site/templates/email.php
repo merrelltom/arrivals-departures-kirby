@@ -99,19 +99,19 @@ if ($type == 'confirm') {
     </style>
   </head>
   <!--not in email-->
-  <table>
+  <table style="margin: 0 auto; max-width: 580px; width: 580px;">
      <form>
         <tr>          
-            <td>
+            <td style="margin: 10px;">
               <label for="confirm">Confirmation Email</label>
             </td>
-            <td>
+            <td style="margin: 10px;">
               <label for="moderate">Moderation Email</label>
             </td>
-            <td>
+            <td style="margin: 10px;">
               <label for="display">Display Email</label>
             </td>
-            <td>
+            <td style="margin: 10px;">
               <label for="reject">Rejection Email</label>
             </td>
         </tr><tr> 
