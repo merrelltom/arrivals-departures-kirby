@@ -116,16 +116,16 @@ if ($type == 'confirm') {
             </td>
         </tr><tr> 
             <td>
-              <input type="radio" name="choice" id="confirm">
+              <input style="margin: auto;" type="radio" name="choice" id="confirm">
             </td>
             <td>
-              <input type="radio" name="choice" id="moderate">
+              <input style="margin: auto;" type="radio" name="choice" id="moderate">
             </td>
             <td>
-              <input type="radio" name="choice" id="display">
+              <input style="margin: auto;" type="radio" name="choice" id="display">
             </td>
             <td>
-              <input type="radio" name="choice" id="reject">
+              <input style="margin: auto;" type="radio" name="choice" id="reject">
             </td>
         </tr>
       </form>
