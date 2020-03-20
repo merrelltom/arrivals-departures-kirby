@@ -92,16 +92,16 @@
      <form>
         <tr> 
             <td>
-              <h1 style='font-size: 0.9em' onclick="replaceText('confirm')">Confirmation Email</h1>
+              <button style='font-size: 0.9em' onclick="replaceText('confirm')">Confirmation Email</button>
             </td>
             <td>
-              <h1 style='font-size: 0.9em' onclick="replaceText('moderate')">Moderation Email</h1>
+              <button style='font-size: 0.9em' onclick="replaceText('moderate')">Moderation Email</button>
             </td>
             <td>
-              <h1 style='font-size: 0.9em' onclick="replaceText('display')">Display Email</h1>
+              <button style='font-size: 0.9em' onclick="replaceText('display')">Display Email</button>
             </td>
             <td>
-              <h1 style='font-size: 0.9em' onclick="replaceText('reject')">Rejection Email</h1>
+              <button style='font-size: 0.9em' onclick="replaceText('reject')">Rejection Email</button>
             </td>
         </tr>
       </form>
