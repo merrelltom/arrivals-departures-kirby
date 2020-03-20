@@ -17,11 +17,14 @@ sections:
     type: fields
     fields:
       confirmtext:
-        label: Confirmation Email Text
-        type: textarea
-      displaytext:
-        label: Display Email Text
+        label: Confirmation Email Text (Date/Name submitted, successfull moderation)
         type: textarea
       moderationtext:
-        label: Moderation Email Text
+        label: Moderation Email Text (Date/Name submitted, manual moderation needed)
+        type: textarea
+      displaytext:
+        label: Display Email Text (Date/Name live on board)
+        type: textarea
+      rejecttext:
+        label: Name Rejection Email Text (Manual moderation failed)
         type: textarea
