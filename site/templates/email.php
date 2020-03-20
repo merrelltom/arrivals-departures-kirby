@@ -85,6 +85,8 @@
     }
     </style>
   </head>
+  
+  
   <!--not in email-->
   <table style="margin: 0 auto; max-width: 580px; width: 580px;">
      <form>
@@ -106,11 +108,16 @@
   </table>
   <script>
     function replaceText(e) {
-      console.log(e);
+      var c = document.getElementById('texts');
+      for (i = 0; i < c.length; i++) {
+          c[i].style.display = 'none';
+      }
       document.getElementById(e).style.display = 'block';
     }
     </script>
    <!--not in email-->
+   
+   
   <body class="" style="background-color: #f6f6f6; font-family: sans-serif; -webkit-font-smoothing: antialiased; font-size: 14px; line-height: 1.4; margin: 0; padding: 0; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
      <table border="0" cellpadding="0" cellspacing="0" class="body" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; background-color: #f6f6f6;">
       <tr>
@@ -139,6 +146,8 @@
                     <tr>
                       <td style="font-family: sans-serif; font-size: 14px; vertical-align: top; padding: 80px 20px;">
                         <p style="font-family: sans-serif; font-size: 14px; font-weight: lighter; margin: 0; Margin-bottom: 15px;">
+                       
+                            
                         <!--not in email-->
                            <div id='texts'>
                             <span id='confirm' style="display:none;">
@@ -151,6 +160,8 @@
                                 <?php echo($page->rejecttext()->kt()); ?></span>
                            </div>
                         <!--not in email-->
+                        
+                        
                         </p>
                       </td>
                     </tr>
