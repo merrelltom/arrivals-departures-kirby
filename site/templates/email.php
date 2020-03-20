@@ -109,7 +109,9 @@
   <script>
     function replaceText(e) {
       var c = document.getElementById('texts');
+      var i;
       for (i = 0; i < c.length; i++) {
+          console.log(c[i]);
           c[i].style.display = 'none';
       }
       document.getElementById(e).style.display = 'block';
