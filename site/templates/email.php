@@ -3,8 +3,13 @@ $type = filter_input(INPUT_GET, "type");
 $text = '';
 if ($type == 'confirm') {
     $text =  $page->confirmtext()->kt();
+} elseif ($type == 'moderate') {
+    $text =  $page->moderationtext()->kt();
+} elseif ($type == 'display') {
+    $text =  $page->displaytext()->kt();
+} elseif ($type == 'reject') {
+    $text =  $page->rejecttext()->kt();
 }
-
 ?>
 <!doctype html>
 <html>
