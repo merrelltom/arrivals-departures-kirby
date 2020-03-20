@@ -1,0 +1,27 @@
+title: Email
+
+status:
+  draft: true
+  unlisted:
+    label: Hidden Page
+    text: The page is not listed in the main menu
+  listed:
+    label: Menu Page
+    text: The page is listed in the main menu
+
+
+pages: false
+
+sections:
+  content:
+    type: fields
+    fields:
+      confirmtext:
+        label: Confirmation Email Text
+        type: textare
+      displaytext:
+        label: Display Email Text
+        type: textarea
+      moderationtext:
+        label: Moderation Email Text
+        type: textarea
