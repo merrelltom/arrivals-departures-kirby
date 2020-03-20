@@ -103,16 +103,16 @@ if ($type == 'confirm') {
      <form>
         <tr> 
             <td>
-              <h1 style='font-size: 8px' onclick="myFunction('confirm')">Confirmation Email</h1>
+              <h1 style='font-size: 0.9em' onclick="myFunction('confirm')">Confirmation Email</h1>
             </td>
             <td>
-              <h1 style='font-size: 8px' onclick="myFunction('moderate')">Moderation Email</h1>
+              <h1 style='font-size: 0.9em' onclick="myFunction('moderate')">Moderation Email</h1>
             </td>
             <td>
-              <h1 style='font-size: 8px' onclick="myFunction('display')">Display Email</h1>
+              <h1 style='font-size: 0.9em' onclick="myFunction('display')">Display Email</h1>
             </td>
             <td>
-              <h1 style='font-size: 8px' onclick="myFunction('reject')">Rejection Email</h1>
+              <h1 style='font-size: 0.9em' onclick="myFunction('reject')">Rejection Email</h1>
             </td>
         </tr>
       </form>
