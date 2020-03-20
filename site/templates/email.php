@@ -103,16 +103,16 @@ if ($type == 'confirm') {
      <form>
         <tr> 
             <td>
-              <button style="margin: auto;" type="button" value="confirm" onclick="myFunction(this)">Confirmation Email</button>
+              <h1 value="confirm" onclick="myFunction(this)">Confirmation Email</h1>
             </td>
             <td>
-              <button style="margin: auto;" type="button" value="moderate" onclick="myFunction(this)">Moderation Email</button>
+              <h1 value="moderate" onclick="myFunction(this)">Moderation Email</h1>
             </td>
             <td>
-              <button style="margin: auto;" type="button" value="display" onclick="myFunction(this)">Display Email</button>
+              <h1 value="display" onclick="myFunction(this)">Display Email</h1>
             </td>
             <td>
-              <button style="margin: auto;" type="button" value="reject" onclick="myFunction(this)">Rejection Email</button>
+              <h1 value="reject" onclick="myFunction(this)">Rejection Email</h1>
             </td>
         </tr>
       </form>
