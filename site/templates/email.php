@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Simple Transactional Email</title>
+    <title>Arrivals + Departures Update</title>
     <style>
     @media only screen and (max-width: 620px) {
       table[class=body] h1 {
@@ -85,8 +85,42 @@
     }
     </style>
   </head>
+  
+  
+  <!--not in email-->
+  <table style="margin: 0 auto; max-width: 580px; width: 580px;">
+     <form>
+        <tr> 
+            <td>
+              <button type='button' onclick="replaceText('confirm')">Confirmation Email</button>
+            </td>
+            <td>
+              <button type='button' onclick="replaceText('moderate')">Moderation Email</button>
+            </td>
+            <td>
+              <button type='button' onclick="replaceText('display')">Display Email</button>
+            </td>
+            <td>
+              <button type='button' onclick="replaceText('reject')">Rejection Email</button>
+            </td>
+        </tr>
+      </form>
+  </table>
+  <script>
+    function replaceText(e) {
+      var c = document.getElementById('texts').children;
+      var i;
+      for (i = 0; i < c.length; i++) {
+          c[i].style.display = 'none';
+      }
+      document.getElementById(e).style.display = 'block';
+    }
+    </script>
+   <!--not in email-->
+   
+   
   <body class="" style="background-color: #f6f6f6; font-family: sans-serif; -webkit-font-smoothing: antialiased; font-size: 14px; line-height: 1.4; margin: 0; padding: 0; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
-    <table border="0" cellpadding="0" cellspacing="0" class="body" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; background-color: #f6f6f6;">
+     <table border="0" cellpadding="0" cellspacing="0" class="body" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; background-color: #f6f6f6;">
       <tr>
         <td style="font-family: sans-serif; font-size: 14px; vertical-align: top;">&nbsp;</td>
         <td class="container" style="font-family: sans-serif; font-size: 14px; vertical-align: top; display: block; Margin: 0 auto; max-width: 580px; padding: 10px; width: 580px;">
@@ -112,9 +146,23 @@
                     <!--text area-->
                     <tr>
                       <td style="font-family: sans-serif; font-size: 14px; vertical-align: top; padding: 80px 20px;">
-                        <p style="font-family: sans-serif; font-size: 14px; font-weight: lighter; margin: 0; Margin-bottom: 15px;">Hi there,</p>
                         <p style="font-family: sans-serif; font-size: 14px; font-weight: lighter; margin: 0; Margin-bottom: 15px;">
-                            This text will be pulled from Kirby dpending on the email.
+                       
+                            
+                        <!--not in email-->
+                           <div id='texts'>
+                            <span id='confirm' style="display:none;">
+                                <?php echo($page->confirmtext()->kt()); ?></span>
+                            <span id='moderate' style="display:none;">
+                                <?php echo($page->moderationtext()->kt()); ?></span>
+                            <span id='display' style="display:none;">
+                                <?php echo($page->displaytext()->kt()); ?></span>
+                            <span id='reject' style="display:none;"
+                                <?php echo($page->rejecttext()->kt()); ?></span>
+                           </div>
+                        <!--not in email-->
+                        
+                        
                         </p>
                       </td>
                     </tr>
