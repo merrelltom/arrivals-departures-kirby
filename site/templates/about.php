@@ -51,6 +51,15 @@
                 </div>
             </div>
         </section>
+        
+        
+        <?php
+        foreach($page->blocks2()->toBuilderBlocks() as $block):
+          snippet('sections/' . $block->_key(), array('data' => $block));
+        endforeach;
+        ?>
+        
+        
     </main>
 
 

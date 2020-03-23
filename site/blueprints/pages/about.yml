@@ -108,6 +108,29 @@ tabs:
                     size: medium
                     width: 1/2
                     buttons: false
+                blocks2:
+                    label: Page Blocks
+                    type: builder
+                    width: 2/2
+                    columns: 1
+                    max: 10 
+                    fieldsets:
+                        twoColumnSection: 
+                            name: twoColumnSection
+                            label: Two Column Section
+                            fields:
+                                columnOne:
+                                    label: Text
+                                    type: textarea
+                                    size: medium
+                                    buttons: true
+                                    width: 1/2
+                                columnTwo:
+                                    label: Text
+                                    type: textarea
+                                    size: medium
+                                    buttons: true
+                                    width: 1/2
                                     
   # seo tab
   seo:
