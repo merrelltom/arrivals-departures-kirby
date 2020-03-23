@@ -131,6 +131,15 @@ tabs:
                                     size: medium
                                     buttons: true
                                     width: 1/2
+                        addNameBannerBlock: 
+                            name: Call To Action
+                            label: Call To Action Banner
+                            fields:
+                                bannerContent:
+                                    label: Call to action
+                                    type: textarea
+                                    size: medium
+                                    buttons: false
                                     
   # seo tab
   seo:
