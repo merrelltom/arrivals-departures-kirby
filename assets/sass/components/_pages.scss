@@ -388,3 +388,23 @@ RESROUCES
         display: block;
     }
 }
+
+
+
+/*  
+================================================================
+MODERATION PAGE
+================================================================  
+*/
+
+.moderation-title{
+    hr{
+        border-top: 2px solid black;
+    }
+}
+
+.moderation-row{
+    .radio-wrapper label .label{
+        width: auto;
+    }
+}
