@@ -357,3 +357,34 @@ MAP
 .map-main, .map-section{
     padding-bottom: 0;
 }
+
+
+
+/*  
+================================================================
+RESROUCES
+================================================================  
+*/
+
+.block-link{
+    transition: 300ms transform ease-in-out;
+    display: block;
+    &:hover{
+        transform: scaleX(1.02) scaleY(1.02);
+        transition: 300ms transform ease-in-out;
+    }
+}
+
+
+.resource{
+    .resource-type{
+        padding-bottom: 2rem;
+    }
+    p{
+        padding-bottom: 1rem;
+    }
+    .button-text{
+        padding-top: 2rem;
+        display: block;
+    }
+}

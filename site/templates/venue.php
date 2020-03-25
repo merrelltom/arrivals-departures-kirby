@@ -56,6 +56,7 @@
                                         <?= $image->thumb(array('width' => 960))->url();?> 960w, 
                                         <?= $image->thumb(array('width' => 2000))->url();?>"
                                          sizes="100vw, (min-width: 640px) 33vw, (min-width: 1000px) 25vw" >
+                                    <?php }?>
                                     <h3 class="event-title"><?= $event->eventTitle();?></h3>
                                     <p class="event-date">
                                         <?= $event->eventDate() . '</br>' . $event->eventTime();?>
@@ -63,7 +64,6 @@
                                     <div class="event-intro"> 
                                     <?= $event->eventDescription()->kt();?>
                                     </div>
-                                <?php }?>
                                 </div>
                                 <?php endforeach;?>
                             

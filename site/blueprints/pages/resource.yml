@@ -1,0 +1,77 @@
+title: Resource
+icon: 📝
+
+pages: false
+
+tabs:
+
+  # content tab
+  content:
+    label: Content
+    icon: text
+    columns:
+
+      # intro one
+      column2:
+        width: 2/2
+        sections:
+          content2:
+            type: fields
+            fields:
+                description:
+                    width: 1/2
+                    label: Description
+                    type: textarea
+                    size: medium
+                    buttons: true
+                coverImage:
+                    width: 1/2
+                    label: Cover Image
+                    type: files
+                    max: 1
+                    layout: cards
+                    uploads:
+                      template: image
+                    image:
+                      ratio: 1/1
+                externalLink:
+                    width: 1/2
+                    label: External Link (leave blank if reseource is a PDF)
+                    type: url
+                    size: medium
+                    buttons: true
+                pdf:
+                    width: 1/2
+                    label: PDF
+                    type: files
+                    max: 1
+                    layout: row
+                    uploads:
+                      template: image
+                    image:
+                      ratio: 1/1
+
+
+  # seo tab
+  seo:
+    label: SEO
+    icon: search
+    fields:
+      seoTitle:
+        label: SEO Title
+        type: text
+      seoDescription:
+        label: SEO Description
+        type: text
+
+  # Files tab
+  filesTab:
+    label: Files
+    icon: add
+    sections:
+      filesSection:
+        headline: Files
+        type: files
+        layout: cards
+        size: small
+        template: image
