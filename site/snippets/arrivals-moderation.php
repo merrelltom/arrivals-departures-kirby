@@ -27,9 +27,9 @@ if (count($results) == 0) {
 }
 foreach ($results as $result) { ?>
     <form method="post" action="./moderation" class="row moderation-row" id="board-line-<?php echo($board_line);?>">
-        <div class="colxs-12"><hr></div>
-        <div class="col-xs-12 col-md-2"><?php echo($result["date"]);?></div>
-        <div class="col-xs-12 col-md-4"><?php echo($result["name"]);?></div>        
+        <div class="col-xs-12"><hr></div>
+        <div class="col-xs-12 col-md-2 large-text"><?php echo($result["date"]);?></div>
+        <div class="col-xs-12 col-md-4 large-text"><?php echo($result["name"]);?></div>        
         <input type="hidden" value="arrival" name="type" id="type">
         <input type="hidden" value="<?php echo($result["ID"]);?>" name="ID" id="ID">
         <div class="radio-wrapper col-xs-12 col-md-2">
