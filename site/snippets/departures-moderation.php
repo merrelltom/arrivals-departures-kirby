@@ -21,9 +21,9 @@ curl_close($curl);
 
 $board_line = 1;
 if (count($results) == 0) {
-    echo("<div class='row'><h2>No Departures to moderate</h2></div>");
+    echo("<div class='row'><h2 class='col-xs-12 section-title'>No Departures to moderate</h2></div>");
  }else{
-    echo("<div class='row'><h2>Departures:</h2></div>");
+    echo("<div class='row'><h2 class='col-xs-12 section-title'>Departures:</h2></div>");
 }
 foreach ($results as $result) { ?>
     <div class="row" id="board-line-<?php echo($board_line);?>">
@@ -33,9 +33,9 @@ foreach ($results as $result) { ?>
             <input type="hidden" value="arrival" name="type" id="type">
             <input type="hidden" value="<?php echo($result["ID"]);?>" name="ID" id="ID">
             <input type="radio" id="accept" name="update" value="accept">
-            <label for="accept">Accept</label>
+            <label for="accept"><span class="label">Accept</span></label>
             <input type="radio" id="delete" name="update" value="delete">
-            <label for="delete">Delete</label>
+            <label for="delete"><span class="label">Delete</span></label>
             <input type="submit" value="Update">
         </form>
     </div>

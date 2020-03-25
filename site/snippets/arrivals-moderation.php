@@ -21,22 +21,29 @@ curl_close($curl);
 
 $board_line = 1;
 if (count($results) == 0) {
-    echo("<div class='row'><h2>No Arrivals to moderate</h2></div>");
+    echo("<div class='row'><h2 class='col-xs-12 section-title'>No Arrivals to moderate</h2></div>");
  }else{
-    echo("<div class='row'><h2>Arrivals:</h2></div>");
+    echo("<div class='row'><h2 class='col-xs-12 section-title'>Arrivals:</h2></div>");
 }
 foreach ($results as $result) { ?>
     <div class="row" id="board-line-<?php echo($board_line);?>">
+        <hr>
         <span class="col-xs-12 col-md-2"><?php echo($result["date"]);?></span>
         <span class="col-xs-12 col-md-4"><?php echo($result["name"]);?></span>
         <form class="col-xs-12 col-md-6" method="post" action="./moderation">
-            <input type="hidden" value="arrival" name="type" id="type">
-            <input type="hidden" value="<?php echo($result["ID"]);?>" name="ID" id="ID">
-            <input type="radio" id="accept" name="update" value="accept">
-            <label for="accept">Accept</label>
-            <input type="radio" id="delete" name="update" value="delete">
-            <label for="delete">Delete</label>
-            <input type="submit" value="Update">
+            <div class="radio-wrapper">
+                <div>
+                    <input type="hidden" value="arrival" name="type" id="type">
+                    <input type="hidden" value="<?php echo($result["ID"]);?>" name="ID" id="ID">
+                    <input type="radio" id="accept" name="update" value="accept">
+                    <label for="accept"><span class="label">Accept</span></label>
+                    <input type="radio" id="delete" name="update" value="delete">
+                    <label for="delete"><span class="label">Delete</span></label>
+                    <input type="submit" value="Update">
+                </div>
+            </div>
+            
+
         </form>
     </div>
 <?php $board_line += 1;
