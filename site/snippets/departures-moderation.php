@@ -21,24 +21,33 @@ curl_close($curl);
 
 $board_line = 1;
 if (count($results) == 0) {
-    echo("<div class='row'><h2 class='col-xs-12 section-title'>No Departures to moderate</h2></div>");
+    echo("<div class='row'><h2 class='col-xs-12 section-title moderation-title'><hr>No Departures to moderate</h2></div>");
  }else{
-    echo("<div class='row'><h2 class='col-xs-12 section-title'>Departures:</h2></div>");
+    echo("<div class='row'><h2 class='col-xs-12 section-title moderation-title'><hr>Departures:</h2></div>");
 }
 foreach ($results as $result) { ?>
-    <div class="row" id="board-line-<?php echo($board_line);?>">
-        <span class="col-xs-12 col-md-2"><?php echo($result["date"]);?></span>
-        <span class="col-xs-12 col-md-4"><?php echo($result["name"]);?></span>
-        <form class="col-xs-12 col-md-6" method="post" action="./moderation">
-            <input type="hidden" value="arrival" name="type" id="type">
-            <input type="hidden" value="<?php echo($result["ID"]);?>" name="ID" id="ID">
-            <input type="radio" id="accept" name="update" value="accept">
-            <label for="accept"><span class="label">Accept</span></label>
-            <input type="radio" id="delete" name="update" value="delete">
-            <label for="delete"><span class="label">Delete</span></label>
+    <form method="post" action="./moderation" class="row moderation-row" id="board-line-<?php echo($board_line);?>">
+        <div class="col-xs-12"><hr></div>
+        <div class="col-xs-12 col-md-2 large-text"><?php echo($result["date"]);?></div>
+        <div class="col-xs-12 col-md-4 large-text"><?php echo($result["name"]);?></div>        
+        <input type="hidden" value="arrival" name="type" id="type">
+        <input type="hidden" value="<?php echo($result["ID"]);?>" name="ID" id="ID">
+        <div class="radio-wrapper col-xs-12 col-md-2">
+            <div>
+                <input type="radio" id="delete" name="update" value="delete">
+                <label for="delete"><span class="label">Delete</span></label>
+            </div>
+        </div>
+        <div class="radio-wrapper col-xs-12 col-md-2">
+            <div>
+                <input type="radio" id="accept" name="update" value="accept">
+                <label for="accept"><span class="label">Accept</span></label>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-2">
             <input type="submit" value="Update">
-        </form>
-    </div>
+        </div>
+    </form>
 <?php $board_line += 1; 
 
 } ?>
