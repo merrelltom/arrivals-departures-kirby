@@ -30,23 +30,25 @@ foreach ($results as $result) { ?>
         <hr>
         <span class="col-xs-12 col-md-2"><?php echo($result["date"]);?></span>
         <span class="col-xs-12 col-md-4"><?php echo($result["name"]);?></span>
-        <form class="col-xs-12 col-md-6" method="post" action="./moderation">
+        <form method="post" action="./moderation">
             <input type="hidden" value="arrival" name="type" id="type">
             <input type="hidden" value="<?php echo($result["ID"]);?>" name="ID" id="ID">
-            <div class="radio-wrapper">
+            <div class="radio-wrapper col-xs-12 col-md-2">
                 <div>
                     <input type="radio" id="delete" name="update" value="delete">
                     <label for="delete"><span class="label">Delete</span></label>
                 </div>
             </div>
-            <div class="radio-wrapper">
+            <div class="radio-wrapper col-xs-12 col-md-2">
                 <div>
                     <input type="radio" id="accept" name="update" value="accept">
                     <label for="accept"><span class="label">Accept</span></label>
                 </div>
             </div>
-            <input type="submit" value="Update">
-
+            <div class="col-xs-12 col-md-2">
+                <input type="submit" value="Update">
+            </div>
+            
         </form>
     </div>
 <?php $board_line += 1;
