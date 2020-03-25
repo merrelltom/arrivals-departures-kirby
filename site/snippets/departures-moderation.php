@@ -34,14 +34,14 @@ foreach ($results as $result) { ?>
         <input type="hidden" value="<?php echo($result["ID"]);?>" name="ID" id="ID">
         <div class="radio-wrapper col-xs-12 col-md-2">
             <div>
-                <input type="radio" id="delete" name="update" value="delete">
-                <label for="delete"><span class="label">Delete</span></label>
+                <input type="radio" id="delete-<?php echo($board_line);?>" name="update" value="delete">
+                <label for="delete-<?php echo($board_line);?>"><span class="label">Delete</span></label>
             </div>
         </div>
         <div class="radio-wrapper col-xs-12 col-md-2">
             <div>
-                <input type="radio" id="accept" name="update" value="accept">
-                <label for="accept"><span class="label">Accept</span></label>
+                <input type="radio" id="accept-<?php echo($board_line);?>" name="update" value="accept">
+                <label for="accept-<?php echo($board_line);?>"><span class="label">Accept</span></label>
             </div>
         </div>
         <div class="col-xs-12 col-md-2">
