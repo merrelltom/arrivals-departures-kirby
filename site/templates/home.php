@@ -5,10 +5,10 @@
         <section class="introduction-banner page-section bg-yellow">
             <div class="wrapper">
                 <div class="row">
-                    <div class="introduction-text col-xs-12 col-md-7">
-                        <?= $page->introductionBanner();?>
+                    <div class="introduction-text col-xs-12 col-md-6">
+                        An interactive public installation about birth, death and the journey in between by YARA&nbsp;+&nbsp;DAVINA.
                     </div>
-                    <div class="button-container col-xs-12 col-md-4 col-md-offset-1">
+                    <div class="button-container col-xs-12 col-md-5 col-md-offset-1 col-lg-4 col-lg-offset-2">
                         <button class="sm-button" data-link="<?= $site->url();?>/submission-form" onclick="toggleForm(this);">Add a name to the boards</button>
                     </div>
                 </div>
@@ -50,14 +50,16 @@
         
         </div>
         
-        <section class="board-buttons page-section">
+        <section class="board-buttons page-section bg-yellow">
             <div class="wrapper">
                 <div class="row">
-                    <div class="button-container col-xs-12 col-md-5 col-md-offset-4">
-                        <button class="sm-button" onclick="toggleForm(this);">Add a name to the boards</button>
-                    </div>
-                    <div class="button-container col-xs-12 col-md-3">
-                        <button class="sm-button">Share</button>
+                    <div class="col-xs-12">
+                        <div class="button-container">
+                            <button class="sm-button" onclick="toggleForm(this);">Add a name to the boards</button>
+                        </div>
+                        <div class="button-container">
+                            <button class="sm-button">Share</button>
+                        </div>
                     </div>
                 </div>
 

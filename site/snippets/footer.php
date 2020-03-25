@@ -1,17 +1,26 @@
 <footer class="site-footer bg-yellow">
     <div class="wrapper">
         <div class="row">
-            <div class="col-xs-12 col-md-6 col-lg-4 footer-col">
-                <h3 class="footer-title"><?= $site->footerTitle();?></h3>
-                <div class="footer-content">
-                    <p class="footer-text"><?= $site->footerCallToAction();?></p>
-                    <div class="button-container">
-                        <button class="sm-button" onclick="toggleForm(this);">Add a name to the boards</button>
-                    </div>
-                </div>
+            <div class="top-footer large-text col-xs-12 col-lg-6">
+                <p><?= $site->footerCallToAction();?></p>
+                <div class="button-container">
+                    <button class="lg-button" onclick="toggleForm(this);">Add a name to the boards</button>
+                </div>            
             </div>
-            <div class="col-xs-12 col-md-6 col-lg-4 footer-col">
-                <h3 class="footer-title">Site Links</h3>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-6 col-lg-3 footer-col">
+                <h3 class="footer-title">Main Menu</h3>
+                <nav class="footer-nav footer-content">
+                    <ul>
+                    <?php foreach ($site->children()->listed() as $item): ?>
+                        <li><?= $item->title()->link() ?></li>
+                    <?php endforeach ?>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-xs-12 col-md-6 col-lg-3 footer-col">
+                <h3 class="footer-title">Other Information</h3>
                 <nav class="footer-nav footer-content">
                     <ul>
                     <?php $footerLinks = $site->footerNavigation()->toPages(); 
@@ -21,7 +30,7 @@
                     </ul>
                 </nav>
             </div>
-            <div class="col-xs-12 col-lg-4 footer-col">
+            <div class="col-xs-12 col-lg-6 footer-col">
                 <h3 class="footer-title"><?= $site->mailingListSignUpTitle();?></h3>
                 <div class="footer-content">
                     <?php snippet('mailinglist');?>

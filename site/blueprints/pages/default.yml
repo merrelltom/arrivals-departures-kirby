@@ -28,34 +28,18 @@ tabs:
           content2:
             type: fields
             fields:
-                introTextOne:
-                    label: Intro Text One
+                text:
+                    label: Text
                     type: textarea
                     size: medium
-                    buttons: false
+                    buttons: true
                 blocks:
                     label: Page Blocks
                     type: builder
                     columns: 1 # Optional. If set to 2 or more, the builder blocks will be placed in a grid.
                     max: 10 # Optional. Limits the number of builder blocks that can be added.
                     fieldsets:
-                        quote: 
-                            name: Text Block
-                            label: Text Block {{title}} 
-                            preview: # Optional. If defined, a preview of the fieldset can be rendered by the specified snippet from within the snippets folder.
-                                snippet: blocks/quote
-                                css: /assets/css/blocks/quote.css
-                            defaultView: preview # Optional. If the value "preview" is set, the block will show the preview when the page is loaded in the panel. If the value is a tab name, the respective tab is preselected when the page is loaded. Newly created blocks ignore this value and have the edit mode or the first tab preselected.
-                            fields:
-                                title:
-                                    label: Title
-                                    type: text
-                                    width: 2/4
-                                introduction:
-                                    label: Introduction
-                                    type: textarea
-                                    size: medium
-                                    width: 2/4
+                        
 
   # seo tab
   seo:

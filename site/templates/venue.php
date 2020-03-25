@@ -5,7 +5,7 @@
         <section class="page-section">
             <div class="wrapper">
                 <div class="row">
-                    <div class="col-xs-12 col-md-12 col-lg-4 large-text">
+                    <div class="col-xs-12 col-md-12 col-lg-4">
                         <div class="bg-yellow padded venue-details">
 
                             <h2 class="section-title">
