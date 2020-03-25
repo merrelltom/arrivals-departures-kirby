@@ -36,13 +36,16 @@ foreach ($results as $result) { ?>
                     <input type="hidden" value="arrival" name="type" id="type">
                     <input type="hidden" value="<?php echo($result["ID"]);?>" name="ID" id="ID">
                     <input type="radio" id="accept" name="update" value="accept">
+                </div>
+            </div>
+            <div class="radio-wrapper">
+                <div>
                     <label for="accept"><span class="label">Accept</span></label>
                     <input type="radio" id="delete" name="update" value="delete">
                     <label for="delete"><span class="label">Delete</span></label>
-                    <input type="submit" value="Update">
                 </div>
             </div>
-            
+            <input type="submit" value="Update">
 
         </form>
     </div>
