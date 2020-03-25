@@ -21,13 +21,13 @@ curl_close($curl);
 
 $board_line = 1;
 if (count($results) == 0) {
-    echo("<div class='row'><h2 class='col-xs-12 section-title'>No Arrivals to moderate</h2></div>");
+    echo("<div class='row'><h2 class='col-xs-12 section-title'><hr>No Arrivals to moderate</h2></div>");
  }else{
-    echo("<div class='row'><h2 class='col-xs-12 section-title'>Arrivals:</h2></div>");
+    echo("<div class='row'><h2 class='col-xs-12 section-title'><hr>Arrivals:</h2></div>");
 }
 foreach ($results as $result) { ?>
-    <form method="post" action="./moderation" class="row" id="board-line-<?php echo($board_line);?>">
-        <hr>
+    <form method="post" action="./moderation" class="row moderation-row" id="board-line-<?php echo($board_line);?>">
+        <div class="colxs-12"><hr></div>
         <div class="col-xs-12 col-md-2"><?php echo($result["date"]);?></div>
         <div class="col-xs-12 col-md-4"><?php echo($result["name"]);?></div>        
         <input type="hidden" value="arrival" name="type" id="type">
