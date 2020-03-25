@@ -1,9 +1,29 @@
 
-<?php snippet('header');
-$MAPS_API_KEY = apache_getenv("MAPS_API_KEY"); ?>
-    <div id="map-wrapper">
-    <div id="map" style="height: 500px;"></div>
-    </div>
+<?php 
+    snippet('header');
+    $MAPS_API_KEY = apache_getenv("MAPS_API_KEY"); 
+?>
+    <main class="main map-main">
+        
+        <section class="page-section">
+            <div class="wrapper">
+                <div class="row">
+                    <h2 class="section-title col-xs-12 col-md-4 col-lg-5"><?= $page->pageTitle();?></h2>
+                    <div class="introduction large-text col-xs-12 col-md-8 col-lg-7">
+                        <?= $page->pageIntroduction()->kt(); ?>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="page-section map-section">
+                     <div id="map-wrapper">
+                        <div id="map"></div>
+                    </div>
+        </section>
+
+    </main>
+
     <script>
       var customLabel = {
         arrival: {
@@ -70,8 +90,8 @@ $MAPS_API_KEY = apache_getenv("MAPS_API_KEY"); ?>
 
       function doNothing() {}
     </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=<?php echo $MAPS_API_KEY; ?>&callback=initMap">
-    </script>
-  </body>
-</html>
+
+    
+<?php snippet('footer') ?>
+
+

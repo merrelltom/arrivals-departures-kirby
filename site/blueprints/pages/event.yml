@@ -1,0 +1,72 @@
+title: Venue
+icon: 📝
+
+
+tabs:
+
+  # content tab
+  content:
+    label: Content
+    icon: text
+    columns:
+
+      # intro one
+    
+     
+      column2:
+        width: 2/3
+        sections:
+          content2:
+            type: fields
+            fields:
+                eventType:
+                    label: Event Type
+                    type: text
+                    buttons: false
+                eventTitle:
+                    label: Title
+                    type: text
+                eventDate:
+                    label: Date
+                    type: text
+                eventTime:
+                    label: Time
+                    type: text
+                eventImage:
+                    label: Image
+                    type: files
+                    max: 1
+                    layout: cards
+                    uploads:
+                      template: image
+                    image:
+                      ratio: 2/1
+                eventDescription:
+                    label: Description
+                    type: textarea
+                    size: large
+               
+                                    
+  # seo tab
+  seo:
+    label: SEO
+    icon: search
+    fields:
+      seoTitle:
+        label: SEO Title
+        type: text
+      seoDescription:
+        label: SEO Description
+        type: text
+
+  # Files tab
+  filesTab:
+    label: Files
+    icon: add
+    sections:
+      filesSection:
+        headline: Files
+        type: files
+        layout: cards
+        size: small
+        template: image

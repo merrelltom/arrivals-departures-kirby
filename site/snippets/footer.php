@@ -26,8 +26,27 @@
                 <div class="footer-content">
                     <?php snippet('mailinglist');?>
                 </div>
-                
             </div>
+            <?php 
+                $items = $site->logos()->toStructure();
+                if($items):
+            ?>
+            <?php foreach($items as $item):?>
+            <div class="col-xs-12 footer-col">
+                <h3 class="partners-title"><?= $item->title()->kt();?></h3>
+                <div class="logo-row row">
+                <?php 
+                    $logos = $item->logoImages()->toFiles();
+                    foreach($logos as $logo):?>
+                    <figure class="logo-container col-xs-12">
+                        <img src="<?= $logo->url();?>" alt="<?= $logo->alt();?>" />
+                    </figure>
+                    <?php endforeach;?>
+                </div>
+            </div>
+                <?php endforeach;?>
+            <?php endif;?> 
+            
         </div>
     </div>
 </footer>
@@ -48,7 +67,7 @@
 <?= js('https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js') ?>
 <?= js('assets/js/plugins.js') ?>
 <?= js('assets/js/script.js') ?>
-<script src="https://maps.googleapis.com/maps/api/js?key=<?php echo $MAPS_API_KEY; ?>&libraries=places&callback=initAutocomplete"
+<script src="https://maps.googleapis.com/maps/api/js?key=<?php echo $MAPS_API_KEY; ?>&libraries=places&callback=initAutocomplete&callback=initMap"
    async defer></script>
 <?= js('assets/js/formValidate.js') ?>
 

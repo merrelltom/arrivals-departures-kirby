@@ -97,7 +97,7 @@ PARAGRAPHS
 ================================================================  
 */
 
-.introduction p{
+.introduction p, .introduction address{
     font-size: 1.5rem;
     padding-bottom: 1.5rem;
 }
@@ -118,3 +118,9 @@ PARAGRAPHS
 .page-section p:last-child{
     padding-bottom: 0;
 }
+
+address{
+    font-style: normal;
+    font-size:1em;
+}
+

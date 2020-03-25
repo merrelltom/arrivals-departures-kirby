@@ -6,7 +6,29 @@ Displaytitle: Brighton Festival
 
 ----
 
-Displaydates: 2 – 11 May
+Displaydates: 2 –  11 May
+
+----
+
+Details:
+
+- 
+  title: Location of boards
+  detailcontent: |
+    Friends Meeting House Garden,
+    Lanes End House, 15 Prince Albert St,
+    Brighton BN1 1HY
+- 
+  title: Times
+  detailcontent: |
+    Mon: 1 – 7pm
+    Tue – Sun: 11am – 7pm
+
+----
+
+Venueimage:
+
+- departures-6000x4000_2.jpg
 
 ----
 
@@ -15,6 +37,10 @@ Seotitle:
 ----
 
 Seodescription: 
+
+----
+
+Displayaddress: 
 
 ----
 

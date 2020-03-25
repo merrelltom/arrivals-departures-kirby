@@ -1,0 +1,76 @@
+title: FAQS
+icon: 📝
+
+pages: true
+    create: event
+
+tabs:
+
+  # content tab
+  content:
+    label: Content
+    icon: text
+    columns:
+
+      # intro one
+      column1:
+        width: 2/2
+        sections:
+          introContent:
+            type: fields
+            fields:
+                displayTitle:
+                    width: 1/2
+                    label: Title
+                    type: text
+                    buttons: false
+                introduction:
+                    width: 1/2
+                    label: Introduction
+                    type: textarea
+                    buttons: true
+
+      # intro one
+      column2:
+        width: 2/2
+        sections:
+          questionContent:
+            type: fields
+            fields:
+                questions:
+                    label: Questions
+                    type: structure
+                    layout: blocks
+                    fields:
+                      title:
+                        label: Question
+                        type: text
+                      answer:
+                        label: Answer
+                        type: textarea
+            
+                
+  # seo tab
+  seo:
+    label: SEO
+    icon: search
+    fields:
+      seoTitle:
+        label: SEO Title
+        type: text
+      seoDescription:
+        label: SEO Description
+        type: text
+
+  # Files tab
+  filesTab:
+    label: Files
+    icon: add
+    sections:
+      filesSection:
+        headline: Files
+        type: files
+        layout: cards
+        size: small
+        template: image
+

@@ -27,6 +27,44 @@ tabs:
                     label: Dates
                     type: text
                     buttons: false
+                details:
+                    label: Details
+                    type: structure
+                    layout: blocks
+                    fields:
+                      title:
+                        label: Detail Name
+                        type: text
+                      detailContent:
+                        label: Detail Content
+                        type: textarea
+                    
+      column3:
+        width: 1/2
+        sections:
+          imageSection:
+            type: fields
+            fields:
+                venueImage:
+                    label: Image
+                    type: files
+                    max: 1
+                    layout: cards
+                    uploads:
+                      template: image
+                    image:
+                      ratio: 2/1
+
+      column4:
+        width: 2/2
+        sections:
+          pages:
+            type: pages
+            headline: Events
+            create: event
+            layout: cards
+            size: small
+            
                 
   # seo tab
   seo:

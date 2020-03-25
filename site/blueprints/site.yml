@@ -49,3 +49,20 @@ columns:
      type: text
      buttons: false
      help: 'Used to generate the mailchimp sign up form'
+    logos:
+        label: Logo Rows
+        type: structure
+        fields:
+          title:
+            label: Row Title
+            type: textarea
+          logoImages:
+            label: Logo Files
+            type: files
+            layout: cards
+            size: small
+            uploads:
+              template: image
+            image:
+              ratio: 1/1
+              back: white

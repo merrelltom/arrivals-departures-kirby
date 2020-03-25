@@ -36,7 +36,9 @@ body{
     border-top: 1px solid black;
 }
 
-
+.padded{
+    padding: 15px;
+}
 
 /*  
 ================================================================
@@ -70,6 +72,32 @@ FOOTER
 }
 .site-footer li:first-child{
     padding-top: 0;
+}
+
+.partners-title{
+    font-size:.75rem;
+    padding-top:.75rem;
+    border-top:1px solid black;
+    p{
+        padding: 0;
+    }
+}
+
+.logo-row{
+    align-items: baseline;
+    padding-top:.75rem;
+    padding-bottom: 1.5rem;
+}
+
+.logo-container{
+    margin:0;
+    padding-top: .75rem;
+    padding-bottom: 2rem;
+    display: block;
+    img{
+        width: 100%;
+        max-width: 170px;
+     }
 }
 
 /*  
@@ -240,4 +268,92 @@ VENUE LIST
             line-height: 1.3;
         }
     }
+}
+
+
+/*  
+================================================================
+VENUE
+================================================================  
+*/
+
+.venue-details{
+    margin-bottom: 3rem;
+}
+
+.details{
+    padding: 1.5rem 0 1.5rem;
+    h3{
+        font-weight: bold;
+        padding: 0;
+        margin: 0;
+    }
+    p{
+        padding-bottom: 1.5rem;
+    }
+}
+
+.event-section{
+    width:100%;
+//    padding-left: 5px;
+    margin-top: -2px;
+}
+
+.event{
+    padding-bottom: 3rem;
+    p{
+        padding: 0 0 1em;
+    }
+    .event-type, img{
+        padding-bottom: 1em;
+        display: block;
+        text-transform: uppercase;
+    }
+    .event-title{
+        font-size: 1.125rem;
+        padding-bottom: 1rem;
+//        text-transform: uppercase;
+    }
+}
+
+
+/*  
+================================================================
+FAQS
+================================================================  
+*/
+
+.questions{
+   
+}
+
+.question{
+    font-size: 1.125rem;
+    padding:20px 0 20px;
+    border-top: 1px solid black;
+    .question-title{
+        font-weight: bold;
+    }
+    .answer{
+        padding-top: 1em;
+    }
+    .answer p{
+        font-size: 1em;
+    }
+}
+
+
+/*  
+================================================================
+MAP
+================================================================  
+*/
+
+#map{
+    min-height: 500px;
+    height:100vh;
+}
+
+.map-main, .map-section{
+    padding-bottom: 0;
 }

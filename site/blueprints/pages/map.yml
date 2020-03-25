@@ -1,0 +1,44 @@
+title: Map
+icon: 📝
+
+pages: false
+
+tabs:
+
+  # content tab
+  content:
+    label: Content
+    icon: text
+    columns:
+
+      # intro one
+      column2:
+        width: 2/2
+        sections:
+          content2:
+            type: fields
+            fields:
+                pageTitle:
+                    width: 1/2
+                    label: Title
+                    type: textarea
+                    size: small
+                    buttons: false
+                pageIntroduction:
+                    width: 1/2
+                    label: Introduction
+                    type: textarea
+                    size: medium
+                    buttons: false
+                    
+  # seo tab
+  seo:
+    label: SEO
+    icon: search
+    fields:
+      seoTitle:
+        label: SEO Title
+        type: text
+      seoDescription:
+        label: SEO Description
+        type: text

@@ -19,20 +19,85 @@ tabs:
             headline: Subpages
             create: venue
              
-             
-     - width: 2/3
+            
+     - width: 3/3
          sections:
           content-section:
             type: fields
+       sections:
+          content2:
+            type: fields
             fields:
-                introduction:
+                pageTitle:
+                    width: 1/2
+                    label: Title
+                    type: textarea
+                    size: small
+                    buttons: false
+                pageIntroduction:
+                    width: 1/2
                     label: Introduction
                     type: textarea
                     size: medium
-                bodyText:
-                    label: Body Text
-                    type: textarea
-                    size: large
+                    buttons: false
+                blocks:
+                    label: Page Blocks
+                    type: builder
+                    width: 2/2
+                    columns: 1
+                    max: 10 
+                    fieldsets:
+                        largeTextBlock: 
+                            name: Large Text Block
+                            label: Large Text Block
+                            fields:
+                                largeTextContent:
+                                    label: Text
+                                    type: textarea
+                                    size: medium
+                                    buttons: false
+                        smallTextBlock: 
+                            name: Small Text Block
+                            label: Small Text Block
+                            fields:
+                                smallTextContent:
+                                    label: Text
+                                    type: textarea
+                                    size: medium
+                                    buttons: true
+                        addNameBannerBlock: 
+                            name: Call To Action
+                            label: Call To Action Banner
+                            fields:
+                                bannerContent:
+                                    label: Call to action
+                                    type: textarea
+                                    size: medium
+                                    buttons: false
+                        fullWidthImageBlock:
+                            name: Full Width Image
+                            label: Full Width Image
+                            fields:
+                                imageMobile:
+                                    label: Image 02 (mobile)
+                                    type: files
+                                    max: 1
+                                    width: 1/2
+                                    layout: cards
+                                    uploads:
+                                      template: image
+                                    image:
+                                      ratio: 1/1
+                                imageDesktop:
+                                    label: Image 02 (desktop)
+                                    type: files
+                                    max: 1
+                                    width: 1/2
+                                    layout: cards
+                                    uploads:
+                                      template: image
+                                    image:
+                                      ratio: 2/1
 
              
                 

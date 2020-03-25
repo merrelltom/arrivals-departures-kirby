@@ -31,3 +31,14 @@ function hideOverlay() {
          tm_form.setAttribute('aria-hidden', 'true');
     }
 }
+
+document.addEventListener('click', function (event) {
+        if (!event.target.classList.contains('accordion-title')) return;
+        var content = document.getElementById(event.target.hash);
+//        if (!content) return;
+        console.log(content);
+        if (event.target.classList.contains('active')) {
+            event.target.classList.remove('active');
+        }
+        content.classList.toggle('visuallyhidden');
+});
