@@ -1,6 +1,6 @@
 <?php
 
-$email = $site->children()->findByURI('email');
+$email = $page->site()->children()->findByURI('email');
 
 if ($type == 'confirm' ) {
     $email_text = $email->confirmtext()->kt();
