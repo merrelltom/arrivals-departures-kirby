@@ -26,6 +26,7 @@ return [
       } else {
         $email_text = array('email_text'=> NULL);   
       }
+      $email_text = json_encode($email_text);
       // return response with correct header type
       return new Kirby\Cms\Response($email_text, 'application/json');
     }
