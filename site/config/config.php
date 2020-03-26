@@ -12,9 +12,11 @@ return [
     }
   ],
   [
-    'pattern' => 'sitemap',
-    'action'  => function() {
-      return go('get_map.xml', 301);
+    'pattern' => 'email_text/(:any)',
+    'action'  => function($any) {
+      $email_text = snippet('get_email',['type'=>$any], true);
+      // return response with correct header type
+      return new Kirby\Cms\Response($email_text, 'application/json');
     }
   ]
 ]
