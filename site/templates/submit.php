@@ -3,7 +3,7 @@ snippet('oauth');
 
 $months = array("JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEPT", "OCT", "NOV", "DEC" );
     
-    if ($_POST) {
+    if ($_POST && ! filter_input(INPUT_POST, "valid")) {
         if ( filter_input(INPUT_POST, "arrival_or_departure") == "arrival") {
                 $endpoint = "arrivals";
             } elseif (filter_input(INPUT_POST, "arrival_or_departure") == "departure") {

@@ -1,7 +1,6 @@
 <?php snippet('header'); 
     snippet('oauth');
     $token = getToken();
-    $bot_check = filter_input(INPUT_POST, "valid");
     $update_type = filter_input(INPUT_POST, "type");
     $action = filter_input(INPUT_POST, "update");
     $id = filter_input(INPUT_POST, "ID");?>
@@ -22,9 +21,7 @@
             <div class="row">
                 <div class="col-xs-12">
                     <?php 
-                    if ($bot_check) {
-                      echo "An error has occured";  
-                    } elseif ($update_type == 'arrival'){
+                    if ($update_type == 'arrival'){
                         snippet('arrivals-update', ['token'=>$token, 'action'=>$action, 'ID'=>$id]);
                     } elseif ($update_type == 'departure'){
                         snippet('departures-update', ['token'=>$token, 'action'=>$action, 'ID'=>$id]);
