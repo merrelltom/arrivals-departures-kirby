@@ -17,7 +17,7 @@ return [
       $email = site()->children()->findByURI('email');
       if ($any == 'confirm' ) {
         $text = page('Email')->confirmtext()->kt();
-        $email_text = array('email_text'=> $text);
+        $email_text = array('confirm_text'=> $text);
       } elseif ($any == 'moderate') {
         $email_text = array('email_text'=> $email->moderationtext()->kt());
       } elseif ($any == 'display') {
