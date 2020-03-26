@@ -25,6 +25,7 @@ if (count($results) == 0) {
  }else{
     echo("<div class='row'><h2 class='col-xs-12 section-title moderation-title'><hr>Departures:</h2></div>");
 }
+$results = array_reverse($results, true);
 foreach ($results as $result) { ?>
     <form method="post" action="./remove" class="row moderation-row" id="d-board-line-<?php echo($board_line);?>">
         <div class="col-xs-12"><hr></div>
