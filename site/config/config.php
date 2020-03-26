@@ -24,7 +24,7 @@ return [
       } elseif ($any == 'reject') {
         $email_text = array('email_text'=> $email->rejecttext()->kt());
       } else {
-        $email_text = array('email_text'=> NULL);   
+        $email_text = array('email_text'=> 'error');   
       }
       $email_text = json_encode($email_text);
       // return response with correct header type
