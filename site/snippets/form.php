@@ -27,6 +27,7 @@ $form = $site->children()->findByURI('submission-form');
                 </div>
             </section>
             <form class="row form" action="<?= $site->children()->findByURI('submit')->url();?>" method="post" id="name-submission-form" name="name-submission-form" validate>
+                <input type="text" name="valid" id="valid" class="visuallyhidden">
                 <fieldset class="form-item col-xs-12">
                     <h3 class="fieldset-title" aria-hidden="true">Arrival or Departure?</h3>
                     <legend class="visuallyhidden">
