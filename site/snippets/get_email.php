@@ -13,7 +13,7 @@ if ($type == 'confirm' ) {
     $email_text = array('email_text'=> $email->rejecttext()->kt());
     echo json_encode($email_text);
 } else {
-    array('email_text'=> $email_text = NULL);
+    $email_text = array('email_text'=> NULL);
     echo json_encode($email_text);
 }
 
