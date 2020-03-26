@@ -14,7 +14,8 @@ return [
   [
     'pattern' => 'email_text/(:any)',
     'action'  => function($any) {
-      $email_text = snippet('get_email',['type'=>$any], true);
+      $email = page('email');
+      $email_text = snippet('get_email',['type'=>$any, 'email'=>$email], true);
       // return response with correct header type
       return new Kirby\Cms\Response($email_text, 'application/json');
     }

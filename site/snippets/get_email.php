@@ -1,7 +1,5 @@
 <?php
 
-$email = $page->site()->children()->findByURI('email');
-
 if ($type == 'confirm' ) {
     $email_text = $email->confirmtext()->kt();
     return json_encode($email_text);
