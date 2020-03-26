@@ -15,7 +15,17 @@ return [
     'pattern' => 'email_text/(:any)',
     'action'  => function($any) {
       $email = page('email');
-      $email_text = snippet('get_email',['type'=>$any, 'email'=>$email], true);
+      if ($any == 'confirm' ) {
+        $email_text = array('email_text'=> $email->confirmtext()->kt());
+      } elseif ($any == 'moderate') {
+        $email_text = array('email_text'=> $email->moderationtext()->kt());
+      } elseif ($any == 'display') {
+        $email_text = array('email_text'=> $email->displaytext()->kt());
+      } elseif ($any == 'reject') {
+        $email_text = array('email_text'=> $email->rejecttext()->kt());
+      } else {
+        $email_text = array('email_text'=> NULL);   
+      }
       // return response with correct header type
       return new Kirby\Cms\Response($email_text, 'application/json');
     }
