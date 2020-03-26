@@ -16,16 +16,16 @@ return [
     'action'  => function($any) {
       $email = site()->children()->findByURI('email');
       if ($any == 'confirm' ) {
-        $text = page('Email')->confirmtext()->kt();
-        $email_text = array('confirm_text'=> $text);
+
+        $email_text = $email->confirmtext()->kt();
       } elseif ($any == 'moderate') {
-        $email_text = array('email_text'=> $email->moderationtext()->kt());
+        $email_text = $email->moderationtext()->kt();
       } elseif ($any == 'display') {
-        $email_text = array('email_text'=> $email->displaytext()->kt());
+        $email_text = $email->displaytext()->kt();
       } elseif ($any == 'reject') {
-        $email_text = array('email_text'=> $email->rejecttext()->kt());
+        $email_text = $email->rejecttext()->kt();
       } else {
-        $email_text = array('email_text'=> 'error');   
+        $email_text = NULL;   
       }
       $email_text = json_encode($email_text);
       // return response with correct header type
