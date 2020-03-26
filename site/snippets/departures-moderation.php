@@ -30,7 +30,7 @@ foreach ($results as $result) { ?>
         <div class="col-xs-12"><hr></div>
         <div class="col-xs-12 col-md-2 large-text"><?php echo($result["date"]);?></div>
         <div class="col-xs-12 col-md-4 large-text"><?php echo($result["name"]);?></div>        
-        <input type="hidden" value="arrival" name="type" id="type">
+        <input type="hidden" value="departure" name="type" id="type">
         <input type="hidden" value="<?php echo($result["ID"]);?>" name="ID" id="ID">
         <div class="radio-wrapper col-xs-12 col-md-2">
             <div>
