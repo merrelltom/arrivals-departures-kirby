@@ -14,7 +14,7 @@ return [
   [
     'pattern' => 'email_text/(:any)',
     'action'  => function($any) {
-      $email = page('email');
+      $email = site()->children()->findByURI('email');
       if ($any == 'confirm' ) {
         $email_text = array('email_text'=> $email->confirmtext()->kt());
       } elseif ($any == 'moderate') {
