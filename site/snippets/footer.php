@@ -76,9 +76,21 @@
 <?= js('https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js') ?>
 <?= js('assets/js/plugins.js') ?>
 <?= js('assets/js/script.js') ?>
+<?= js('assets/js/cookieValidate.js') ?>
+
+<script>
+    new cookieNoticeJS({
+        'learnMoreLinkEnabled' : 'true',
+       // The href of the learn more link must be applied if (learnMoreLinkEnabled=true) 
+       'learnMoreLinkHref':'<?= $site->page('privacy-policy')->url();?>'
+    });
+</script>
+
+
 <script src="https://maps.googleapis.com/maps/api/js?key=<?php echo $MAPS_API_KEY; ?>&libraries=places&callback=initAutocomplete&callback=initMap"
    async defer></script>
 <?= js('assets/js/formValidate.js') ?>
+
 
 <?php if ($page->isHomePage()):?>
     <?= js('assets/js/update.js') ?>

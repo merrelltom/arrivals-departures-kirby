@@ -443,3 +443,51 @@ PARTNERS PAGE
     position: relative;
     margin: 1rem 0 1.5rem;
 }
+
+
+/*  
+================================================================
+COOKIE NOTICE
+================================================================  
+*/
+
+#cookieNotice{
+    background: $yellow;
+    color: black;
+    width:100%;
+    padding: 10px 20px 10px; 
+    position: fixed;
+    top:100vh;
+    left:0;
+    font-family: "New Rail Alphabet", sans-serif;
+    font-size: 12px;
+    line-height: 24px;
+    transform: translate(0%,00%);
+    animation: slideUp 300ms;
+    animation-delay: 2000ms;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    .message{
+        display: inline-block;
+        padding-right: .5em;
+    }
+    .learn-more{
+        padding: 0 .75em 0 0;
+        color:black;
+        text-decoration: underline;
+        display: inline-block;
+    }
+    .button{
+        display: inline-block;
+        max-width: 150px;
+    }
+}
+
+@keyframes slideUp{
+    from{
+        transform: translate(0,0);
+    }
+    to{
+        transform: translate(0,-100%);
+    }
+}
