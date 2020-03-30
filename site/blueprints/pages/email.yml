@@ -16,15 +16,31 @@ sections:
   content:
     type: fields
     fields:
+      #confirm
+      confirmsubject:
+        label: Confirmation Email subject (Date/Name submitted, successfull moderation)
+        type: text
       confirmtext:
         label: Confirmation Email Text (Date/Name submitted, successfull moderation)
         type: textarea
+      #moderation
+      moderationsubject:
+        label: Moderation Email Subject (Date/Name submitted, manual moderation needed)
+        type: text
       moderationtext:
         label: Moderation Email Text (Date/Name submitted, manual moderation needed)
         type: textarea
+      #display
+      displaysubject:
+        label: Display Email Subject (Date/Name live on board)
+        type: text
       displaytext:
         label: Display Email Text (Date/Name live on board)
         type: textarea
+      #reject
+      rejectsubject:
+        label: Name Rejection Email Subject (Manual moderation failed)
+        type: text
       rejecttext:
         label: Name Rejection Email Text (Manual moderation failed)
         type: textarea
