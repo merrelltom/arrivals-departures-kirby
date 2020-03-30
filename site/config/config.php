@@ -17,20 +17,28 @@ return [
       $email = site()->children()->findByURI('email');
       if ($any == 'confirm' ) {
         $email_text = array(
-            "subject"=>$email->confirmsubject()->kt(),
-            "text"=>$email->confirmtext()->kt());
+            "subject"=> strip_tags($email->confirmsubject()->kt()),
+            "text"=>$email->confirmtext()->kt(),
+            "plain_text"=>strip_tags($email->confirmtext()->kt())
+                );
       } elseif ($any == 'moderate') {
         $email_text = array(
-            "subject"=>$email->moderationsubject()->kt(),
-            "text"=>$email->moderationtext()->kt());
+            "subject"=>strip_tags($email->moderationsubject()->kt()),
+            "text"=>$email->moderationtext()->kt(),
+            "plain_text"=>strip_tags($email->moderationtext()->kt())
+                );
       } elseif ($any == 'display') {
         $email_text = array(
-            "subject"=>$email->displaysubject()->kt(),
-            "text"=>$email->displaytext()->kt());
+            "subject"=>strip_tags($email->displaysubject()->kt()),
+            "text"=>$email->displaytext()->kt(),
+            "plain_text"=> strip_tags($email->displaytext()->kt())
+                );
       } elseif ($any == 'reject') {
         $email_text = array(
-            "subject"=>$email->rejectsubject()->kt(),
-            "text"=>$email->rejecttext()->kt());
+            "subject"=>strip_tags($email->rejectsubject()->kt()),
+            "text"=>$email->rejecttext()->kt(),
+            "plain_text"=> strip_tags($email->rejecttext()->kt())
+                );
       } else {
         $email_text = NULL;   
       }
