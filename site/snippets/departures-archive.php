@@ -24,25 +24,19 @@ curl_close($curl);
 $board_line = 1;
 $letter_no = 1;
 foreach ($results as $result) { ?>
-        <li class="archive-list-item" id=" ">
-                <span class="date col-md-3" id="a-board-date-<?=$board_line;?>">
+        <li class="archive-list-item">
+            <div class="row">
+                <div class="archive-date col-xs-12 col-md-3">
                     <?php 
-                        $letters = str_split($result["date"]); 
-                        foreach ($letters as $letter){
-                            echo '<span class="letter-'. $letter_no .'">'. $letter .'</span>';
-                            $letter_no++;
-                        }
+                        echo $result["date"];
                     ?>
-                </span>
-                <span class="name col-md-9" id="a-board-name-<?=$board_line;?>">
+                </div>
+                <div class="archive-name col-xs-12 col-md-9">
                     <?php 
-                        $letters = str_split($result["name"]); 
-                        foreach ($letters as $letter){
-                            echo '<span class="letter-'. $letter_no .'">'. $letter .'</span>';
-                            $letter_no++;
-                        }
+                        echo $result["name"];
                     ?>
-                </span>
+                </div>            
+            </div>
         </li>
 <?php 
     $board_line += 1;
