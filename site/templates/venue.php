@@ -71,10 +71,10 @@
                             
                         </div>
                     </div>
+                    <?php endif;?>
                 </div>
             </div>
         </section>
-        <?php endif;?>
     </main>
 
 

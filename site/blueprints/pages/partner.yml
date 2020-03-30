@@ -1,0 +1,67 @@
+title: Partner
+icon: 📝
+
+
+tabs:
+
+  # content tab
+  content:
+    label: Content
+    icon: text
+    columns:
+
+      # intro one
+    
+     
+      column2:
+        width: 3/3
+        sections:
+          content2:
+            type: fields
+            fields:
+                logo:
+                    width: 2/4
+                    label: Logo
+                    type: files
+                    max: 1
+                    layout: cards
+                    size: small
+                    uploads:
+                      template: image
+                    image:
+                      ratio: 1/1   
+                      back: white
+                partnerName:
+                    width: 3/4
+                    label: Name
+                    type: text
+                    buttons: false
+                partnerDescription:
+                    width: 3/4
+                    label: Description
+                    type: textarea
+                    size: medium
+                                 
+  # seo tab
+  seo:
+    label: SEO
+    icon: search
+    fields:
+      seoTitle:
+        label: SEO Title
+        type: text
+      seoDescription:
+        label: SEO Description
+        type: text
+
+  # Files tab
+  filesTab:
+    label: Files
+    icon: add
+    sections:
+      filesSection:
+        headline: Files
+        type: files
+        layout: cards
+        size: small
+        template: image

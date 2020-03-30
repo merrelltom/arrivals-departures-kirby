@@ -1,0 +1,72 @@
+title: Venue
+icon: 📝
+
+pages: true
+    create: event
+
+tabs:
+
+  # content tab
+  content:
+    label: Content
+    icon: text
+    columns:
+
+      # intro one
+      column2:
+        width: 2/2
+        sections:
+          texts:
+            type: fields
+            fields:
+                pageTitle:
+                    width: 1/2
+                    label: Title
+                    type: textarea
+                    size: small
+                    buttons: false
+                pageIntroduction:
+                    width: 1/2
+                    label: Introduction
+                    type: textarea
+                    size: medium
+                    buttons: false
+                
+      column4:
+        width: 2/2
+        sections:
+          pages:
+            type: pages
+            headline: Partners
+            create: partner
+            layout: cards
+            size: tiny
+            image:
+              ratio: 1/1   
+              back: white
+            
+                
+  # seo tab
+  seo:
+    label: SEO
+    icon: search
+    fields:
+      seoTitle:
+        label: SEO Title
+        type: text
+      seoDescription:
+        label: SEO Description
+        type: text
+
+  # Files tab
+  filesTab:
+    label: Files
+    icon: add
+    sections:
+      filesSection:
+        headline: Files
+        type: files
+        layout: cards
+        size: small
+        template: image
+
