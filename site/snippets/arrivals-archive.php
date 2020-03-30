@@ -25,7 +25,7 @@ curl_close($curl);
 $board_line = 1;
 $letter_no = 1;
 foreach ($results as $result) { ?>
-        <li class="names-list-item" id=" ">
+        <li class="archive-list-item" id=" ">
                 <span class="date col-md-3" id="a-board-date-<?=$board_line;?>">
                     <?php 
                         $letters = str_split($result["date"]); 
