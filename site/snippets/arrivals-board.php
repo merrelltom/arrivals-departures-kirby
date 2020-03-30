@@ -29,24 +29,36 @@ foreach ($results as $result) { ?>
         <li class="names-list-item" id=" ">
             <div class="board-item-wrapper">
                 <span class="date col-md-3" id="a-board-date-<?=$board_line;?>">
+                    <div class="word">
                     <?php 
                         $letters = str_split($result["date"]); 
                         foreach ($letters as $letter){
-                            echo '<span class="letter-'. $letter_no .'">'. $letter .'</span>';
+                            if($letter == ' '){
+                                echo '</div><span class="letter-'. $letter_no .'">'. $letter .'</span><div class="word">';
+                            }else{
+                                echo '<span class="letter-'. $letter_no .'">'. $letter .'</span>';
+                            }
                             $letter_no++;
                         }
                     ?>
+                    </div>
                 </span>
             </div>
             <div class="board-item-wrapper">
-                <span class="name col-md-9" id="a-board-name-<?=$board_line;?>">
-                    <?php 
-                        $letters = str_split($result["name"]); 
-                        foreach ($letters as $letter){
-                            echo '<span class="letter-'. $letter_no .'">'. $letter .'</span>';
-                            $letter_no++;
-                        }
-                    ?>
+                <span class="name col-md-3" id="a-board-name-<?=$board_line;?>">
+                    <div class="word">
+                        <?php 
+                            $letters = str_split($result["name"]); 
+                            foreach ($letters as $letter){
+                                if($letter == ' '){
+                                    echo '</div><span class="letter-'. $letter_no .'">'. $letter .'</span><div class="word">';
+                                }else{
+                                    echo '<span class="letter-'. $letter_no .'">'. $letter .'</span>';
+                                }
+                                $letter_no++;
+                            }
+                        ?>
+                    </div>
                 </span>
             </div>
     </li>

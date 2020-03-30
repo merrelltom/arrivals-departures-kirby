@@ -15,14 +15,27 @@
 	data.forEach(function(item) {
         var date = item["date"].split("");
         var name = item["name"].split("");
+        var nameHTML = '<div class="word">';
+        var dateHTML = '<div class="word">';
         date.forEach(function(item){
-            document.getElementById('a-board-date-'+board_line).innerHTML +='<span class="letter-'+ letter_no +'">'+ item + '</span>';
-            letter_no +=1;   
-        });
-        name.forEach(function(item){
-            document.getElementById('a-board-name-'+board_line).innerHTML +='<span class="letter-'+ letter_no +'">'+ item + '</span>';
+            if(item == ' '){
+                dateHTML +='</div><span class="letter-'+ letter_no +'">'+ item + '</span><div class="word">';
+            }else{
+                dateHTML +='<span class="letter-'+ letter_no +'">'+ item + '</span>';
+            }
             letter_no +=1;
         });
+        document.getElementById('a-board-date-'+board_line).innerHTML = dateHTML;
+        name.forEach(function(item){
+            if(item == ' '){
+                nameHTML +='</div><span class="letter-'+ letter_no +'">'+ item + '</span><div class="word">';
+            }else{
+                nameHTML +='<span class="letter-'+ letter_no +'">'+ item + '</span>';
+            }
+            letter_no +=1;
+        });
+        nameHTML +='</div>';
+        document.getElementById('a-board-name-'+board_line).innerHTML = nameHTML;
 	    board_line += 1;
 	});
       board_line = 1;
@@ -34,14 +47,27 @@
 	data.forEach(function(item) {
         var date = item["date"].split("");
         var name = item["name"].split("");
+        var nameHTML = '<div class="word">';
+        var dateHTML = '<div class="word">';
         date.forEach(function(item){
-            document.getElementById('d-board-date-'+board_line).innerHTML +='<span class="letter-'+ letter_no +'">'+ item + '</span>';
-            letter_no +=1;   
-        });
-        name.forEach(function(item){
-            document.getElementById('d-board-name-'+board_line).innerHTML +='<span class="letter-'+ letter_no +'">'+ item + '</span>';
+            if(item == ' '){
+                dateHTML +='</div><span class="letter-'+ letter_no +'">'+ item + '</span><div class="word">';
+            }else{
+                dateHTML +='<span class="letter-'+ letter_no +'">'+ item + '</span>';
+            }
             letter_no +=1;
         });
+        document.getElementById('d-board-date-'+board_line).innerHTML = dateHTML;
+        name.forEach(function(item){
+            if(item == ' '){
+                nameHTML +='</div><span class="letter-'+ letter_no +'">'+ item + '</span><div class="word">';
+            }else{
+                nameHTML +='<span class="letter-'+ letter_no +'">'+ item + '</span>';
+            }
+            letter_no +=1;
+        });
+        nameHTML +='</div>';
+        document.getElementById('d-board-name-'+board_line).innerHTML = nameHTML;
 	    board_line += 1;
 	});
      board_line = 1;

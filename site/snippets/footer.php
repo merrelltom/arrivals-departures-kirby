@@ -83,8 +83,7 @@
 <script>
     new cookieNoticeJS({
         'learnMoreLinkEnabled' : 'true',
-       // The href of the learn more link must be applied if (learnMoreLinkEnabled=true) 
-       'learnMoreLinkHref':'<?= $site->page('privacy-policy')->url();?>'
+        'learnMoreLinkHref':'<?= $site->page('privacy-policy')->url();?>'
     });
 </script>
 
