@@ -18,13 +18,13 @@
                 <div class="row">
                     <div class="col-xs-12 col-lg-6">
                         <h2 class="section-title">Arrivals</h2>
-                        <ol class="names-list">
+                        <ol class="names-list large-text">
                             <?php snippet('arrivals-archive');?>
                         </ol>
                     </div>
                     <div class="col-xs-12 col-lg-6">
                         <h2 class="section-title">Departures</h2>
-                        <ol class="names-list">
+                        <ol class="names-list large-text">
                            <?php snippet('departures-archive');?>
                         </ol>
                     </div>
