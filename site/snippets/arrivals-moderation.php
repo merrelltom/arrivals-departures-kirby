@@ -45,7 +45,7 @@ foreach ($results as $result) { ?>
             </div>
         </div>
         <div class="col-xs-12 col-md-2">
-            <input type="submit" value="Update">
+            <input class="lg-button" type="submit" value="Update">
         </div>
     </form>
 <?php $board_line += 1;
