@@ -1,3 +1,5 @@
+</div>
+
 <footer class="site-footer bg-yellow">
     <div class="wrapper">
         <div class="row">
@@ -87,10 +89,19 @@
 </script>
 
 
-<script src="https://maps.googleapis.com/maps/api/js?key=<?php echo $MAPS_API_KEY; ?>&libraries=places&callback=initAutocomplete&callback=initMap"
-   async defer></script>
-<?= js('assets/js/formValidate.js') ?>
 
+<?php 
+    if($page->template() == "map"):
+        $callback = "&libraries=places&callback=initAutocomplete&callback=initMap";
+    else:
+        $callback = "&libraries=places&callback=initAutocomplete";
+    endif; 
+?>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=<?php echo $MAPS_API_KEY . $callback; ?>"
+   async defer></script>
+
+<?= js('assets/js/formValidate.js') ?>
 
 <?php if ($page->isHomePage()):?>
     <?= js('assets/js/update.js') ?>
