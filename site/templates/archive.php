@@ -4,7 +4,7 @@
         <div class="board-section">
             <div class="wrapper">
                 
-                <article id="arrivals-board" class="board">
+                <div class="col-xs-12 col-lg-6">
                     
                     <header class="board-header">
                         <h2 class="board-title">Arrivals</h2>
@@ -16,9 +16,9 @@
                         <?php snippet('arrivals-archive');?>
                     </ol>
                 
-                </article>
+                </div>
                 
-                <article id="departures-board" class="board">
+                <div class="col-xs-12 col-lg-6">
                     
                     <header class="board-header">
                         <h2 class="board-title">Departures</h2>
@@ -30,7 +30,7 @@
                        <?php snippet('departures-archive');?>
                     </ol>
                 
-                </article>
+                </div>
 
             </div>
         

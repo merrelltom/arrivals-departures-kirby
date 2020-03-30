@@ -26,7 +26,6 @@ $board_line = 1;
 $letter_no = 1;
 foreach ($results as $result) { ?>
         <li class="names-list-item" id=" ">
-            <div class="board-item-wrapper">
                 <span class="date col-md-3" id="a-board-date-<?=$board_line;?>">
                     <?php 
                         $letters = str_split($result["date"]); 
@@ -36,8 +35,6 @@ foreach ($results as $result) { ?>
                         }
                     ?>
                 </span>
-            </div>
-            <div class="board-item-wrapper">
                 <span class="name col-md-9" id="a-board-name-<?=$board_line;?>">
                     <?php 
                         $letters = str_split($result["name"]); 
@@ -47,8 +44,7 @@ foreach ($results as $result) { ?>
                         }
                     ?>
                 </span>
-            </div>
-    </li>
+        </li>
 <?php 
     $board_line += 1;
     } 
