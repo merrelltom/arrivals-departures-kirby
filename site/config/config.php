@@ -16,14 +16,21 @@ return [
     'action'  => function($any) {
       $email = site()->children()->findByURI('email');
       if ($any == 'confirm' ) {
-
-        $email_text = $email->confirmtext()->kt();
+        $email_text = array(
+            "subject"=>$email->confirmsubject()->kt(),
+            "text"=>$email->confirmtext()->kt());
       } elseif ($any == 'moderate') {
-        $email_text = $email->moderationtext()->kt();
+        $email_text = array(
+            "subject"=>$email->moderationsubject()->kt(),
+            "text"=>$email->moderationtext()->kt());
       } elseif ($any == 'display') {
-        $email_text = $email->displaytext()->kt();
+        $email_text = array(
+            "subject"=>$email->displaysubject()->kt(),
+            "text"=>$email->displaytext()->kt());
       } elseif ($any == 'reject') {
-        $email_text = $email->rejecttext()->kt();
+        $email_text = array(
+            "subject"=>$email->rejectsubject()->kt(),
+            "text"=>$email->rejecttext()->kt());
       } else {
         $email_text = NULL;   
       }
