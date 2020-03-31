@@ -2,7 +2,9 @@
 snippet('oauth');
 
 $months = array("JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEPT", "OCT", "NOV", "DEC" );
-    
+
+$time = 90;
+
 if(isset($_COOKIE['FormSubmitted'])){
     $time = time() - $_COOKIE['FormSubmitted'];
 //    exit("Please wait. Seconds since last upload: ($time)");
