@@ -25,15 +25,28 @@
     </main>
 
     <script>
-        const MAP_MARKER = 'M7-6.33A9.33,9.33,0,0,0-2.33,3C-2.33,9.08,7,20.33,7,20.33S16.33,9.35,16.33,3A9.33,9.33,0,0,0,7-6.33ZM5,6.24L3.93,9.63H2.49L6.15-1.15H7.83L11.51,9.63H10L8.87,6.24H5ZM8.58,5.15L7.53,2.05C7.29,1.35,7.13.71,7,.08h0c-0.16.64-.34,1.3-0.54,2L5.34,5.15H8.58Z';
+        const A_MARKER = 'M11-2.33A9.33,9.33,0,0,0,1.67,7C1.67,13.08,11,24.33,11,24.33s9.33-11,9.33-17.33A9.33,9.33,0,0,0,11-2.33ZM9.56,8.39L8.73,10.89H7.67l2.71-8h1.24l2.72,8h-1.1L12.38,8.39H9.56Zm2.61-.8L11.39,5.29c-0.18-.52-0.3-1-0.41-1.45h0c-0.12.47-.25,1-0.4,1.44L9.77,7.58h2.4Z';
 
+        const D_MARKER = 'M11-2.33A9.33,9.33,0,0,0,1.67,7C1.67,13.08,11,24.33,11,24.33s9.33-11,9.33-17.33A9.33,9.33,0,0,0,11-2.33ZM11.17,11H8.31V3.16H11.4c1.78,0,3.38,1.17,3.38,3.82C14.78,9,13.83,11,11.17,11Zm0-7H9.27v6.17h1.81c1.19,0,2.72-.56,2.72-3.14C13.79,4.69,12.51,4,11.14,4Z';
+        
         var customIcon = {
             arrival: {
-              icon: '<?= $site->url()?>/assets/images/arrival-marker-1.png'
+              icon: {
+                    path: A_MARKER,
+                    fillColor: '#f1f900',
+                    fillOpacity: 1,
+//                    strokeColor: '#000',
+                    anchor: { x: 16, y: 32 },
+              }
             },
             departure: {
-              icon: '<?= $site->url()?>/assets/images/departure-marker-1.png'
-            }
+              icon: {
+                    path: D_MARKER,
+                    fillColor: '#f1f900',
+                    fillOpacity: 1,
+//                    strokeColor: '#000',
+                    anchor: { x: 16, y: 32 },
+              }
         };
         
         var styles = [
@@ -226,13 +239,7 @@
               var marker = new google.maps.Marker({
                 map: map,
                 position: point,
-                icon: {
-                    path: MAP_MARKER,
-                    fillColor: '#f1f900',
-                    fillOpacity: 1,
-//                    strokeColor: '#000',
-                    anchor: { x: 16, y: 32 },
-                },
+                icon: icon.icon
               });
               marker.addListener('click', function() {
                 infoWindow.setContent(infowincontent);
