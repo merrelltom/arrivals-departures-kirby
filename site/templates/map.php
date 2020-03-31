@@ -181,7 +181,7 @@
             "elementType": "geometry",
             "stylers": [
               {
-                "color": "#ABDBFF"
+                "color": "#5D99DF"
               }
             ]
           },
@@ -190,7 +190,7 @@
             "elementType": "labels.text.fill",
             "stylers": [
               {
-                "visibility": "off"
+                "color": "#9e9e9e"
               }
             ]
           }
@@ -204,7 +204,35 @@
             zoom: 2,
             styles: styles
         });
- 
+        var infoWindow = new google.maps.InfoWindow;
+          downloadUrl('./get_map.xml', function(data) {
+            var xml = data.responseXML;
+            var markers = xml.documentElement.getElementsByTagName('marker');
+            Array.prototype.forEach.call(markers, function(markerElem) {
+              var name = markerElem.getAttribute('name');
+              var date = markerElem.getAttribute('date');
+              var type = markerElem.getAttribute('type');
+              var point = new google.maps.LatLng(
+                  parseFloat(markerElem.getAttribute('lat')),
+                  parseFloat(markerElem.getAttribute('lng')));
+
+              var infowincontent = document.createElement('div');
+              var strong = document.createElement('strong');
+              strong.textContent = date + " " + name;
+              infowincontent.appendChild(strong);
+              infowincontent.appendChild(document.createElement('br'));
+              var icon = customIcon[type] || {};
+              var marker = new google.maps.Marker({
+                map: map,
+                position: point,
+                icon: icon.icon
+              });
+              marker.addListener('click', function() {
+                infoWindow.setContent(infowincontent);
+                infoWindow.open(map, marker);
+              });
+            });
+          });
         }
 
 
