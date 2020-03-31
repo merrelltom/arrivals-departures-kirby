@@ -12,6 +12,7 @@ Footercalltoaction: Officiati doluptatios ea doluptate omnia volestis unt, optat
 
 Footernavigation:
 
+- archive
 - privacy-policy
 - contact
 - partners

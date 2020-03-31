@@ -58,7 +58,15 @@
                             <button class="sm-button" onclick="toggleForm(this);">Add a name to the boards</button>
                         </div>
                         <div class="button-container">
-                            <button class="sm-button">Share</button>
+                            <a title="Share on twitter" class="button sm-button" href="https://twitter.com/intent/tweet?url=<?= $page->url(); ?>" target="_blank">
+                                Share on Twitter
+                            </a>
+                        </div>
+                        <div class="button-container">
+                            <a title="Share on facebook" class="button sm-button" href="https://www.facebook.com/sharer/sharer.php?u=<?= $page->url(); ?>" target="_blank">
+                                Share on Facebook
+                            </a>
+                        </div>
                         </div>
                     </div>
                 </div>

@@ -3,6 +3,12 @@ snippet('oauth');
 
 $months = array("JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEPT", "OCT", "NOV", "DEC" );
     
+if(isset($_COOKIE['FormSubmitted'])){
+    $time = time() - $_COOKIE['FormSubmitted'];
+//    exit("Please wait. Seconds since last upload: ($time)");
+}
+
+if($time > 60 || $kirby->user()){
     if ($_POST && ! filter_input(INPUT_POST, "valid")) {
         if ( filter_input(INPUT_POST, "arrival_or_departure") == "arrival") {
                 $endpoint = "arrivals";
@@ -67,10 +73,17 @@ $months = array("JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEPT", 
 
        // Redirect to this page.
         if($result["moderated"] == 0){
+            setcookie('FormSubmitted', time(), time() + (86400 * 30), '/');
             header("Location: " . $site->children()->findByURI('moderation-message')->url());
         }else{
+            setcookie('FormSubmitted', time(), time() + (86400 * 30), '/');
             header("Location: " . $site->children()->findByURI('thank-you')->url());
         }
        exit();
         
+    }
+    
+}else{
+    exit("Please wait. Seconds since last upload: ($time)");
 }
+

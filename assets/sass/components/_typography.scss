@@ -45,18 +45,17 @@ LINK STYLES
 */
 
 a, a:link, a:visited{
-  color: black;
-  text-decoration: none;
-}
+    color: black;
+    text-decoration: none;
+ }
 
 a:hover{
-  color: black;
-}
+    color: #FB4828;
+ }
 
 a:active{
-  color: black;
-}
-
+    color: #FB4828;
+ }
 
 .read-more:before{
     content: "> ";
@@ -64,6 +63,20 @@ a:active{
 
 .read-more:hover, .read-more:active{
     text-decoration: underline;
+}
+
+p{
+   a, a:link, a:visited{
+        color: #4A90E2
+    }   
+    a:hover{
+    color: #FB4828;
+    }
+
+    a:active{
+        color: #FB4828;
+     }
+    
 }
 
 /*  

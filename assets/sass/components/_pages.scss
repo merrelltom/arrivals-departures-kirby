@@ -374,6 +374,7 @@ RESROUCES
     transition: 300ms transform ease-in-out;
     display: block;
     &:hover{
+        color: black;
         transform: scaleX(1.02) scaleY(1.02);
         transition: 300ms transform ease-in-out;
     }
