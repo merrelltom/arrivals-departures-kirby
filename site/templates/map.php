@@ -25,15 +25,13 @@
     </main>
 
     <script>
-         var iconBase =
-            '<?= $site->url()?>/assets/images/';
-        
-        var customLabel = {
+
+        var customIcon = {
             arrival: {
-              icon: iconBase + 'arrival-marker-1.png'
+              icon: '<?= $site->url()?>/assets/images/arrival-marker-1.png'
             },
             departure: {
-              icon: iconBase + 'departure-marker-1.png'
+              icon: '<?= $site->url()?>/assets/images/departure-marker-1.png'
             }
         };
         
@@ -201,7 +199,8 @@
         function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
           center: new google.maps.LatLng(0, 0),
-          zoom: 2
+          zoom: 2,
+          styles: styles
         });
         var infoWindow = new google.maps.InfoWindow;
           downloadUrl('./get_map.xml', function(data) {
@@ -220,11 +219,11 @@
               strong.textContent = date + " " + name;
               infowincontent.appendChild(strong);
               infowincontent.appendChild(document.createElement('br'));
-              var icon = customLabel[type] || {};
+              var icon = customIcon[type] || {};
               var marker = new google.maps.Marker({
                 map: map,
                 position: point,
-                label: icon.label
+                icon: icon.icon
               });
               marker.addListener('click', function() {
                 infoWindow.setContent(infowincontent);
