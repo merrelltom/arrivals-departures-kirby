@@ -226,8 +226,9 @@
                 map: map,
                 position: point,
                 icon: {
-                  path: google.maps.SymbolPath.CIRCLE,
-                  scale: 10
+                  path: "M500.48,750.5S617,528,640.17,475.9c15.32-34.42,14.29-71.43,14.29-71.43a154,154,0,1,0-307.94,0s-1,37,14.29,71.43C384,528,500.48,750.5,500.48,750.5Z",
+                  scale: 10,
+                  fill: '#f1f900',    
                 },
               });
               marker.addListener('click', function() {
