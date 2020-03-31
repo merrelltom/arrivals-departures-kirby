@@ -25,6 +25,7 @@
     </main>
 
     <script>
+        const MAP_MARKER = 'M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z';
 
         var customIcon = {
             arrival: {
@@ -226,9 +227,11 @@
                 map: map,
                 position: point,
                 icon: {
-                  path: "M500.48,750.5S617,528,640.17,475.9c15.32-34.42,14.29-71.43,14.29-71.43a154,154,0,1,0-307.94,0s-1,37,14.29,71.43C384,528,500.48,750.5,500.48,750.5Z",
-                  scale: 10,
-                  fill: '#f1f900',    
+                    path: MAP_MARKER,
+                    fillColor: '#f1f900',
+                    fillOpacity: 1,
+                    strokeColor: '#000',
+                    anchor: { x: 12, y: 24 },
                 },
               });
               marker.addListener('click', function() {
