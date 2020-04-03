@@ -38,6 +38,22 @@
                 <div class="col-xs-12 col-md-2 large-text">
                     <input type="text" name="bad_name">
                 </div>
+                <div class="col-xs-12 col-md-2 large-text">
+                    <input type="text" name="type">
+                    <label for="name"><span class="label">Name</span></label>
+                </div>
+                <div class="radio-wrapper col-xs-12 col-md-2">
+                    <div>
+                        <input type="radio" id="type" name="type" value="arrival">
+                        <label for="type"><span class="label">Arrival</span></label>
+                    </div>
+                </div>
+                <div class="radio-wrapper col-xs-12 col-md-2">
+                    <div>
+                        <input type="radio" id="type" name="type" value="departure">
+                        <label for="type"><span class="label">Arrival</span></label>
+                    </div>
+                </div>
                 <input type="hidden" name="update" value="add">
                 <div class="col-xs-12 col-md-2">
                     <input class="lg-button" type="submit" value="Add">
