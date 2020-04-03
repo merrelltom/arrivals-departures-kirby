@@ -33,7 +33,7 @@
     </section>
     <section class="page-section moderation-forms arrival-moderation">
         <div class="wrapper">
-            <form method="post" action="./bad-names" class="row moderation-row" id="a-board-line-<?php echo($board_line);?>">
+            <form method="post" action="./bad-names" class="row moderation-row" id="a-board-line-">
                 <div class="col-xs-12"><hr></div>
                 <div class="col-xs-12 col-md-2 large-text">
                     <input type="text" name="bad_name">
