@@ -24,6 +24,6 @@ $result = json_decode(curl_exec($ch), true);
 // Close cURL session handle
 curl_close($ch);
 
-if (array_key_exists('name', $results) ) {
+if (array_key_exists('name', $result) ) {
     echo("Name:" . $payload_array["name"] . " Deleted");
 }
