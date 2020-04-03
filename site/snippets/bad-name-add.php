@@ -2,6 +2,7 @@
 
 $payload_array = array ();
 $payload_array["name"] = filter_input(INPUT_POST, "bad_name");
+$payload_array["type"] = filter_input(INPUT_POST, "type");
 $payload = json_encode($payload_array);
 $ch = curl_init('http://134.209.184.8:44444/badnames');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
