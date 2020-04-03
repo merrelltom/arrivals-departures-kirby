@@ -36,22 +36,19 @@
             <form method="post" action="./bad-names" class="row moderation-row" id="a-board-line-">
                 <div class="col-xs-12"><hr></div>
                 <div class="col-xs-12 col-md-2 large-text">
-                    <input type="text" name="bad_name">
-                </div>
-                <div class="col-xs-12 col-md-2 large-text">
-                    <input type="text" name="type">
                     <label for="name"><span class="label">Name</span></label>
+                    <input type="text" name="bad_name">
                 </div>
                 <div class="radio-wrapper col-xs-12 col-md-2">
                     <div>
-                        <input type="radio" id="type" name="type" value="arrival">
-                        <label for="type"><span class="label">Arrival</span></label>
+                        <input type="radio" id="arrival" name="type" value="arrival">
+                        <label for="arrival"><span class="label">Arrival</span></label>
                     </div>
                 </div>
                 <div class="radio-wrapper col-xs-12 col-md-2">
                     <div>
-                        <input type="radio" id="type" name="type" value="departure">
-                        <label for="type"><span class="label">Arrival</span></label>
+                        <input type="radio" id="departure" name="type" value="departure">
+                        <label for="departure"><span class="label">Departure</span></label>
                     </div>
                 </div>
                 <input type="hidden" name="update" value="add">
