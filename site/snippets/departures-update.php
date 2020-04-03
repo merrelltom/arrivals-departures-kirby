@@ -44,6 +44,6 @@ if ($action == "accept"){
     $result = " Deleted";
 }
 
-if ($result != NULL ) {
+if (array_key_exists('id', $results) ) {
     echo("Departure ID:" . $results['id'] . $result);
 }
