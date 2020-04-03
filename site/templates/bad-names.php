@@ -36,8 +36,9 @@
             <form method="post" action="./bad-names" class="row moderation-row" id="a-board-line-">
                 <div class="col-xs-12"><hr></div>
                 <div class="col-xs-12 col-md-2 large-text">
-                    <label for="name"><span class="label">Name</span></label>
-                    <input type="text" name="bad_name">
+                    <input type="text" name="bad_name" placeholder="Enter Name..." 
+                           pattern="[A-Za-z- ]{1,24}" 
+                           title="Max. 24 characters , letters and hyphens only" required>
                 </div>
                 <div class="radio-wrapper col-xs-12 col-md-2">
                     <div>
