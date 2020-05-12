@@ -116,7 +116,6 @@ UTILITY CLASSES
 ================================================================
 DESKTOP MENU
 ================================================================  
-*/
 
 button.menu-button{
     display: none;
@@ -148,6 +147,23 @@ button.menu-button{
 .main-menu li:last-child a{
     border-bottom: none;
     margin-bottom: 0;
+}
+*/
+
+
+
+/*  
+================================================================
+LAYOUT
+================================================================  
+*/
+
+.main{
+    padding-top: 120px;
+}
+
+.lg-no-pad{
+    padding-top: 0;
 }
 
 

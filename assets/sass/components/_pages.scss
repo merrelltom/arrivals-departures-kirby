@@ -252,6 +252,10 @@ VENUE LIST
 ================================================================  
 */
 
+.sub-intro-box{
+    padding-right: 30px;
+}
+
 .venue-list{
     padding-top: 3em;
 }
@@ -355,7 +359,7 @@ MAP
 
 #map{
     min-height: 500px;
-    height:100vh;
+    height:45vw;
 }
 
 .map-main, .map-section{

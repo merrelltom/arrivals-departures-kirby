@@ -40,6 +40,12 @@ tabs:
                     type: textarea
                     size: medium
                     buttons: false
+                furtherIntro:
+                    width: 1/2
+                    label: Further Introduction
+                    type: textarea
+                    size: medium
+                    buttons: false
                 blocks:
                     label: Page Blocks
                     type: builder

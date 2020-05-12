@@ -131,6 +131,27 @@ tabs:
                                     size: medium
                                     buttons: true
                                     width: 1/2
+                        oneColumnSection: 
+                            name: oneColumnSection
+                            label: One Column Section
+                            fields:
+                                title:
+                                    label: Header
+                                    type: text
+                                    buttons: true
+                                    width: 2/2
+                                columnOne:
+                                    label: Text
+                                    type: textarea
+                                    size: medium
+                                    buttons: true
+                                    width: 1/2
+                                columnTwo:
+                                    label: Text
+                                    type: textarea
+                                    size: medium
+                                    buttons: true
+                                    width: 1/2
                         addNameBannerBlock: 
                             name: Call To Action
                             label: Call To Action Banner

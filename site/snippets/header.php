@@ -47,5 +47,6 @@
             <span class="menu-button-bar"></span>
         </div>
     </button>
-            
+    
+    <button onclick="toggleForm(this);" class="header-add-name-button sm-button">Add a name to the boards</button>
 

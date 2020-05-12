@@ -52,6 +52,11 @@ button:active,  a.button:active {
     background: rgb(20,20,20);
 }
 
+.header-add-name-button:hover,  .header-add-name-button:hover {
+    background: $yellow;
+    color: black;
+}
+
 
 .lg-button, a.lg-button{
     width: 100%;
