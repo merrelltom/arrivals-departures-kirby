@@ -1,9 +1,0 @@
-Caption: 
-
-----
-
-Alt: Departures Board showing names of people who have died
-
-----
-
-Template: image
