@@ -145,7 +145,7 @@ RADIO BUTTONS
     }
 
 .radio-wrapper label:hover{
-    background-color:$yellow;
+    background-color: rgba( $yellow,  .4 );
 }
 
 input[type=radio]:disabled+ label, 
@@ -229,7 +229,7 @@ EMAIL CHECKBOX
     }
 
 .small-checkbox-wrapper label:hover{
-    background-color:$yellow;
+    background-color: rgba( $yellow,  .4 );
 }
 
 input[type=checkbox]:disabled+ label, 

@@ -96,12 +96,25 @@ FOOTER
 .logo-container{
     margin:0;
     padding-top: .75rem;
-    padding-bottom: 2rem;
-    display: block;
+    padding-bottom: .75rem;
+    padding-right: 15px;
+    display: inline-block;
     img{
         width: 100%;
         max-width: 170px;
      }
+}
+
+.logo-container.small{
+   width: 100px;
+}
+
+.logo-container.medium{
+    width: 110px;
+}
+
+.logo-container.large{
+    width: 150px;
 }
 
 /*  
@@ -115,7 +128,15 @@ HOME PAGE
     padding-bottom: 1rem;
 }
 
-
+.board-buttons .button-container{
+    display: inline-block;
+    padding-bottom: .25em;
+    margin-right: .25em;
+    width:230px;
+    a{
+        width: 100%;
+    }
+}
 
 
 

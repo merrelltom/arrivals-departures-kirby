@@ -62,7 +62,7 @@ columns:
             layout: cards
             size: small
             uploads:
-              template: image
+              template: logo
             image:
               ratio: 1/1
               back: white

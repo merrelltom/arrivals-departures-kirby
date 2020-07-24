@@ -6,11 +6,14 @@
             <div class="wrapper">
                 <div class="row">
                     <div class="introduction-text col-xs-12 col-md-6">
-                        An interactive public installation about birth, death and the journey in between by YARA&nbsp;+&nbsp;DAVINA.
+                        An interactive public installation about birth, death and the journey in-between by YARA&nbsp;+&nbsp;DAVINA.
                     </div>
-                    <div class="button-container col-xs-12 col-md-5 col-md-offset-1 col-lg-4 col-lg-offset-2">
-                        <button class="sm-button" data-link="<?= $site->url();?>/submission-form" onclick="toggleForm(this);">Add a name to the boards</button>
+                    <div class="col-xs-12 col-md-6 col-lg-6 md-align-right">
+                        <div class="button-container">
+                            <button class="sm-button" data-link="<?= $site->url();?>/submission-form" onclick="toggleForm(this);">Add a name to the boards</button>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -27,7 +30,7 @@
                         <span class="board-column-heading" >Date</span><span class="board-column-heading">Name</span>
                     </div>
                     <ol class="names-list">
-                        <?php snippet('arrivals-board');?>
+                        <?php //snippet('arrivals-board');?>
                     </ol>
                 
                 </article>
@@ -41,7 +44,7 @@
                         <span class="board-column-heading" >Date</span><span class="board-column-heading">Name</span>
                     </div>
                     <ol class="names-list">
-                       <?php snippet('departures-board');?>
+                       <?php //snippet('departures-board');?>
                     </ol>
                 
                 </article>

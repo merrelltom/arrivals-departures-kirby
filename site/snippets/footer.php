@@ -46,13 +46,30 @@
             <div class="col-xs-12 footer-col">
                 <h3 class="partners-title"><?= $item->title()->kt();?></h3>
                 <div class="logo-row row">
-                <?php 
-                    $logos = $item->logoImages()->toFiles();
-                    foreach($logos as $logo):?>
-                    <figure class="logo-container col-xs-12">
-                        <img src="<?= $logo->url();?>" alt="<?= $logo->alt();?>" />
-                    </figure>
-                    <?php endforeach;?>
+                    <div class="col-xs-12">
+                        <figure class="logo-container medium">
+                            <img src="<?= $site->url();?>/assets/logos/ww-logo-1.png" alt="Without Walls" />
+                        </figure>
+                        <figure class="logo-container medium">
+                            <img src="<?= $site->url();?>/assets/logos/artsadmin.svg" alt="Artsadmin" />
+                        </figure>
+                        <figure class="logo-container small">
+                            <img src="<?= $site->url();?>/assets/logos/n-n_logo_vector_black.svg" alt="Norfolk and Norwich Festival" />
+                        </figure>
+                        <figure class="logo-container medium">
+                            <img src="<?= $site->url();?>/assets/logos/freedom.png" alt="Freedom Festival Arts Trust" />
+                        </figure>
+                        <figure class="logo-container large">
+                            <img src="<?= $site->url();?>/assets/logos/grant_eps_black.svg" alt="Arts Council" />
+                        </figure>
+                        <figure class="logo-container medium">
+                            <img src="<?= $site->url();?>/assets/logos/ctc-cti-black-2.svg" alt="Create to Connect > Create to Impact" />
+                        </figure>
+                        <figure class="logo-container large">
+                            <img src="<?= $site->url();?>/assets/logos/creative-europe.png" alt="Creative Europe" />
+                        </figure>
+                    </div>
+                    
                 </div>
             </div>
                 <?php endforeach;?>
