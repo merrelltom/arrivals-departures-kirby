@@ -1,0 +1,135 @@
+Title: About
+
+----
+
+Pagetitle: About
+
+----
+
+Pageintroduction: Arrivals + Departures is an interactive public installation about birth, death and the journey in between by YARA + DAVINA.
+
+----
+
+Blocks:
+
+- 
+  imagemobile:
+    - departures-6000x4000_2_mobile.jpg
+  imagedesktop:
+    - departures-6000x4000_2.jpg
+  _key: fullWidthImageBlock
+  _uid: fullWidthImageBlock_1584548460527_245
+- 
+  smalltextcontent: |
+    From April 2020, you can make a contribution of a name directly via this website.  Every name will appear on either the arrival or departure board at one of the sites below and on this website.  Each name will move down the display list as further names are added and will then move into the archive here.
+    
+    You may also submit a name at each location whilst the Arrivals & Departures boards are on public view.  A steward will be available at specific times (see PROGRAMME) to support your submission.
+    
+    Integral to the artwork is a programme of events, talks and workshops inviting the public to explore a range of issues associated with commemorating new life and parenthood, acknowledging our own mortality, death and grieving - subjects that need to be spoken about more to help us live well.
+  _key: smallTextBlock
+  _uid: smallTextBlock_1584547830804_180
+- 
+  bannercontent: >
+    Officiati doluptatios ea doluptate omnia
+    volestis unt, optatius eosapient, quat.
+    Officiati.
+  _key: addNameBannerBlock
+  _uid: addNameBannerBlock_1584549546136_332
+
+----
+
+Programmetitle: Programme
+
+----
+
+Programmeintro: Arrivals + Departures Boards will be travelling to different sites and festivals across the UK from April 2020.
+
+----
+
+Blocks2:
+
+- 
+  bannercontent: >
+    Officiati doluptatios ea doluptate omnia
+    volestis unt, optatius eosapient, quat.
+    Officiati.
+  _key: addNameBannerBlock
+  _uid: addNameBannerBlock_1584960906665_604
+- 
+  title: YARA + DAVINA
+  columnone: >
+    Yara El-Sherbini and Davina Drummond are
+    a British collaborative artist duo.
+    They’ve been working for almost two
+    decades, making unfailingly inventive
+    artworks. Passionate about site, context
+    and audiences, together they make
+    accessible works which touch on the
+    human condition in different ways, be it
+    geo-political or love, to knowledge or
+    mental health. From jokes to mini golf,
+    choirs to tattoo parlours, they root
+    their works in the everyday, using
+    interactivity, a lightness of touch and
+    humour to create artworks that are both
+    poetic and political. Their practice is
+    about process and meaning making and
+    considers the ethics of working with and
+    for people.
+  columntwo: |
+    They’ve created artworks for multiple world leading art venues and public organisations such as Tate Modern and Tate Britain, Venice Biennale, Manchester Art Gallery, Baltic, IKON, National Portrait Gallery, Whitechapel Gallery, Delfina Foundation, INIVA, Somerset House, Camden Council, Studio Museum Harlem, The Victoria & Albert, London, ZKM, Germany, HIAP, Helsinki, Kaunus Art Biennial (Lithuania) , Modern Art Oxford, The RCA, Arnolfini, National Maritime Museum, Hayward Gallery, New Art Exchange, Quad Gallery, GOSH, Southbank Center, Casa Arabe, and the ICA. In 2016 Yara + Davina were joint British Council Artist Fellow’s in the USA and were Insitu artists.
+    
+    (link: http://yaraanddavina.com text: > yaraanddavina.com)
+  bodycontent: |
+    Yara El-Sherbini and Davina Drummond are a British collaborative artist duo. They’ve been working for almost two decades, making unfailingly inventive artworks. Passionate about site, context and audiences, together they make accessible works which touch on the human condition in different ways, be it geo-political or love, to knowledge or mental health. From jokes to mini golf, choirs to tattoo parlours, they root their works in the everyday, using interactivity, a lightness of touch and humour to create artworks that are both poetic and political. Their practice is about process and meaning making and considers the ethics of working with and for people.
+    
+    They’ve created artworks for multiple world leading art venues and public organisations such as Tate Modern and Tate Britain, Venice Biennale, Manchester Art Gallery, Baltic, IKON, National Portrait Gallery, Whitechapel Gallery, Delfina Foundation, INIVA, Somerset House, Camden Council, Studio Museum Harlem, The Victoria & Albert, London, ZKM, Germany, HIAP, Helsinki, Kaunus Art Biennial (Lithuania) , Modern Art Oxford, The RCA, Arnolfini, National Maritime Museum, Hayward Gallery, New Art Exchange, Quad Gallery, GOSH, Southbank Center, Casa Arabe, and the ICA. In 2016 Yara + Davina were joint British Council Artist Fellow’s in the USA and were Insitu artists.
+    
+    (link: http://yaraanddavina.com text: > yaraanddavina.com)
+  content: |
+    Yara El-Sherbini and Davina Drummond are a British collaborative artist duo. They’ve been working for almost two decades, making unfailingly inventive artworks. Passionate about site, context and audiences, together they make accessible works which touch on the human condition in different ways, be it geo-political or love, to knowledge or mental health. From jokes to mini golf, choirs to tattoo parlours, they root their works in the everyday, using interactivity, a lightness of touch and humour to create artworks that are both poetic and political. Their practice is about process and meaning making and considers the ethics of working with and for people.
+    
+    They’ve created artworks for multiple world leading art venues and public organisations such as Tate Modern and Tate Britain, Venice Biennale, Manchester Art Gallery, Baltic, IKON, National Portrait Gallery, Whitechapel Gallery, Delfina Foundation, INIVA, Somerset House, Camden Council, Studio Museum Harlem, The Victoria & Albert, London, ZKM, Germany, HIAP, Helsinki, Kaunus Art Biennial (Lithuania) , Modern Art Oxford, The RCA, Arnolfini, National Maritime Museum, Hayward Gallery, New Art Exchange, Quad Gallery, GOSH, Southbank Center, Casa Arabe, and the ICA. In 2016 Yara + Davina were joint British Council Artist Fellow’s in the USA and were Insitu artists.
+    
+    (link: http://yaraanddavina.com text: > yaraanddavina.com)
+  _key: oneColumnSection
+  _uid: oneColumnSection_1589294685095_641
+- 
+  columnone: |
+    ---
+    
+    ## Produced by Artsadmin
+    
+    Supported by Without Walls. Co-commissioned by Freedom Festival Arts Trust (Hull) and Norfolk & Norwich Festival and Artsadmin with support from Create To Connect > Create to Impact through the Creative Europe programme of the European Union. Publicly funded through Arts Council England
+    ​
+    Development phase of Arrivals + Departure (2018)was supported by In Situ Network through the Creative Europe programme of European Union, Without Wall's Blueprint programme and Seedbed Residency at 101
+  columntwo: |
+    ---
+    
+    ##Contributors
+    
+    Emma Curtis
+    
+    With a 30 year career as an operatic contralto soloist on international stages, Emma expanded her professional exploration of the importance of self-expression and identity, and in 2013 became a Secular Minister specialising in end of life ceremonies. She went on to win the first National Celebrant Award for influencing the wider profession of funeral celebrancy. She has a grief and resiliency practice in the West End of London and is the founder of Ceremony Matters which runs advanced trainings for funeral celebrants seeking a more person-centred approach to ceremonies. Emma describes herself as a singer, minister and therapist, working with ceremony, cognitive behavioural therapy, self-hypnosis, sound, art, breath and voice.
+    
+    Emma is a consultant and collaborator for the Arrivals + Departures public programme, and a creative collaborator on Death Euphemism Bingo.
+    
+    (link: http://ceremonymatters.org/about-emma text: > www.ceremonymatters.org/about-emma)
+  _key: twoColumnSection
+  _uid: twoColumnSection_1584718923867_352
+
+----
+
+Seotitle: 
+
+----
+
+Seodescription: 
+
+----
+
+Image02mobile: 
+
+----
+
+Image02desktop: 

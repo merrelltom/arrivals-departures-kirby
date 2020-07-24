@@ -1,0 +1,17 @@
+Title: Thank You
+
+----
+
+Thankyoutext: Your submission has been successful and will appear on the boards. There maybe other names ahead of yours in the queue, if you supplied an email with your submission you will receive a notification when your name is live on the boards.
+
+----
+
+Moderationtext: You submission is awaiting moderation before it will appear on the boards. If you supplied an email address you will receive a notification when your name is live on the boards.
+
+----
+
+Seotitle: 
+
+----
+
+Seodescription: 

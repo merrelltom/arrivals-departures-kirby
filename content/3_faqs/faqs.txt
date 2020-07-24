@@ -1,0 +1,127 @@
+Title: FAQs
+
+----
+
+Displaytitle: FAQs
+
+----
+
+Introduction: Click on a question below to see the answer.
+
+----
+
+Questions:
+
+- 
+  title: Can I submit an Arrival and a Departure?
+  answer: >
+    Lorem ipsum dolor sit amet, consectetur
+    adipiscing elit. Morbi ligula est,
+    ultrices id lectus auctor, auctor
+    aliquet metus.
+  detailcontent: >
+    Lorem ipsum dolor sit amet, consectetur
+    adipiscing elit. In sit amet tortor eu
+    nunc sodales vulputate id sed metus.
+    Maecenas elementum elementum metus ac
+    efficitur.
+- 
+  title: How are the submitted names moderated?
+  answer: >
+    Lorem ipsum dolor sit amet, consectetur
+    adipiscing elit. Morbi ligula est,
+    ultrices id lectus auctor, auctor
+    aliquet metus.
+  detailcontent: ""
+- 
+  title: >
+    What happens if the name I submitted is
+    not approved for posting on the board?
+  answer: >
+    Lorem ipsum dolor sit amet, consectetur
+    adipiscing elit. Morbi ligula est,
+    ultrices id lectus auctor, auctor
+    aliquet metus.
+  detailcontent: ""
+- 
+  title: How many names can I submit?
+  answer: >
+    Lorem ipsum dolor sit amet, consectetur
+    adipiscing elit. Morbi ligula est,
+    ultrices id lectus auctor, auctor
+    aliquet metus.
+  detailcontent: ""
+- 
+  title: >
+    What happens when a name is no longer on
+    the boards?
+  answer: >
+    Lorem ipsum dolor sit amet, consectetur
+    adipiscing elit. Morbi ligula est,
+    ultrices id lectus auctor, auctor
+    aliquet metus.
+  detailcontent: ""
+- 
+  title: >
+    Can the person I name live anywhere in
+    the world?
+  answer: >
+    Lorem ipsum dolor sit amet, consectetur
+    adipiscing elit. Morbi ligula est,
+    ultrices id lectus auctor, auctor
+    aliquet metus.
+  detailcontent: ""
+- 
+  title: Does the Departure have to be recent?
+  answer: >
+    Lorem ipsum dolor sit amet, consectetur
+    adipiscing elit. Morbi ligula est,
+    ultrices id lectus auctor, auctor
+    aliquet metus.
+  detailcontent: ""
+- 
+  title: >
+    Can the Departure list be a historical
+    name?
+  answer: >
+    Lorem ipsum dolor sit amet, consectetur
+    adipiscing elit. Morbi ligula est,
+    ultrices id lectus auctor, auctor
+    aliquet metus.
+  detailcontent: ""
+- 
+  title: 'Does the Arrival have to be recent? '
+  answer: >
+    Lorem ipsum dolor sit amet, consectetur
+    adipiscing elit. Morbi ligula est,
+    ultrices id lectus auctor, auctor
+    aliquet metus.
+  detailcontent: ""
+- 
+  title: >
+    How do I get a name I posted removed
+    from the board and website?
+  answer: >
+    Lorem ipsum dolor sit amet, consectetur
+    adipiscing elit. Morbi ligula est,
+    ultrices id lectus auctor, auctor
+    aliquet metus.
+  detailcontent: ""
+- 
+  title: >
+    How do I get a name someone else posted
+    removed from the board and website?
+  answer: >
+    Lorem ipsum dolor sit amet, consectetur
+    adipiscing elit. Morbi ligula est,
+    ultrices id lectus auctor, auctor
+    aliquet metus.
+  detailcontent: ""
+
+----
+
+Seotitle: 
+
+----
+
+Seodescription: 
