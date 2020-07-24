@@ -1,15 +1,35 @@
+//button.menu-button{
+//    position: fixed;
+//    top:0;
+//    right:0;
+//    padding:20px;
+//    width:76px;
+//    z-index: 40;
+//    border: none;
+//    svg{
+//        width:100%;
+//    }
+//}
+
+.menu-button-container{
+    width:100%;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+
 button.menu-button{
+    border:1px solid red;
     position: fixed;
-    top:0;
-    right:0;
-    padding:20px;
-    width:76px;
+    padding:0px;
+    width:36px;
     z-index: 40;
     border: none;
     svg{
         width:100%;
     }
 }
+
 
 button.menu-button:hover, button.menu-button:focus {
     background: transparent;

@@ -21,7 +21,7 @@
                         $resources = $page->children();
                         if($resources): foreach($resources as $resource):
                     ?>
-                    <div class="col-xs-12 col-md-6 col-lg-4 resource">
+                    <div class="col-xs-12 col-md-6 col-xl-4 resource">
                         <?php 
                             $extLink = $resource->externalLink();
                             $pdf = $resource->pdf()->toFile();

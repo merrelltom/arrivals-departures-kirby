@@ -24,29 +24,30 @@
 
   <div class="page">
       
-    <header class="header wrapper">
+    <header id="header" class="header wrapper">
         <div class="row">
             <h1 class="site-title col-xs-12 col-lg-8">
                 <a class="logo" title="Arrivals + Departures" href="<?= $site->url() ?>">Arrivals +<br>Departures</a>
             </h1>
-            <nav id="menu" class="main-menu col-lg-4" aria-label="Main Navigation">
-                <ul class="menu-items">
-                    <?php foreach ($site->children()->listed() as $item): ?>
-                        <li><?= $item->title()->link() ?></li>
-                    <?php endforeach ?>
-                </ul>
-                <button class="lg-button lg-hide" onclick="toggleForm(this);">Add a name to the boards</button>
-            </nav>  
+            <div class="col-lg-4">
+                <div class="menu-button-container">
+                    <button class="menu-button" aria-hidden="true" onclick="toggleMenu();">
+                        <div class="menu-button-inner">
+                            <span class="menu-button-bar"></span>
+                            <span class="menu-button-bar"></span>
+                            <span class="menu-button-bar"></span>
+                        </div>
+                    </button>
+                </div>
+            </div>
         </div>
     </header>
 
-    <button class="menu-button" aria-hidden="true" onclick="toggleMenu();">
-        <div class="menu-button-inner">
-            <span class="menu-button-bar"></span>
-            <span class="menu-button-bar"></span>
-            <span class="menu-button-bar"></span>
-        </div>
-    </button>
-    
-    <button onclick="toggleForm(this);" class="header-add-name-button sm-button">Add a name to the boards</button>
-
+                
+    <nav id="menu" class="main-menu" aria-label="Main Navigation">
+            <?php foreach ($site->children()->listed() as $item): ?>
+                <?= $item->title()->link() ?>
+            <?php endforeach ?>
+        <br><br>
+        <button class="lg-button" onclick="toggleForm(this);">Add a name to the boards</button>
+    </nav>  

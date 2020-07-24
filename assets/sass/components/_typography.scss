@@ -106,18 +106,36 @@ h3.footer-title{
 
 /*  
 ================================================================
+FONT SIZES
+================================================================  
+*/
+
+.large-text{
+    font-size:2rem;
+}
+
+.medium-text, .body-text{
+    font-size:1.5rem;
+}
+
+.small-text, .site-footer{
+    font-size: 1rem;
+}
+
+
+/*  
+================================================================
 PARAGRAPHS
 ================================================================  
 */
 
-
 .introduction p, .introduction address, .large-text{
-    font-size: 1.5rem;
-    padding-bottom: 1.5rem;
+    font-size: 2rem;
+    padding-bottom: 2rem;
 }
 
 .body-text p{
-    font-size: 1.125rem;
+    font-size: 1.5rem;
     padding-bottom: 1.5rem;
 }
 

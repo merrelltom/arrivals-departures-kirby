@@ -1,10 +1,14 @@
 var tm_body = document.getElementsByTagName("body")[0];
 
 function toggleMenu() {
+    var right = window.innerWidth - (document.getElementById('header').offsetLeft + document.getElementById('header').offsetWidth);
+    console.log(right);
     if(tm_body.classList.contains("menu--open")){
         tm_body.classList.remove("menu--open");
+        document.getElementById('menu').style.right = '-100vw';
     }else{
         tm_body.classList.add("menu--open");
+        document.getElementById('menu').style.right = right + 'px';
     }
 }
 
@@ -24,7 +28,8 @@ function toggleForm(e) {
 
 function hideOverlay() {
     if(tm_body.classList.contains("menu--open")){
-         tm_body.classList.remove("menu--open");
+        tm_body.classList.remove("menu--open");
+        document.getElementById('menu').style.right = '-100vw';
     }
     if(tm_body.classList.contains("form--open")){
          tm_body.classList.remove("form--open");
