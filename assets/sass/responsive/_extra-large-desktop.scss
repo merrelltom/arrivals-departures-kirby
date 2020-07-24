@@ -4,8 +4,8 @@ XL GRID
 ================================================================  
 */
 
-  $name: nth($xl, 1);
-  $size: nth($xl, 2);
+  $name: nth($xxl, 1);
+  $size: nth($xxl, 2);
 
   @media only screen and (min-width: $size) {
 
@@ -110,7 +110,24 @@ UTILITY CLASSES
 }
 
 
+  
+/*  
+================================================================
+BOARDS
+================================================================  
+*/
 
+
+.board-section{
+    padding-top: 15px;
+}
+
+.boards-wrapper{
+    padding: 0 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 15px;
+}
 
 
 } /* End Media Query */
