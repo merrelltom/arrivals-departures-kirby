@@ -1,0 +1,25 @@
+Title: Contact
+
+----
+
+Text:
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ligula est, ultrices id lectus auctor, auctor aliquet metus. 
+
+(email: contact@address.com text: contact@address.com)
+
+----
+
+Blocks: 
+
+----
+
+Seotitle: 
+
+----
+
+Seodescription: 
+
+----
+
+Introtextone: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ligula est, ultrices id lectus auctor, auctor aliquet metus.

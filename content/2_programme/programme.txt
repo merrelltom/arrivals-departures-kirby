@@ -1,0 +1,41 @@
+Title: Programme
+
+----
+
+Pagetitle: Programme
+
+----
+
+Pageintroduction: Arrivals + Departures Boards will be travelling to different sites and festivals across the UK from April 2020.
+
+----
+
+Furtherintro:
+
+See each location listing to find out where and times you can view the boards live together with the series of related events, talks and workshops inviting people to sing, laugh, dance and maybe cry, through collective moments of figuring out how to better celebrate new life, grieve, live well and prepare for the end.
+
+All scheduled events are free unless stated. There will be submissions desk at each location where you can be guided to submit a name by a steward at specific times.
+
+----
+
+Blocks: 
+
+----
+
+Seotitle: 
+
+----
+
+Seodescription: 
+
+----
+
+Introduction:
+
+Arrivals + Departures Boards will be travelling to different sites and festivals across the UK from April 2020.
+	 		 		 	 	 		
+See each location listing below to find out where and times you can view the boards live together with the series of related events, talks and workshops inviting people to sing, laugh, dance and maybe cry, through collective moments of figuring out how to better celebrate new life, grieve, live well and prepare for the end.
+
+----
+
+Bodytext: All scheduled events are free unless stated. There will be submissions desk at each location where you can be guided to submit a name by a steward at specific times.
