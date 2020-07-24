@@ -37,7 +37,7 @@ Logos:
   title: |
     Supported by Without Walls
     Commissioned by Artsadmin, Norfolk & Norwich Festival, Freedom Festival Arts Trust
-    Funded by Arts Council England, Create to Connect>Create To Impact , Creative Europe Programme
+    Funded by Arts Council England, Create to Connect>Create To Impact, Creative Europe Programme
   logoimages:
     - ww-logo-1.png
     - artsadmin.svg
