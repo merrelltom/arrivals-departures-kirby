@@ -78,3 +78,16 @@ button:active,  a.button:active {
     border-radius: 14px;
     font-size: 12px;
 }
+
+.icon-button, a.icon-button{
+    width:36px;
+    padding: 0;
+    border-radius: 18px;
+    img{
+        width: 100%;
+    }
+}
+
+.icon-button:hover, a.icon-button:hover{
+    background: $yellow;
+}

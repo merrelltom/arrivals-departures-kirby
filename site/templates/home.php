@@ -30,7 +30,7 @@
                         <span class="board-column-heading" >Date</span><span class="board-column-heading">Name</span>
                     </div>
                     <ol class="names-list">
-                        <?php snippet('arrivals-board');?>
+                        <?php //snippet('arrivals-board');?>
                     </ol>
                 
                 </div>
@@ -44,7 +44,7 @@
                         <span class="board-column-heading" >Date</span><span class="board-column-heading">Name</span>
                     </div>
                     <ol class="names-list">
-                       <?php snippet('departures-board');?>
+                       <?php //snippet('departures-board');?>
                     </ol>
                 
                 </div>
@@ -53,23 +53,17 @@
         
         </div>
         
-        <section class="board-buttons page-section bg-yellow">
-            <div class="wrapper">
+        <section class="board-buttons page-section">
+            <div class="wrapper board-buttons-wrapper">
                 <div class="row">
                     <div class="col-xs-12">
-                        <div class="button-container">
-                            <button class="sm-button" onclick="toggleForm(this);">Add a name to the boards</button>
-                        </div>
-                        <div class="button-container">
-                            <a title="Share on twitter" class="button sm-button" href="https://twitter.com/intent/tweet?url=<?= $page->url(); ?>" target="_blank">
-                                Share on Twitter
+                            <a title="Add a name to the board" class="button icon-button" onclick="toggleForm(this);"><img src="<?= $site->url()?>/assets/icons/add.svg"/></a>
+                            <a title="Share on twitter" class="button icon-button" href="https://twitter.com/intent/tweet?url=<?= $page->url(); ?>" target="_blank">
+                                <img src="<?= $site->url()?>/assets/icons/twitter.svg"/>
                             </a>
-                        </div>
-                        <div class="button-container">
-                            <a title="Share on facebook" class="button sm-button" href="https://www.facebook.com/sharer/sharer.php?u=<?= $page->url(); ?>" target="_blank">
-                                Share on Facebook
+                            <a title="Share on facebook" class="button icon-button" href="https://www.facebook.com/sharer/sharer.php?u=<?= $page->url(); ?>" target="_blank">
+                                <img src="<?= $site->url()?>/assets/icons/facebook.svg"/>
                             </a>
-                        </div>
                         </div>
                     </div>
                 </div>
