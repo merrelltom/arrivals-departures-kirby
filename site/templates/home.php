@@ -30,7 +30,7 @@
                         <span class="board-column-heading" >Date</span><span class="board-column-heading">Name</span>
                     </div>
                     <ol class="names-list">
-                        <?php //snippet('arrivals-board');?>
+                        <?php snippet('arrivals-board');?>
                     </ol>
                 
                 </div>
@@ -44,7 +44,7 @@
                         <span class="board-column-heading" >Date</span><span class="board-column-heading">Name</span>
                     </div>
                     <ol class="names-list">
-                       <?php //snippet('departures-board');?>
+                       <?php snippet('departures-board');?>
                     </ol>
                 
                 </div>
