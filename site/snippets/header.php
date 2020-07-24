@@ -17,7 +17,7 @@
   <meta name="description" content="<?= $site->seoDescription();?>">
   <?php endif;?>  
 
-  <?= css(['assets/css/style-1.1.css', '@auto']) ?>
+  <?= css(['assets/css/style-1.2.css', '@auto']) ?>
 
 </head>
 <body>

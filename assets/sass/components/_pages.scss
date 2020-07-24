@@ -146,6 +146,10 @@ BOARDS
 ================================================================  
 */
 
+.boards-wrapper{
+    max-width: 100000px;
+}
+
 .board-section{
     background: $lightBlack;
 }

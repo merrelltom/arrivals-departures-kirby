@@ -19,9 +19,9 @@
         </section>
 
         <div class="board-section">
-            <div class="wrapper">
+            <div class="wrapper boards-wrapper">
                 
-                <article id="arrivals-board" class="board">
+                <div id="arrivals-board" class="board">
                     
                     <header class="board-header">
                         <h2 class="board-title">Arrivals</h2>
@@ -33,9 +33,9 @@
                         <?php //snippet('arrivals-board');?>
                     </ol>
                 
-                </article>
+                </div>
                 
-                <article id="departures-board" class="board">
+                <div id="departures-board" class="board">
                     
                     <header class="board-header">
                         <h2 class="board-title">Departures</h2>
@@ -47,7 +47,7 @@
                        <?php //snippet('departures-board');?>
                     </ol>
                 
-                </article>
+                </div>
 
             </div>
         
