@@ -42,7 +42,7 @@ Icon
 
 # Content
 # ---------------
-# content
+content/*
 
 
 # OAUTH ETC
