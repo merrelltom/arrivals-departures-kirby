@@ -227,12 +227,12 @@
               infowincontent.appendChild(strong);
               infowincontent.appendChild(document.createElement('br'));
               console.log("Showing story link for:" + id);
-//              if (story_mod === 1) {
+              if (true) {
                   var story_link = document.createElement('a');
                   story_link.href = './stories#' + id;
                   story_link.appendChild(document.createTextNode("Story"));
                   infowincontent.appendChild(story_link);
-//              }
+              }
               var icon = customIcon[type] || {};
               var marker = new google.maps.Marker({
                 map: map,
