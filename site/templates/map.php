@@ -215,7 +215,7 @@
               var id = markerElem.getAttribute('ID');
               var name = markerElem.getAttribute('name');
               var date = markerElem.getAttribute('date');
-              var story_mod = markerElem.getAttribute('story_mod');
+              var story_mod = parseInt(markerElem.getAttribute('story_mod'));
               var type = markerElem.getAttribute('type');
               var point = new google.maps.LatLng(
                   parseFloat(markerElem.getAttribute('lat')),
