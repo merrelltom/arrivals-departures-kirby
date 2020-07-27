@@ -39,7 +39,7 @@ foreach ($results as $result) { ?>
                 </div>  
                 <?php if ($result["story_mod"] == 1) { ?>
                 <div>
-                    <a href="./stories#"<?php echo $result["ID"];?> >
+                    <a href="./stories#<?php echo $result["ID"];?>">
                         Story
                     </a>
                 </div>
