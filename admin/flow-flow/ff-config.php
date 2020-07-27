@@ -29,4 +29,4 @@ define('DB_TABLE_PREFIX', '');//TABLE PREFIX
 define('FF_LOCALE', 'en_US');
 //date_default_timezone_set('America/New_York');
 
-define('WP_CONTENT_DIR', 'path to the root of the site');
+define('WP_CONTENT_DIR', 'http://134.209.184.8/');
