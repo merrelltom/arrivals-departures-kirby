@@ -127,7 +127,7 @@ $form = $site->children()->findByURI('submission-form');
                     <legend class="visuallyhidden">
                         <?php if($form->storyInstructions()): $form->storyInstructions()->kt(); endif;?>?>
                     </legend>
-                    <textarea id="ad_story" name="story" type="textarea" rows="8" maxlength="200" placeholder="Add a story..."></textarea>
+                    <textarea id="story" name="story" type="textarea" rows="8" maxlength="200" placeholder="Add a story..."></textarea>
                     <?php if($form->storyInstructions()):?>
                     <div aria-hidden="true" class="small-text">
                         <?= $form->storyInstructions()->kt();?>
