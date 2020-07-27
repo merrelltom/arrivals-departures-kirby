@@ -47,6 +47,9 @@ if($time > 60 || $kirby->user()){
             if ( isset( $_POST['email'] )){
                 $payload_array["email"] = filter_input(INPUT_POST, "email");
             }
+            if ( isset( $_POST['story'] )){
+                $payload_array["story"] = filter_input(INPUT_POST, "story");
+            }
 
             $payload = json_encode($payload_array);
 
