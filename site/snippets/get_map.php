@@ -43,8 +43,10 @@ header("Content-type: text/xml");
 foreach ($arr_geo as $arr_row) {
   $node = $dom->createElement("marker");
   $newnode = $parnode->appendChild($node);
+  $newnode->setAttribute("ID", $arr_row['ID']);
   $newnode->setAttribute("name", $arr_row['name']);
   $newnode->setAttribute("date", $arr_row['date']);
+  $newnode->setAttribute("story_mod", $arr_row['story_mod']);
   $latlng = explode(',',  $arr_row['geo']);
   $newnode->setAttribute("lat", $latlng[0]);
   $newnode->setAttribute("lng", $latlng[1]);
@@ -54,8 +56,10 @@ foreach ($arr_geo as $arr_row) {
 foreach ($dep_geo as $dep_row) {
   $node = $dom->createElement("marker");
   $newnode = $parnode->appendChild($node);
-  $newnode->setAttribute("name", $dep_row['name']);
-  $newnode->setAttribute("date", $dep_row['date']);
+  $newnode->setAttribute("ID", $arr_row['ID']);
+  $newnode->setAttribute("name", $arr_row['name']);
+  $newnode->setAttribute("date", $arr_row['date']);
+  $newnode->setAttribute("story_mod", $arr_row['story_mod']);
   $latlng = explode(',',  $dep_row['geo']);
   $newnode->setAttribute("lat", $latlng[0]);
   $newnode->setAttribute("lng", $latlng[1]);

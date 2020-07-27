@@ -212,8 +212,10 @@
             var xml = data.responseXML;
             var markers = xml.documentElement.getElementsByTagName('marker');
             Array.prototype.forEach.call(markers, function(markerElem) {
+              var id = markerElem.getAttribute('ID');
               var name = markerElem.getAttribute('name');
               var date = markerElem.getAttribute('date');
+              var story_mod = markerElem.getAttribute('story_mod');
               var type = markerElem.getAttribute('type');
               var point = new google.maps.LatLng(
                   parseFloat(markerElem.getAttribute('lat')),
@@ -224,6 +226,12 @@
               strong.textContent = date + " " + name;
               infowincontent.appendChild(strong);
               infowincontent.appendChild(document.createElement('br'));
+              if (story_mod === 1) {
+                  var story_link = document.createElement('a');
+                  story_link.href = './stories#' + id;
+                  story_link.textContent = "Story";
+                  infowincontent.appendChild(story_link);
+              }
               var icon = customIcon[type] || {};
               var marker = new google.maps.Marker({
                 map: map,
