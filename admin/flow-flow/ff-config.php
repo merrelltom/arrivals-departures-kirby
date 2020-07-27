@@ -14,13 +14,13 @@
  * @link      http://looks-awesome.com
  * @copyright 2014-2016 Looks Awesome
  */
-define('FF_PLUGIN_URL', 'http://127.0.0.1/site');
-define('FF_AJAX_URL',   'http://127.0.0.1/site/flow-flow/ff.php');
+define('FF_PLUGIN_URL', 'http://134.209.184.8/admin');
+define('FF_AJAX_URL',   'http://134.209.184.8/admin/flow-flow/ff.php');
 
-define('DB_HOST', '127.0.0.1:3306');
-define('DB_NAME','DB');//DB NAME
-define('DB_USER', 'USER');//DB USER NAME
-define('DB_PASSWORD', 'PASSWORD');//DB PASSWORD
+define('DB_HOST', 'localhost');
+define('DB_NAME','ad_social');//DB NAME
+define('DB_USER', 'aandd_social');//DB USER NAME
+define('DB_PASSWORD', '@rrD3p_social');//DB PASSWORD
 
 define('DB_CHARSET','utf8');
 define('DB_COLLATE','utf8_general_ci');
