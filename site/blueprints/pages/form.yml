@@ -43,6 +43,11 @@ tabs:
                     type: textarea
                     size: small
                     buttons: false
+                storyInstructions:
+                    label: Story Instructions
+                    type: textarea
+                    size: small
+                    buttons: false                    
                 emailInstructions:
                     label: Email Instructions
                     type: textarea

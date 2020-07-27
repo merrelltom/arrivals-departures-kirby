@@ -123,6 +123,19 @@ $form = $site->children()->findByURI('submission-form');
                 </fieldset>
                 
                 <fieldset class="form-item col-xs-12">
+                    <label class="fieldset-title" for="ad_location">Story <small class="small">(Optional)</small></label>
+                    <legend class="visuallyhidden">
+                        <?php if($form->storyInstructions()): $form->storyInstructions()->kt(); endif;?>?>
+                    </legend>
+                    <textarea id="ad_story" type="textarea" rows="8" maxlength="200" placeholder="Add a story..."></textarea>
+                    <?php if($form->storyInstructions()):?>
+                    <div aria-hidden="true" class="small-text">
+                        <?= $form->storyInstructions()->kt();?>
+                    </div>
+                    <?php endif;?>
+                </fieldset>
+                
+                <fieldset class="form-item col-xs-12">
                     <label class="fieldset-title" for="email">Email <small class="small">(Optional)</small></label>
                     <legend class="visuallyhidden">
                         <?php if($form->emailInstructions()): $form->emailInstructions()->kt(); endif;?>?>
