@@ -1,4 +1,6 @@
 var tm_body = document.getElementsByTagName("body")[0];
+var tm_form = document.getElementById("form-overlay");
+
 
 function toggleMenu() {
     var right = window.innerWidth - (document.getElementById('header').offsetLeft + document.getElementById('header').offsetWidth);
@@ -14,7 +16,6 @@ function toggleMenu() {
 
 
 function toggleForm(e) {
-    var tm_form = document.getElementById("form-overlay");
     var title = "Submission Form";
     if(tm_body.classList.contains("form--open")){
         tm_body.classList.remove("form--open");
