@@ -227,7 +227,7 @@
               infowincontent.appendChild(strong);
               infowincontent.appendChild(document.createElement('br'));
               console.log("Showing story link for:" + id);
-              if (true) {
+              if (story_mod === 1) {
                   var story_link = document.createElement('a');
                   story_link.href = './stories#' + id;
                   story_link.appendChild(document.createTextNode("Story"));
