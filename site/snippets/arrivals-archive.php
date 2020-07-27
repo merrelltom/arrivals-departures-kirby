@@ -36,7 +36,14 @@ foreach ($results as $result) { ?>
                     <?php 
                         echo $result["name"];
                     ?>
-                </div>            
+                </div>  
+                <?php if ($result["story_mod"] == 1) { ?>
+                <div>
+                    <a href="./stories#"<?php echo $result["ID"];?> >
+                        Story
+                    </a>
+                </div>
+                <?php } ?>
             </div>
         </li>
 <?php 
