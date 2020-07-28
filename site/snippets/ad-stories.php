@@ -54,7 +54,7 @@ foreach ($results as $result) { ?>
              <h2 class="story-name large-text"><?php echo($result['name']);?></h2>
              <div class="story-date"><?php echo($result['date']);?></div>
              <div class="story-text"><?php echo($result['story']);?></div>
-             <div class="story-cat"><?php if($result['location']){echo $result['location'];}?></div>
+             <div class="story-cat"><?php print_r($result);?></div>
          </div>
      </div>
 <?php 
