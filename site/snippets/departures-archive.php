@@ -34,15 +34,13 @@ foreach ($results as $result) { ?>
                 <div class="archive-name col-xs-12 col-md-9">
                     <?php 
                         echo $result["name"];
-                    ?>
+                        if ($result["story_mod"] == 1) { ?>
+                        <a class="story-link" href="./stories#<?php echo $result["ID"];?> ">
+                            View Story
+                        </a>
+                    <?php } ?>
                 </div>
-                <?php if ($result["story_mod"] == 1) { ?>
-                <div>
-                    <a href="./stories#<?php echo $result["ID"];?> ">
-                        Story
-                    </a>
-                </div>
-                <?php } ?>
+
             </div>
         </li>
 <?php 

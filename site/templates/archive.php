@@ -29,3 +29,5 @@
                 </div>
             </div>
         </section>
+        
+<?php snippet('footer') ?>
