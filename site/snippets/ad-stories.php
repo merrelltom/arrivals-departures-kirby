@@ -50,7 +50,7 @@ $results = array_reverse($all_results,true);
 foreach ($results as $result) { ?>
     <div id="<?php echo($result['type'].$result['ID']);?>" class="col-xs-12 col-md-6 col-xl-4 resource">
          <div class="bg-yellow story">
-             <div class="story-cat">Arrival</div>
+             <div class="story-cat"><?php echo($result['type']);?></div>
              <h2 class="story-name large-text"><?php echo($result['name']);?></h2>
              <div class="story-date"><?php echo($result['date']);?></div>
              <div class="story-text"><?php echo($result['story']);?></div>
