@@ -24,7 +24,7 @@ curl_setopt_array($curl, [
       "authorization: Bearer " . $token),
 ]);
 $arrival_results = json_decode(curl_exec($curl), true);
-array_walk($arrival_results, 'test_alter', 'arrivals');
+array_walk($arrival_results, 'test_alter', 'arrival');
 curl_close($curl);
 
 $curl = curl_init();
@@ -40,7 +40,7 @@ curl_setopt_array($curl, [
       "authorization: Bearer " . $token),
 ]);
 $departure_results = json_decode(curl_exec($curl), true);
-array_walk($departure_results, 'test_alter', 'departures');
+array_walk($departure_results, 'test_alter', 'departure');
 curl_close($curl);
 
 $all_results = array_merge($arrival_results, $departure_results);

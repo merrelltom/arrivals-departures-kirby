@@ -35,7 +35,7 @@ foreach ($results as $result) { ?>
                     <?php 
                         echo $result["name"];
                         if ($result["story_mod"] == 1) { ?>
-                        <a class="story-link" href="./stories#<?php echo "departures".$result["ID"];?> ">
+                        <a class="story-link" href="./stories#<?php echo "departure".$result["ID"];?> ">
                             View Story
                         </a>
                     <?php } ?>
