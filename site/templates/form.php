@@ -1,32 +1,8 @@
-<!doctype html>
-<html lang="en">
-<head>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-
-  <?php if($page->seoTitle()->isNotEmpty()):?>
-  <title><?= $page->seoTitle();?></title>
-  <?php else : ?>
-  <title><?= $site->title() ?> | <?= $page->title() ?></title>
-  <?php endif;?>  
-
-  <?php if($page->seoDescription()->isNotEmpty()):?>
-  <meta name="description" content="<?= $page->seoDescription();?>">
-  <?php else : ?>
-  <meta name="description" content="<?= $site->seoDescription();?>">
-  <?php endif;?>  
-
-  <?= css(['assets/css/style-1.1.css', '@auto']) ?>
-
-</head>
-<body>
-
-  <div class="page">
+<?php snippet('header') ?>
       
    <?php snippet('form');?>
       
-  </div>
+  </div><?php //dont delete – opening tag is in header!?>
 
 <?php 
     $MAPS_API_KEY = apache_getenv("MAPS_API_KEY");
