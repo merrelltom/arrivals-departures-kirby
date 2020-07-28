@@ -26,7 +26,7 @@ if (count($results) == 0) {
     echo("<div class='row'><h2 class='col-xs-12 section-title moderation-title'><hr>Departures:</h2></div>");
 }
 foreach ($results as $result) { ?>
-    <form method="post" action="./story_moderation" class="row moderation-row" id="d-board-line-<?php echo($board_line);?>">
+    <form method="post" action="./story-moderation" class="row moderation-row" id="d-board-line-<?php echo($board_line);?>">
         <div class="col-xs-12"><hr></div>
         <div class="col-xs-12 col-md-2 large-text"><?php echo($result["date"]);?></div>
         <div class="col-xs-12 col-md-4 large-text"><?php echo($result["name"]);?></div>
