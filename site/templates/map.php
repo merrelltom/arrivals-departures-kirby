@@ -230,7 +230,7 @@
               if (story_mod === 1) {
                   var story_link = document.createElement('a');
                   story_link.href = './stories#' + type + id;
-                  story_link.appendChild(document.createTextNode("Story"));
+                  story_link.appendChild(document.createTextNode("View Story"));
                   infowincontent.appendChild(story_link);
               }
               var icon = customIcon[type] || {};
