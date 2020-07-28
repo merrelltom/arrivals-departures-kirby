@@ -229,7 +229,7 @@
               console.log("Showing story link for:" + id);
               if (story_mod === 1) {
                   var story_link = document.createElement('a');
-                  story_link.href = './stories#' + id;
+                  story_link.href = './stories#' + type + id;
                   story_link.appendChild(document.createTextNode("Story"));
                   infowincontent.appendChild(story_link);
               }
