@@ -45,7 +45,7 @@ curl_close($curl);
 
 $all_results = array_merge($arrival_results, $departure_results);
 arsort($all_results);
-$results = array_reverse($a,true);
+$results = array_reverse($all_results,true);
 
 foreach ($results as $result) { ?>
     <div id="<?php echo($result['type'].$result['ID']);?>" class="col-xs-12 col-md-6 col-xl-4 resource">
