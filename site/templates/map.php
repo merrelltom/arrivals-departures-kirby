@@ -231,15 +231,9 @@
               infoBoxDate.setAttribute('class', 'date');
               infoBoxDate.textContent = date;
                 
-              var infoBoxType = document.createElement('span');
-              infoBoxDate.setAttribute('class', 'cat');
-              infoBoxDate.textContent = type;
-                
               infowincontent.appendChild(infoBoxDate);
               infowincontent.appendChild(infoBoxName);
-              infowincontent.appendChild(infoBoxType;
 
-                
               console.log("Showing story link for:" + id);
               if (story_mod === 1) {
                   var story_link = document.createElement('a');
