@@ -264,6 +264,7 @@ FORM OVERLAY
     top:0;
     right:-100vw;
     width:100vw;
+    max-width: 800px;
     height:100vh;
     transition: right 300ms 50ms ease-in-out;
     background:white;

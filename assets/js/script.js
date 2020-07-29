@@ -16,13 +16,17 @@ function toggleMenu() {
 
 
 function toggleForm(e) {
+    var right = window.innerWidth - (document.getElementById('header').offsetLeft + document.getElementById('header').offsetWidth);
     var title = "Submission Form";
     if(tm_body.classList.contains("form--open")){
         tm_body.classList.remove("form--open");
         tm_form.setAttribute('aria-hidden', 'true');
+        tm_form.style.right = '-100vw';
     }else{
         tm_body.classList.add("form--open");
         tm_form.setAttribute('aria-hidden', 'false');
+        tm_form.style.right = right + 'px';
+        
     }
 }
 
@@ -35,6 +39,7 @@ function hideOverlay() {
     if(tm_body.classList.contains("form--open")){
          tm_body.classList.remove("form--open");
          tm_form.setAttribute('aria-hidden', 'true');
+         tm_form.style.right = '-100vw';
     }
 }
 

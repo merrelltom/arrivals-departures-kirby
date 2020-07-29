@@ -222,10 +222,18 @@
                   parseFloat(markerElem.getAttribute('lng')));
 
               var infowincontent = document.createElement('div');
-              var strong = document.createElement('strong');
-              strong.textContent = date + " " + name;
-              infowincontent.appendChild(strong);
-              infowincontent.appendChild(document.createElement('br'));
+              infowincontent.setAttribute('class', 'map-info-container');
+                
+              var name = document.createElement('h2');
+              name.textContent = name;
+                
+              var date = document.createElement('span');
+              date.setAttribute('class', 'date');
+              date.textContent = date;
+                
+              infowincontent.appendChild(date);
+              infowincontent.appendChild(name);
+
               console.log("Showing story link for:" + id);
               if (story_mod === 1) {
                   var story_link = document.createElement('a');
