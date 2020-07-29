@@ -229,10 +229,15 @@
                 
               var infoBoxDate = document.createElement('span');
               infoBoxDate.setAttribute('class', 'date');
-              infoBoxDate.textContent = type;
+              infoBoxDate.textContent = date;
+
+              var infoBoxType = document.createElement('span');
+              infoBoxType.setAttribute('class', 'type');
+              infoBoxType.textContent = type;
                 
-              infowincontent.appendChild(infoBoxDate);
+              infowincontent.appendChild(infoBoxType);
               infowincontent.appendChild(infoBoxName);
+              infowincontent.appendChild(infoBoxDate);
 
               console.log("Showing story link for:" + id);
               if (story_mod === 1) {
