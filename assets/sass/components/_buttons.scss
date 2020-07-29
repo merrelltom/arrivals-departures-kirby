@@ -23,7 +23,7 @@ button, a.button {
     -moz-appearance: none;
 }
 
-button:hover, a.button:hover,
+button:hover, a.button:hover, .lg-button:hover,
 button:focus, a.button:focus {
     background: black;
     color: $yellow;
