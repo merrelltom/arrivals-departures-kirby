@@ -67,3 +67,5 @@
     
     <?php endif; ?>
 </main>
+
+<?php snippet('footer');?>
