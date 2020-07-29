@@ -224,15 +224,15 @@
               var infowincontent = document.createElement('div');
               infowincontent.setAttribute('class', 'map-info-container');
                 
-              var name = document.createElement('h2');
-              name.textContent = name;
+              var infoBoxName = document.createElement('h2');
+              infoBoxName.textContent = name;
                 
-              var date = document.createElement('span');
-              date.setAttribute('class', 'date');
-              date.textContent = date;
+              var infoBoxDate = document.createElement('span');
+              infoBoxDate.setAttribute('class', 'date');
+              infoBoxDate.textContent = date;
                 
-              infowincontent.appendChild(date);
-              infowincontent.appendChild(name);
+              infowincontent.appendChild(infoBoxDate);
+              infowincontent.appendChild(infoBoxName);
 
               console.log("Showing story link for:" + id);
               if (story_mod === 1) {
