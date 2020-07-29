@@ -229,7 +229,7 @@
                 
               var infoBoxDate = document.createElement('span');
               infoBoxDate.setAttribute('class', 'date');
-              infoBoxDate.textContent = date;
+              infoBoxDate.textContent = type;
                 
               infowincontent.appendChild(infoBoxDate);
               infowincontent.appendChild(infoBoxName);
