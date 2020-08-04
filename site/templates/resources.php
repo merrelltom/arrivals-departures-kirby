@@ -35,7 +35,7 @@
                                 $text = 'Click to view resource';
                             }
                         ?>
-                        <a href="<?= $link;?>" class="block-link bg-yellow padded venue-details">
+                        <a <?php if($pdf){ echo 'download';}?> href="<?= $link;?>" class="block-link bg-yellow padded venue-details">
                             <div class="resource-type"><?= $type;?></div>
                             <h2 class="section-title"><?= $resource->title();?></h2>
                             <div class="event-intro"> 

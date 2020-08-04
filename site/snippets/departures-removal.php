@@ -33,7 +33,7 @@ foreach ($results as $result) { ?>
         <div class="col-xs-12 col-md-4 large-text"><?php echo($result["name"]);?></div>        
         <input type="hidden" value="departure" name="type" id="type">
         <input type="hidden" value="<?php echo($result["ID"]);?>" name="ID" id="ID">
-        <div class="radio-wrapper col-xs-12 col-md-2">
+        <div class="radio-wrapper col-xs-12 col-md-4">
             <div>
                 <input type="radio" id="delete-d-<?php echo($board_line);?>" name="update" value="delete">
                 <label for="delete-d-<?php echo($board_line);?>"><span class="label">Delete</span></label>
