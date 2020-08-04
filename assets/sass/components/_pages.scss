@@ -557,7 +557,8 @@ COOKIE NOTICE
     width:100%;
     padding: 10px 20px 10px; 
     position: fixed;
-    top:100vh;
+    top: 100vh; /* Fallback for browsers that do not support Custom Properties */
+    top: calc(var(--vh, 1vh) * 100);
     left:0;
     font-family: "New Rail Alphabet", sans-serif;
     font-size: 12px;
