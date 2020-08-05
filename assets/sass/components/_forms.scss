@@ -36,7 +36,7 @@ input:focus, textarea:focus{
 }
 
 .form fieldset{
-    padding-bottom: 2.5rem;
+    padding-bottom: 1rem;
 }
 
 .form h3.fieldset-title, label.fieldset-title{
@@ -69,6 +69,8 @@ input:focus, textarea:focus{
 
 //remove google logo
 .pac-logo:after{display:none;}
+
+
 
 /*  
 ================================================================

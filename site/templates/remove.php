@@ -20,7 +20,7 @@
         <div class="wrapper">
             <div class="row">
                 <div class="col-xs-12">
-                   <p class="red-text">Notice: Once you delete an entry it cannot be recovered.</p>
+                   <p class="red-text">Note: Once you delete an entry it cannot be recovered.</p>
                 </div>
             </div>
         </div>
