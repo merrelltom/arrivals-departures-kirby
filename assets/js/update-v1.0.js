@@ -2,7 +2,7 @@
   var letter_no = 1;
 
 
-  var socket = io.connect('https://134.209.184.8:44444', {rejectUnauthorized: false});
+  var socket = io.connect('https://arrivalsanddepartures.net:44444', {rejectUnauthorized: false});
 
   socket.on('connect', function(data) {
     	socket.emit('join', 'Hello World from client');
