@@ -16,5 +16,5 @@
 <?= js('assets/js/formValidate.js') ?>
 
 <?php if ($page->isHomePage()):?>
-    <?= js('assets/js/update.js') ?>
+    <?= js('assets/js/update-v1.0.js') ?>
 <?php endif;?>
