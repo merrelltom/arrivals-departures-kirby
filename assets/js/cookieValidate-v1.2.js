@@ -222,7 +222,7 @@
             cookieExpire = new Date();
 
         cookieExpire.setTime(now.getTime() + expireIn);
-        document.cookie = "cookie_notice=1; SameSite=None; expires=" + cookieExpire.toUTCString() + "; path=/;";
+        document.cookie = "cookie_notice=1; SameSite=Lax; expires=" + cookieExpire.toUTCString() + "; path=/;";
         console.log('dropped');
     }
 
