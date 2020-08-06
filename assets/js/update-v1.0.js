@@ -2,7 +2,7 @@
   var letter_no = 1;
 
 
-  var socket = io.connect('https://www.arrivalsanddepartures.net:44444');
+  var socket = io.connect('https://www.arrivalsanddepartures.net:44444', {secure: true});
 
   socket.on('connect', function(data) {
     	socket.emit('join', 'Hello World from client');
