@@ -47,7 +47,7 @@ $all_results = array_merge($arrival_results, $departure_results);
 //arsort($all_results);
 function compare_ID($a, $b)
   {
-    return strnatcmp($a['date'], $b['date']);
+    return strnatcmp($a['ID'], $b['ID']);
   }
 usort($all_results, 'compare_ID');
 $results = array_reverse($all_results,true);
