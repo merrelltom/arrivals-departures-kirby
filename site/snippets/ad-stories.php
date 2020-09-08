@@ -52,7 +52,7 @@ function compare_ID($a, $b)
 usort($all_results, 'compare_ID');
 $results = array_reverse($all_results,true);
 
-foreach ($results as $result) { ?>
+foreach ($arrival_results as $result) : ?>
     <div id="<?php echo($result['type'].$result['ID']);?>" class="col-xs-12 col-md-6 col-xl-4 resource">
          <div class="bg-yellow story <?= $result['type'];?>">
              <div class="story-cat"><?php echo($result['type']);?></div>
@@ -63,5 +63,5 @@ foreach ($results as $result) { ?>
          </div>
      </div>
 <?php 
-    } 
+    endforeach;
 ?>
