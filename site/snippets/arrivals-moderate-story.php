@@ -17,7 +17,7 @@ curl_setopt_array($curl, [
       "authorization: Bearer " . $token),
 ]);
 $results = json_decode(curl_exec($curl), true);
-curl_close($curl);
+curl_close($curl); 
 
 $board_line = 1;
 if (count($results) == 0) {
