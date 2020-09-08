@@ -51,17 +51,42 @@ function compare_ID($a, $b)
   }
 usort($all_results, 'compare_ID');
 $results = array_reverse($all_results,true);
-
-foreach (array_reverse ($arrival_results) as $result) : ?>
-    <div id="<?php echo($result['type'].$result['ID']);?>" class="col-xs-12 col-md-6 col-xl-4 resource">
-         <div class="bg-yellow story <?= $result['type'];?>">
-             <div class="story-cat"><?php echo($result['type']);?></div>
-             <h2 class="story-name large-text"><?php echo($result['name']);?></h2>
-             <div class="story-date"><?php echo($result['date']);?></div>
-             <div class="story-text"><?php echo($result['story']);?></div>
-             <div class="story-cat"></div>
-         </div>
-     </div>
-<?php 
-    endforeach;
 ?>
+
+<div class="col-xs-12 col-md-6">
+    <div class="grid">
+        <?php
+        foreach (array_reverse ($arrival_results) as $result) : ?>
+            <div id="<?php echo($result['type'].$result['ID']);?>" class="col-xs-12 resource">
+                 <div class="bg-yellow story <?= $result['type'];?>">
+                     <div class="story-cat"><?php echo($result['type']);?></div>
+                     <h2 class="story-name large-text"><?php echo($result['name']);?></h2>
+                     <div class="story-date"><?php echo($result['date']);?></div>
+                     <div class="story-text"><?php echo($result['story']);?></div>
+                     <div class="story-cat"></div>
+                 </div>
+             </div>
+        <?php 
+            endforeach;
+        ?>
+    </div>
+</div>
+
+<div class="col-xs-12 col-md-6">
+    <div class="grid">
+        <?php
+        foreach (array_reverse ($departure_results) as $result) : ?>
+            <div id="<?php echo($result['type'].$result['ID']);?>" class="col-xs-12 resource">
+                 <div class="bg-yellow story <?= $result['type'];?>">
+                     <div class="story-cat"><?php echo($result['type']);?></div>
+                     <h2 class="story-name large-text"><?php echo($result['name']);?></h2>
+                     <div class="story-date"><?php echo($result['date']);?></div>
+                     <div class="story-text"><?php echo($result['story']);?></div>
+                     <div class="story-cat"></div>
+                 </div>
+             </div>
+        <?php 
+            endforeach;
+        ?>
+    </div>
+</div>
