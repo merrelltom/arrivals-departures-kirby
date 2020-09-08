@@ -24,7 +24,7 @@ curl_close($curl);
 
 $board_line = 1;
 $letter_no = 1;
-foreach ($results as $result) { ?>
+foreach (array_reverse ($results) as $result) { ?>
         <li class="archive-list-item">
             <div class="row">
                 <div class="archive-date col-xs-12 col-md-3">
