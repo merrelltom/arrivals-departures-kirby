@@ -5,7 +5,10 @@
 
 # enable awesome urls. i.e.:
 # http://yourdomain.com/about-us/team
-RewriteEngine on
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
+Header always set Content-Security-Policy "upgrade-insecure-requests;"
 
 # make sure to set the RewriteBase correctly
 # if you are running the site in a subfolder.
