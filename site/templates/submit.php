@@ -1,7 +1,7 @@
 <?php
 snippet('oauth');
 
-$months = array("JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEPT", "OCT", "NOV", "DEC" );
+$months = array("JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC" );
 
 $time = 90;
 
@@ -34,7 +34,7 @@ if($time > 60 || $kirby->user()){
                 }
             } else {
                 if ( $month != 0 ) {
-                    $month = $months[filter_input(INPUT_POST, "ad_month")];
+                    $month = $months[$month -1];
                     $date .= $month . "-";
                 }
             }
