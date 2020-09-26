@@ -19,7 +19,10 @@ if($time > 60 || $kirby->user()){
             }
 
             $payload_array = array ();
+            if ( isset( $_POST['ad_name'] )) {
             $payload_array["name"] = filter_input(INPUT_POST, "ad_name");
+            }
+        
             $date = "";
             $year = strval(filter_input(INPUT_POST, "ad_year"));
             $month = filter_input(INPUT_POST, "ad_month");
@@ -39,7 +42,9 @@ if($time > 60 || $kirby->user()){
                 }
             }
             $date .= $year;
-            $payload_array["date"] = $date;
+             if ( isset( $_POST['ad_year'] )) {
+                $payload_array["date"] = $date;
+             }
 
              if ( isset( $_POST['latlng'] )) {
                  $payload_array["geo"] = filter_input(INPUT_POST, "latlng");
