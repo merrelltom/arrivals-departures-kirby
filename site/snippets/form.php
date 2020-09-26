@@ -166,7 +166,7 @@ $paused = true;
                 <div class="col-xs-12 ">
                     <h2 class="section-title form-title">Apologies</h2>
                     <div class="body-text">
-                        We are temporarlily not accepting submissions due to technical difficulties. Please check back soon as we will be back up and running as soon as possible.
+                        We are temporarily not accepting submissions due to technical difficulties. Please check back soon as we will be back up and running as soon as possible.
                     </div>
                 </div>
             </section>
