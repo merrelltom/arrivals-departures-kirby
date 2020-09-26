@@ -5,6 +5,8 @@ error_reporting(E_ALL);
 
 $form = $site->children()->findByURI('submission-form');
 
+$paused = true;
+
 ?>
 
     <header class="header wrapper">
@@ -17,7 +19,7 @@ $form = $site->children()->findByURI('submission-form');
       
     <main class="main">
         <div class="wrapper">
-
+            <?php if($paused == false):?>
             <section class="form-intro row">
                 <div class="col-xs-12 ">
                     <h2 class="section-title form-title"><?= $form->title();?></h2>
@@ -159,6 +161,15 @@ $form = $site->children()->findByURI('submission-form');
                 </div>
                 
             </form>
-            
+            <?php else : ?>
+            <section class="form-intro row">
+                <div class="col-xs-12 ">
+                    <h2 class="section-title form-title">Apologies</h2>
+                    <div class="body-text">
+                        We are temporarlily not accepting submissions due to technical difficulties. Please check back soon as we will be back up and running as soon as possible.
+                    </div>
+                </div>
+            </section>
+            <?php endif;?>
         </div>
 </main>
