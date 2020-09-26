@@ -24,6 +24,7 @@ curl_close($curl);
 
 $board_line = 1;
 $letter_no = 1;
+if($results):
 foreach ($results as $result) { ?>
         <li class="names-list-item" id=" ">
             <div class="board-item-wrapper">
@@ -64,4 +65,5 @@ foreach ($results as $result) { ?>
 <?php 
     $board_line += 1;
     } 
+endif;
 ?>
