@@ -25,6 +25,7 @@ if (count($results) == 0) {
  }else{
     echo("<div class='row'><h2 class='col-xs-12 section-title moderation-title'><hr>Arrivals:</h2></div>");
 }
+if{$results}:
 foreach ($results as $result) { ?>
     <form method="post" action="./story-moderation" class="row moderation-row <?php if( strlen($result["story"]) == 0){ echo 'visuallyhidden';}?>" id="a-board-line-<?php echo($board_line);?>">
         <div class="col-xs-12"><hr></div>
@@ -52,4 +53,6 @@ foreach ($results as $result) { ?>
         </div>
     </form>
 <?php $board_line += 1;
-} ?> 
+}
+endif;
+?> 
