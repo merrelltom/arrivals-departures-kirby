@@ -5,7 +5,7 @@ error_reporting(E_ALL);
 
 $form = $site->children()->findByURI('submission-form');
 
-$paused = true;
+$paused = false;
 
 ?>
 
