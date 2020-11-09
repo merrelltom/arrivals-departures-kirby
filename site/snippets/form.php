@@ -5,7 +5,7 @@ error_reporting(E_ALL);
 
 $form = $site->children()->findByURI('submission-form');
 
-$paused = false;
+$paused = true;
 
 ?>
 
@@ -164,9 +164,27 @@ $paused = false;
             <?php else : ?>
             <section class="form-intro row">
                 <div class="col-xs-12 ">
-                    <h2 class="section-title form-title">Apologies</h2>
+                    <h2 class="section-title form-title">Submissions</h2>
                     <div class="body-text">
-                        We are temporarily not accepting submissions due to technical difficulties. Please check back soon as we will be back up and running as soon as possible.
+                        <p>
+                        Name submissions are currently closed until the boards are installed again. Add your name to our mailing list if you would like to be notified when Arrivals + Departures is next on show.
+                        </p><p>
+                        Please also visit the Archive and Stories pages on this website, to see how the public have previously engaged with the work in deeply personal and political ways. 
+                        </p>
+                        <form class="validate" action="<?= $site->mailingListSignUpURL();?>" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+                        <div class="label-wrapper">
+                            <label for="EMAIL"><?= $site->mailingListSignUpText();?></label>
+                        </div>
+                        <div class="button-wrapper">
+                            <div class="sign-up-button-group">
+                                    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Email" required>
+                                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_ef8f4be807ab7b6e52936da2c_78179ee229" tabindex="-1" value=""></div>
+                                    <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="enter button"><span class="visuallyhidden">Subscribe</span> > <span class="icon-short-l-arr-1"></span>
+                                    </button>
+                              </div>
+                        </div>
+                    </form>
                     </div>
                 </div>
             </section>
