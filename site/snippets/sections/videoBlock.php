@@ -22,9 +22,9 @@
                                   width: '640',
                                   videoId: '<?= $data->videoID();?>',
                                   playerVars: {
-                                      autoplay: '1',
+                                      autoplay: '0',
                                       muted: '1',
-                                      controls: '0',
+                                      controls: '1',
                                       fs: '0',
                                       rel: '0'
 
@@ -39,7 +39,7 @@
                               // 4. The API will call this function when the video player is ready.
                               function onPlayerReady(event) {
                 //                  player.mute();
-                                  player.playVideo();
+//                                  player.playVideo();
                               }
                               function onPlayerStateChange(event) {
                                 if (event.data == 1) {
@@ -48,11 +48,11 @@
                                 }
                                 if (event.data == 0 ){
                                     console.log('end');
-                                    event.target.h.parentElement.classList.remove('playing');
+//                                    event.target.h.parentElement.classList.remove('playing');
                                     event.target.h.parentElement.classList.add('ended');
                                 }
                                 if (event.data == 2){
-                                    event.target.h.parentElement.classList.remove('playing');
+//                                    event.target.h.parentElement.classList.remove('playing');
                                 }
                               }
                               function stopVideo() {
