@@ -6,8 +6,8 @@ error_reporting(E_ALL);
 $form = $site->children()->findByURI('submission-form');
 
 $open = $form->submissionsOpen()->toBool();
+if (!$kirby->user()){ }else{ $open = true; } ?>
 
-?>
 
     <header class="header wrapper">
         <div class="row">
