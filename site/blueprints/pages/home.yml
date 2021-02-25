@@ -33,6 +33,48 @@ tabs:
                     type: textarea
                     size: medium
                     buttons: false
+                closedToggle:
+                    label: Show Closed Banner
+                    type: toggle
+                closedBanner:
+                    label: Introduction Banner
+                    type: textarea
+                    size: small
+                    buttons: true
+                    when:
+                        closedToggle: true
+                showVideo:
+                    label: Show Video
+                    type: toggle
+                videoID:
+                    label: Video ID
+                    width: 1/3
+                    type: text
+                    size: small
+                    when:
+                        showVideo: true
+                    help: Add the ID of the youtube video here
+                videoPoster:
+                    label: Poster Image
+                    type: files
+                    max: 1
+                    width: 1/3
+                    layout: cards
+                    uploads:
+                      template: image
+                    image:
+                      ratio: 16/9
+                    when:
+                        showVideo: true
+                    help: This image shows before the user clicks play
+                videoCaption:
+                    label: Video Caption
+                    width: 1/3
+                    type: text
+                    size: small
+                    when:
+                        showVideo: true
+                    help: Caption appears below the video
                 image01mobile:
                     label: Image 01 (mobile)
                     type: files
@@ -43,6 +85,8 @@ tabs:
                       template: image
                     image:
                       ratio: 1/1
+                    when:
+                        showVideo: false
                 image01desktop:
                     label: Image 01 (desktop)
                     type: files
@@ -53,6 +97,8 @@ tabs:
                       template: image
                     image:
                       ratio: 2/1
+                    when:
+                        showVideo: false
                 aboutTitle:
                     label: About Title
                     type: text
@@ -62,9 +108,9 @@ tabs:
                     type: builder
                     width: 1/2
                     columns: 1
-                    max: 10 
+                    max: 10
                     fieldsets:
-                        largeText: 
+                        largeText:
                             name: Large Text Block
                             label: Large Text Block
                             fields:
@@ -73,7 +119,7 @@ tabs:
                                     type: textarea
                                     size: medium
                                     buttons: false
-                        smallText: 
+                        smallText:
                             name: Small Text Block
                             label: Small Text Block
                             fields:
@@ -106,13 +152,13 @@ tabs:
                     label: Programme Title
                     type: text
                     width: 1/2
-                programmeIntro: 
+                programmeIntro:
                     label: Programme Intro
                     type: textarea
                     size: medium
                     width: 1/2
                     buttons: false
-                                    
+
   # seo tab
   seo:
     label: SEO

@@ -1,11 +1,11 @@
-<?php 
+<?php
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 $form = $site->children()->findByURI('submission-form');
 
-$paused = true;
+$open = $form->submissionsOpen()->toBool();
 
 ?>
 
@@ -16,10 +16,10 @@ $paused = true;
             </h1>
         </div>
     </header>
-      
+
     <main class="main">
         <div class="wrapper">
-            <?php if($paused == false):?>
+            <?php if( $open  == true ):?>
             <section class="form-intro row">
                 <div class="col-xs-12 ">
                     <h2 class="section-title form-title"><?= $form->title();?></h2>
@@ -54,13 +54,13 @@ $paused = true;
                     </div>
                     <?php endif;?>
                 </fieldset>
-                
+
                 <fieldset class="form-item col-xs-12">
                     <label class="fieldset-title" for="ad_name">Name</label>
                     <legend class="visuallyhidden">
                         <?php if($form->nameInstructions()): $form->nameInstructions()->kt(); endif;?>?>
                     </legend>
-                    <input id="ad_name" name="ad_name" type="text" placeholder="Enter Name..." 
+                    <input id="ad_name" name="ad_name" type="text" placeholder="Enter Name..."
                            pattern="[A-Za-z- ]{1,24}" title="Max. 24 characters , letters and hyphens only" required/>
                     <?php if($form->nameInstructions()):?>
                     <div aria-hidden="true" class="small-text">
@@ -68,23 +68,23 @@ $paused = true;
                     </div>
                     <?php endif;?>
                 </fieldset>
-            
+
                 <fieldset class="form-item col-xs-12">
                     <h3 class="fieldset-title" aria-hidden="true">Date</h3>
                     <legend class="visuallyhidden">
                         <h3 class="fieldset-title">Date</h3>
                         <?php if($form->dateInstructions()): $form->dateInstructions()->kt(); endif;?>?>
                     </legend>
-                    <select id="ad_day" name="ad_day" type="number" min="1" max="31" placeholder="Day"> 
+                    <select id="ad_day" name="ad_day" type="number" min="1" max="31" placeholder="Day">
                         <option value="0">Day</option>
                         <?php for($i = 01; $i < 32; $i++){?>
                             <option value="<?= $i;?>"><?= $i;?></option>
                         <?php }?>
-                        
-                        
+
+
                     </select>
                     <label class="visuallyhidden" for="ad_day">Day</label>
-                    <select id="ad_month" name="ad_month" placeholder="Month"> 
+                    <select id="ad_month" name="ad_month" placeholder="Month">
                         <option value="0">Month</option>
                         <option value="1">January</option>
                         <option value="2">February</option>
@@ -100,16 +100,16 @@ $paused = true;
                         <option value="12">December</option>
                     </select>
                     <label class="visuallyhidden" for="ad_month">Select Month</label>
-                    <input id="ad_year" name="ad_year" type="text" placeholder="Year" 
+                    <input id="ad_year" name="ad_year" type="text" placeholder="Year"
                            pattern="[0-9]{4}" title="Four digit date" required/> <label class="visuallyhidden" for="ad_day">Year</label>
-                    
+
                     <?php if($form->dateInstructions()):?>
                     <div aria-hidden="true" class="small-text">
                         <?= $form->dateInstructions()->kt();?>
                     </div>
                     <?php endif;?>
                 </fieldset>
-                
+
                 <fieldset class="form-item col-xs-12">
                     <label class="fieldset-title" for="ad_location">Location <small class="small">(Optional)</small></label>
                     <legend class="visuallyhidden">
@@ -123,7 +123,7 @@ $paused = true;
                     </div>
                     <?php endif;?>
                 </fieldset>
-                
+
                 <fieldset class="form-item col-xs-12">
                     <label class="fieldset-title" for="ad_location">Story <small class="small">(Optional)</small></label>
                     <legend class="visuallyhidden">
@@ -136,7 +136,7 @@ $paused = true;
                     </div>
                     <?php endif;?>
                 </fieldset>
-                
+
                 <fieldset class="form-item col-xs-12">
                     <label class="fieldset-title" for="email">Email <small class="small">(Optional)</small></label>
                     <legend class="visuallyhidden">
@@ -155,22 +155,18 @@ $paused = true;
                     </div>
                     <?php endif;?>
                 </fieldset>
-                
+
                 <div class="subimt-wrapper col-xs-12">
                     <input type="submit" class="lg-button black-button" value="Submit"/>
                 </div>
-                
+
             </form>
             <?php else : ?>
             <section class="form-intro row">
                 <div class="col-xs-12 ">
                     <h2 class="section-title form-title">Submissions</h2>
                     <div class="body-text">
-                        <p>
-                        Name submissions are currently closed until the boards are installed again. Add your name to our mailing list if you would like to be notified when Arrivals + Departures is next on show.
-                        </p><p>
-                        Please also visit the Archive and Stories pages on this website, to see how the public have previously engaged with the work in deeply personal and political ways. 
-                        </p>
+                        <?= $form->closedText()->kt();?>
                         <form class="validate" action="<?= $site->mailingListSignUpURL();?>" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
                         <div class="label-wrapper">
                             <label for="EMAIL"><?= $site->mailingListSignUpText();?></label>
