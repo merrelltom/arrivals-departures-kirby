@@ -17,7 +17,7 @@
                 </div>
             </div>
         </section>
-        <?php if($page->closedToggle() == true):?>
+        <?php if($page->closedToggle()->toBool() == true):?>
         <section class="introduction-banner page-section bg-orange">
             <div class="wrapper">
                 <div class="row">
