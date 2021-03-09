@@ -2,7 +2,7 @@ title: Moderator
 permissions:
   access:
     panel: true
-    site: false
+    site: true
     settings: false
     users: false
   files:
