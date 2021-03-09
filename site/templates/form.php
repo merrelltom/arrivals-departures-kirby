@@ -1,10 +1,10 @@
-<?php snippet('header') ?>
-      
+<?php snippet('header-form') ?>
+
    <?php snippet('form');?>
-      
+
   </div><?php //dont delete – opening tag is in header!?>
 
-<?php 
+<?php
     $MAPS_API_KEY = apache_getenv("MAPS_API_KEY");
 ?>
 
