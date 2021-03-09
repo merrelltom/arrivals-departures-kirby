@@ -1,7 +1,7 @@
 title: Moderator
 permissions:
   access:
-    panel: false
+    panel: true
     site: false
     settings: false
     users: false
