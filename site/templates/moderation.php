@@ -19,7 +19,7 @@
     <section class="page-section mod-result">
         <div class="wrapper">
             <div class="row">
-                <a href="#departure-moderation" class="section-title col-xs-12 md-hide ">> Skip to Departures</a><br><br>
+                <a href="#departure-moderation" class="section-title col-xs-12">> Skip to Departures</a><br><br>
                 <div class="col-xs-12">
                     <?php
                     if ($update_type == 'arrival'){
