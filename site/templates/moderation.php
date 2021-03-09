@@ -1,10 +1,10 @@
-<?php snippet('header'); 
+<?php snippet('header');
     snippet('oauth');
     $token = getToken();
     $update_type = filter_input(INPUT_POST, "type");
     $action = filter_input(INPUT_POST, "update");
     $id = filter_input(INPUT_POST, "ID");?>
-<main class="main"> 
+<main class="main">
     <?php if (!$kirby->user()): ?>
     <section class="page-section bg-yellow">
         <div class="wrapper">
@@ -19,8 +19,9 @@
     <section class="page-section mod-result">
         <div class="wrapper">
             <div class="row">
+                <a href="#departure-moderation" class="section-title col-xs-12 md-hide ">> Skip to Departures</a><br><br>
                 <div class="col-xs-12">
-                    <?php 
+                    <?php
                     if ($update_type == 'arrival'){
                         snippet('arrivals-update', ['token'=>$token, 'action'=>$action, 'ID'=>$id]);
                     } elseif ($update_type == 'departure'){
@@ -30,19 +31,19 @@
             </div>
         </div>
     </section>
-    
-    <section class="page-section moderation-forms arrival-moderation">
+
+    <section id="arrival-moderation" class="page-section moderation-forms arrival-moderation">
         <div class="wrapper">
             <?php snippet('arrivals-moderation', ['token'=>$token]) ?>
         </div>
     </section>
 
-    <section class="page-section moderation-forms arrival-moderation">
+    <section id="departure-moderation" class="page-section moderation-forms arrival-moderation">
         <div class="wrapper">
-            <?php snippet('departures-moderation', ['token'=>$token]) ?> 
+            <?php snippet('departures-moderation', ['token'=>$token]) ?>
         </div>
     </section>
-    
+
     <?php endif; ?>
 </main>
 
