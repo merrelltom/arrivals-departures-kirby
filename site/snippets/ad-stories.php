@@ -53,7 +53,7 @@ usort($all_results, 'compare_ID');
 $results = array_reverse($all_results,true);
 ?>
 
-<div class="col-xs-12 col-md-6">
+<div id="arrival-stories" class="col-xs-12 col-md-6">
     <div class="grid">
         <?php
         foreach (array_reverse ($arrival_results) as $result) : ?>
@@ -66,13 +66,13 @@ $results = array_reverse($all_results,true);
                      <div class="story-cat"></div>
                  </div>
              </div>
-        <?php 
+        <?php
             endforeach;
         ?>
     </div>
 </div>
 
-<div class="col-xs-12 col-md-6">
+<div id="departure-stories" class="col-xs-12 col-md-6">
     <div class="grid">
         <?php
         foreach (array_reverse ($departure_results) as $result) : ?>
@@ -85,7 +85,7 @@ $results = array_reverse($all_results,true);
                      <div class="story-cat"></div>
                  </div>
              </div>
-        <?php 
+        <?php
             endforeach;
         ?>
     </div>
