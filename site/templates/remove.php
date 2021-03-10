@@ -1,10 +1,10 @@
-<?php snippet('header'); 
+<?php snippet('header');
     snippet('oauth');
     $token = getToken();
     $update_type = filter_input(INPUT_POST, "type");
     $action = filter_input(INPUT_POST, "update");
     $id = filter_input(INPUT_POST, "ID");?>
-<main class="main"> 
+<main class="main">
     <?php if (!$kirby->user()): ?>
     <section class="page-section bg-yellow">
         <div class="wrapper">
@@ -21,6 +21,7 @@
             <div class="row">
                 <div class="col-xs-12">
                    <p class="red-text">Note: Once you delete an entry it cannot be recovered.</p>
+                   <a href="#departures" class="section-title">> Skip to Departures</a><br><br>
                 </div>
             </div>
         </div>
@@ -29,7 +30,7 @@
         <div class="wrapper">
             <div class="row">
                 <div class="col-xs-12">
-                    <?php 
+                    <?php
                     if ($update_type == 'arrival'){
                         snippet('arrivals-update', ['token'=>$token, 'action'=>$action, 'ID'=>$id]);
                     } elseif ($update_type == 'departure'){
@@ -39,20 +40,20 @@
             </div>
         </div>
     </section>
-    
-    <section class="page-section moderation-forms arrival-moderation">
+
+    <section id="arrivals" class="page-section moderation-forms arrival-moderation">
         <div class="wrapper">
             <?php snippet('arrivals-removal', ['token'=>$token]) ?>
         </div>
     </section>
 
-    <section class="page-section moderation-forms arrival-moderation">
+    <section id="departures" class="page-section moderation-forms arrival-moderation">
         <div class="wrapper">
-            <?php snippet('departures-removal', ['token'=>$token]) ?> 
+            <?php snippet('departures-removal', ['token'=>$token]) ?>
         </div>
     </section>
-    
+
     <?php endif; ?>
 </main>
 
-<?php snippet('footer');?> 
+<?php snippet('footer');?>
