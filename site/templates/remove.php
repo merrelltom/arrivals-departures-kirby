@@ -20,7 +20,7 @@
         <div class="wrapper">
             <div class="row">
                 <div class="col-xs-12">
-                   <p class="red-text">Note: Once you delete an entry it cannot be recovered.</p>
+                   <p class="red-text">Note: Once you delete an entry it cannot be recovered.</p><br>
                    <a href="#departures" class="section-title">> Skip to Departures</a><br><br>
                 </div>
             </div>
