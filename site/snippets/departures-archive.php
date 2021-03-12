@@ -23,16 +23,16 @@ curl_close($curl);
 
 $board_line = 1;
 $letter_no = 1;
-foreach (array_reverse ($results) as $result) { ?>
+if($results): foreach (array_reverse ($results) as $result): ?>
         <li class="archive-list-item">
             <div class="row">
                 <div class="archive-date col-xs-12 col-md-3">
-                    <?php 
+                    <?php
                         echo $result["date"];
                     ?>
                 </div>
                 <div class="archive-name col-xs-12 col-md-9">
-                    <?php 
+                    <?php
                         echo $result["name"];
                         if ($result["story_mod"] == 1) { ?>
                         <a class="story-link" href="./stories#<?php echo "departure".$result["ID"];?> ">
@@ -43,7 +43,7 @@ foreach (array_reverse ($results) as $result) { ?>
 
             </div>
         </li>
-<?php 
+<?php
     $board_line += 1;
-    } 
+    endforeach; endif;
 ?>
