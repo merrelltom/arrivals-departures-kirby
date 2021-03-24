@@ -7,7 +7,7 @@
         $open = false;
     }
     if($site->automateSubmissions() == true){
-        if($time > $openTime && $time < $closeTime){
+        if($currentTime > $openTime && $currentTime < $closeTime){
             $open = true;
         }else{
             $open = false;
