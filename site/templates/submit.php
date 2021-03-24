@@ -13,7 +13,7 @@ if(isset($_COOKIE['FormSubmitted'])){
 if(isset($_COOKIE['SubmitCount'])){
     $count  =  $_COOKIE['SubmitCount'];
     if($count > 4){
-        exit("limit reached");
+        header("Location: " . $site->children()->findByURI('error-limit')->url());
     } 
 }
 
