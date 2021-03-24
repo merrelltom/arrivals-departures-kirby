@@ -37,5 +37,10 @@
     echo  $site->automateSubmissions();     
     echo '<hr>';
     echo 'Open result: ';    
-    echo $open;           
+    if($open == false):
+        echo 'closed';
+    endif;
+    if($open == true):
+        echo 'open';
+    endif;       
 ?>
