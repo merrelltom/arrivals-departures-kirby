@@ -1,8 +1,8 @@
 <?php 
     $open = true;
-    $currentTime = date()->toDate('c');
-    $openTime = $site->openTime()->toDate('c');
-    $closeTime = $site->closeTime()->toDate('c');
+    $currentTime = date("Y-m-d H:i:s");
+    $openTime = $site->openTime()->toDate('H:i');
+    $closeTime = $site->closeTime()->toDate('H:i');
     // if($site->submissionsOpen() == false){
     //     $open = false;
     // }
