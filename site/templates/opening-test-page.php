@@ -4,7 +4,7 @@
     $openTime = $site->openTime()->toDate('H:i');
     $closeTime = $site->closeTime()->toDate('H:i');
     if($site->submissionsOpen() == false){
-        $open = false;
+        // $open = false;
     }
     if($site->automateSubmissions() == true){
         if (time() >= strtotime($openTime) && time() >= strtotime($closeTime)){
