@@ -18,6 +18,9 @@ tabs:
           texts:
             type: fields
             fields:
+                heading:
+                    label: Heading
+                    type: text
                 thankYouText:
                     label: Page Text
                     type: textarea
