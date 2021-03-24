@@ -105,7 +105,7 @@ if($count < 4 && $time > 60 || $kirby->user()){
         header("Location: " . $site->children()->findByURI('error-time')->url());
         exit();
     }
-    if($time > 60){
+    if($time < 60){
         header("Location: " . $site->children()->findByURI('error-limit')->url());
         exit();
     }
