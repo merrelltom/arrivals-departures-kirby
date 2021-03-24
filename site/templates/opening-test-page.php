@@ -14,12 +14,12 @@
         }
     }
 
-    if($open == false):
-        echo 'closed';
-    endif;
-    if($open == true):
-        echo 'open';
-    endif;   
+    // if($open == false):
+    //     echo 'closed';
+    // endif;
+    // if($open == true):
+    //     echo 'open';
+    // endif;   
     echo '<hr>';
     echo 'Current Time: ';    
     echo  time();
