@@ -5,6 +5,7 @@ $months = array("JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "
 
 $time = 90;
 $count = 0; //variable used in submission count cookie 
+$submissionsOpen = $submissionsOpen; // this Bool is set in the site controller --> site/controllers/site.php
 
 if(isset($_COOKIE['FormSubmitted'])){
     $time = time() - $_COOKIE['FormSubmitted'];
@@ -14,9 +15,14 @@ if(isset($_COOKIE['SubmitCount'])){
     $count  =  $_COOKIE['SubmitCount'];
 }
 
+if($count < 4 && $time > 60 && $submissionsOpen == true){
+    echo 'open';
+}else{
+    echo 'closed';
+}
 
 
-if($count < 4 && $time > 60 || $kirby->user()){
+if($count < 4 && $time > 60 && $submissionsOpen == true || $kirby->user()){
     if ($_POST && ! filter_input(INPUT_POST, "valid")) {
         if ( filter_input(INPUT_POST, "arrival_or_departure") == "arrival") {
                 $endpoint = "arrivals";
@@ -107,6 +113,10 @@ if($count < 4 && $time > 60 || $kirby->user()){
     }
     if($time < 60){
         header("Location: " . $site->children()->findByURI('error-time')->url());
+        exit();
+    }
+    if($submissionsOpen == false){
+        header("Location: " . $site->children()->findByURI('error-closed')->url());
         exit();
     }
 }

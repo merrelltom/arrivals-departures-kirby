@@ -5,7 +5,7 @@ error_reporting(E_ALL);
 
 $form = $site->children()->findByURI('submission-form');
 
-$open = $form->submissionsOpen()->toBool();
+$open = $submissionsOpen; // Bool set in site controller decides whether submissions are open or not
 if (!$kirby->user()){ }else{ $open = true; } ?>
 
 
@@ -61,7 +61,7 @@ if (!$kirby->user()){ }else{ $open = true; } ?>
                         <?php if($form->nameInstructions()): $form->nameInstructions()->kt(); endif;?>?>
                     </legend>
                     <input id="ad_name" name="ad_name" type="text" placeholder="Enter Name..."
-                           pattern="[A-Za-z- ]{1,24}" title="Max. 24 characters , letters and hyphens only" required/>
+                           pattern="[A-Za-z- ]{1,24}" title="Max. 24 characters, letters and hyphens only" required/>
                     <?php if($form->nameInstructions()):?>
                     <div aria-hidden="true" class="small-text">
                         <?= $form->nameInstructions()->kt();?>

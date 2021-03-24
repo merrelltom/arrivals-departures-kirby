@@ -18,9 +18,7 @@
             </div>
         </section>
         <?php 
-            $open = true;
-            if($open == false):
-            
+            if($submissionsOpen == false):
         ?>
         <section class="introduction-banner page-section bg-orange">
             <div class="wrapper">
