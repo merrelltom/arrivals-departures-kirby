@@ -19,20 +19,6 @@
         </section>
         <?php 
             $open = true;
-            $currentTime = time();
-            $openTime = $site->openTime();
-            $closeTime = $site->closeTime();
-            if($site->submissionsOpen() == false){
-                $open = false;
-            }
-            if($site->automateSubmissions() == true){
-                if($currentTime > $openTime && $currentTime < $closeTime){
-                    $open = true;
-                }else{
-                    $open = false;
-                }
-            }
-
             if($open == false):
             
         ?>
