@@ -23,12 +23,15 @@
     echo '<hr>';
     echo 'Current Time: ';    
     echo  time();
+    echo ' – ' + $currentTime;
     echo '<hr>';
     echo 'Open Time: ';    
     echo  strtotime($openTime);   
+    echo ' – ' + $openTime;
     echo '<hr>';
     echo 'Close Time: ';
     echo  strtotime($closeTime);
+    echo ' – ' + $closeTime;
     echo '<hr>';
     echo 'Submissions open setting: ';
     echo  $site->submissionsOpen(); 
