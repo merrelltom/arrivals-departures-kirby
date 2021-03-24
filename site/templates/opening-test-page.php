@@ -31,7 +31,7 @@
     echo  strtotime($openTime);   
     echo ' – ' . $openTime;
     echo '<hr>';
-    echo 'Close: ';
+    echo 'Clos: ';
     echo  strtotime($closeTime);
     echo ' – ' . $closeTime;
     echo '<hr>';
