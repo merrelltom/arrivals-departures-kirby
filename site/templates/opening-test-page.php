@@ -2,7 +2,7 @@
 
 <?php 
     $open = true;
-    $currentTime = date("H:i");
+    // $currentTime = date("H:i");
     $openTime = $site->openTime()->toDate('H:i');
     $closeTime = $site->closeTime()->toDate('H:i');
     $open = $site->submissionsOpen()->toBool();
@@ -14,7 +14,9 @@
             $open = false;
         }
     }
-  
+    echo '<hr>';
+    echo 'Time Difference: ';   
+    echo  $site->timeDifference();  
     echo '<hr>';
     echo 'Time: ';    
     echo  time();

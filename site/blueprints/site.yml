@@ -35,15 +35,21 @@ columns:
     automateSubmissions:
      label: Automate submission times?
      type: toggle 
-     width: 1/3   
+     width: 1/4   
     openTime:
-     label: Open From (GMT)
+     label: Open From
      type: time
-     width: 1/3   
+     width: 1/4   
     closeTime:
-     label: Closed From (GMT)
+     label: Closed From
      type: time  
-     width: 1/3   
+     width: 1/4   
+    timeDifference:
+     label: Time difference (from GMT)
+     type: number
+     min: -12
+     max: 14  
+     width: 1/4        
     strictModeration:
      label: Strict Moderation
      type: toggle 
