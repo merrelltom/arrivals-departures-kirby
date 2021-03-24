@@ -4,13 +4,18 @@ snippet('oauth');
 $months = array("JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC" );
 
 $time = 90;
+$count = 0; //variable used in submission count cookie 
 
 if(isset($_COOKIE['FormSubmitted'])){
     $time = time() - $_COOKIE['FormSubmitted'];
-//    exit("Please wait. Seconds since last upload: ($time)");
 }
 
-if($time > 60 || $kirby->user()){
+if(isset($_COOKIE['SubmitCount'])){
+    $count  =  $_COOKIE['FormSubmitted'];
+    header("Location: " . $site->children()->findByURI('time-error')->url());
+}
+
+if($count < 4 || $time > 60 || $kirby->user()){
     if ($_POST && ! filter_input(INPUT_POST, "valid")) {
         if ( filter_input(INPUT_POST, "arrival_or_departure") == "arrival") {
                 $endpoint = "arrivals";
@@ -81,12 +86,13 @@ if($time > 60 || $kirby->user()){
             // Close cURL session handle
             curl_close($ch);
 
-       // Redirect to this page.
+       // Set cookies and Redirect to relevant page.
+       $count ++;
+       setcookie('FormSubmitted', time(), time() + (86400 * 30), '/');
+       setcookie('SubmitCount', $count, time() + (86400), '/');
         if($result["moderated"] == 0){
-            setcookie('FormSubmitted', time(), time() + (86400 * 30), '/');
             header("Location: " . $site->children()->findByURI('moderation-message')->url());
         }else{
-            setcookie('FormSubmitted', time(), time() + (86400 * 30), '/');
             header("Location: " . $site->children()->findByURI('thank-you')->url());
         }
        exit();
@@ -94,6 +100,11 @@ if($time > 60 || $kirby->user()){
     }
     
 }else{
-    exit("Please wait. Seconds since last upload: ($time)");
+    if($count > 4){
+        header("Location: " . $site->children()->findByURI('error-time')->url());
+    }
+    if($time > 60){
+        header("Location: " . $site->children()->findByURI('error-limit')->url());
+    }
 }
 
