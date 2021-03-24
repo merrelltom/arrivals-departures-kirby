@@ -31,7 +31,7 @@ columns:
      label: Submissions on or off?
      type: toggle 
      width: 2/2   
-     help: 'This setting will override any timed automation'
+     help: 'This setting will be overridden by any automation set below'
     automateSubmissions:
      label: Automate submission times?
      type: toggle 
