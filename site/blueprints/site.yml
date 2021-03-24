@@ -22,6 +22,27 @@ columns:
         status: draft
  - width: 2/2
    fields:
+    settings:
+     label: Submissions
+     type: headline
+     numbered: false
+     width: 2/2 
+    submissionsOpen:
+     label: Submissions on or off?
+     type: toggle 
+     width: 1/2   
+    automateSubmissions:
+     label: Automate submission times?
+     type: toggle 
+     width: 1/2   
+    openTime:
+     label: Open From
+     type: time   
+    closeTime:
+     label: Closed From
+     type: time              
+ - width: 2/2
+   fields:
     footer:
      label: Site Footer
      type: headline
