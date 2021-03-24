@@ -22,13 +22,13 @@
     endif;   
     echo '<hr>';
     echo 'Current Time: ';    
-    echo  $currentTime;
+    echo  time();
     echo '<hr>';
     echo 'Open Time: ';    
-    echo  $openTime;   
+    echo  strtotime($openTime);   
     echo '<hr>';
     echo 'Close Time: ';
-    echo  $closeTime; 
+    echo  strtotime($closeTime);
     echo '<hr>';
     echo 'Submissions open setting: ';
     echo  $site->submissionsOpen(); 
