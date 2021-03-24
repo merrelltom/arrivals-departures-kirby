@@ -3,16 +3,16 @@
     $currentTime = date("H:i");
     $openTime = $site->openTime()->toDate('H:i');
     $closeTime = $site->closeTime()->toDate('H:i');
-    // if($site->submissionsOpen() == false){
-    //     $open = false;
-    // }
-    // if($site->automateSubmissions() == true){
-    //     if($currentTime > $openTime && $currentTime < $closeTime){
-    //         $open = true;
-    //     }else{
-    //         $open = false;
-    //     }
-    // }
+    if($site->submissionsOpen() == false){
+        $open = false;
+    }
+    if($site->automateSubmissions() == true){
+        if (time() >= strtotime($openTime) && time() >= strtotime($closeTime)){
+            $open = true;
+        }else{
+            $open = false;
+        }
+    }
 
     if($open == false):
         echo 'closed';
@@ -32,6 +32,7 @@
     echo '<hr>';
     echo 'Submissions open setting: ';
     echo  $site->submissionsOpen(); 
+    echo '<hr>';    
     echo 'Automate setting: ';
     echo  $site->automateSubmissions();     
     echo '<hr>';
