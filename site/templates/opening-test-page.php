@@ -6,13 +6,13 @@
     if($site->submissionsOpen() == false){
         // $open = false;
     }
-    if($site->automateSubmissions() == true){
+    // if($site->automateSubmissions() == true){
         if (time() >= strtotime($openTime) && time() >= strtotime($closeTime)){
             $open = true;
         }else{
             $open = false;
         }
-    }
+    // }
 
     // if($open == false):
     //     echo 'closed';
