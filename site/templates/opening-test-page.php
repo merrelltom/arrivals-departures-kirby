@@ -1,3 +1,5 @@
+<pre>
+
 <?php 
     $open = true;
     $currentTime = date("H:i");
@@ -21,15 +23,15 @@
     //     echo 'open';
     // endif;   
     echo '<hr>';
-    echo 'Current Time: ';    
+    echo 'Time: ';    
     echo  time();
     echo ' – ' . $currentTime;
     echo '<hr>';
-    echo 'Open Time: ';    
+    echo 'Open: ';    
     echo  strtotime($openTime);   
     echo ' – ' . $openTime;
     echo '<hr>';
-    echo 'Close Time: ';
+    echo 'Close: ';
     echo  strtotime($closeTime);
     echo ' – ' . $closeTime;
     echo '<hr>';
@@ -47,3 +49,4 @@
         echo 'open';
     endif;       
 ?>
+</pre>
