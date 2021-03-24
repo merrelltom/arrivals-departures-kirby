@@ -39,11 +39,17 @@ columns:
     openTime:
      label: Open From
      type: time
+     step:
+      unit: minute
+      size: 1     
      width: 1/4   
     closeTime:
      label: Closed From
      type: time  
-     width: 1/4   
+     step:
+      unit: minute
+      size: 1        
+     width: 1/4    
     timeDifference:
      label: Time difference (from GMT)
      type: number

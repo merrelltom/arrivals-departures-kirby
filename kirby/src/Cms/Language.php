@@ -4,9 +4,9 @@ namespace Kirby\Cms;
 
 use Kirby\Data\Data;
 use Kirby\Exception\Exception;
-use Kirby\Exception\InvalidArgumentException;
 use Kirby\Exception\PermissionException;
 use Kirby\Toolkit\F;
+use Kirby\Toolkit\Locale;
 use Kirby\Toolkit\Str;
 use Throwable;
 
@@ -230,6 +230,7 @@ class Language extends Model
      *
      * @internal
      * @return bool
+     * @throws \Kirby\Exception\Exception
      */
     public function delete(): bool
     {
@@ -328,6 +329,28 @@ class Language extends Model
     }
 
     /**
+     * Loads the language rules for provided locale code
+     *
+     * @param string $code
+     */
+    public static function loadRules(string $code)
+    {
+        $kirby = kirby();
+        $code  = Str::contains($code, '.') ? Str::before($code, '.') : $code;
+        $file  = $kirby->root('i18n:rules') . '/' . $code . '.json';
+
+        if (F::exists($file) === false) {
+            $file = $kirby->root('i18n:rules') . '/' . Str::before($code, '_') . '.json';
+        }
+
+        try {
+            return Data::read($file);
+        } catch (\Exception $e) {
+            return [];
+        }
+    }
+
+    /**
      * Returns the PHP locale setting array
      *
      * @param int $category If passed, returns the locale for the specified category (e.g. LC_ALL) as string
@@ -414,19 +437,7 @@ class Language extends Model
     public function rules(): array
     {
         $code = $this->locale(LC_CTYPE);
-        $code = Str::contains($code, '.') ? Str::before($code, '.') : $code;
-        $file = $this->kirby()->root('i18n:rules') . '/' . $code . '.json';
-
-        if (F::exists($file) === false) {
-            $file = $this->kirby()->root('i18n:rules') . '/' . Str::before($code, '_') . '.json';
-        }
-
-        try {
-            $data = Data::read($file);
-        } catch (\Exception $e) {
-            $data = [];
-        }
-
+        $data = static::loadRules($code);
         return array_merge($data, $this->slugs());
     }
 
@@ -448,7 +459,7 @@ class Language extends Model
             'code'         => $this->code(),
             'default'      => $this->isDefault(),
             'direction'    => $this->direction(),
-            'locale'       => $this->locale(),
+            'locale'       => Locale::export($this->locale()),
             'name'         => $this->name(),
             'translations' => $this->translations(),
             'url'          => $this->url,
@@ -499,14 +510,10 @@ class Language extends Model
      */
     protected function setLocale($locale = null)
     {
-        if (is_array($locale)) {
-            $this->locale = $locale;
-        } elseif (is_string($locale)) {
-            $this->locale = [LC_ALL => $locale];
-        } elseif ($locale === null) {
+        if ($locale === null) {
             $this->locale = [LC_ALL => $this->code];
         } else {
-            throw new InvalidArgumentException('Locale must be string or array');
+            $this->locale = Locale::normalize($locale);
         }
 
         return $this;
