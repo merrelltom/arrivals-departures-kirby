@@ -6,7 +6,9 @@
     $openTime = $site->openTime()->toDate('H:i');
     $closeTime = $site->closeTime()->toDate('H:i');
     $open = $site->submissionsOpen();
+
     if($site->automateSubmissions() == true){
+        echo 'peea';
         if (time() >= strtotime($openTime) && time() <= strtotime($closeTime)){
             $open = true;
         }else{
