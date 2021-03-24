@@ -1,6 +1,6 @@
 <?php 
     $open = true;
-    $currentTime = date("Y-m-d H:i:s");
+    $currentTime = date("H:i");
     $openTime = $site->openTime()->toDate('H:i');
     $closeTime = $site->closeTime()->toDate('H:i');
     // if($site->submissionsOpen() == false){
