@@ -12,12 +12,11 @@ if(isset($_COOKIE['FormSubmitted'])){
 
 if(isset($_COOKIE['SubmitCount'])){
     $count  =  $_COOKIE['SubmitCount'];
-    if($count > 4){
-        header("Location: " . $site->children()->findByURI('error-limit')->url());
-    } 
 }
 
-if($count < 4 || $time > 60 || $kirby->user()){
+
+
+if($count < 4 && $time > 60 || $kirby->user()){
     if ($_POST && ! filter_input(INPUT_POST, "valid")) {
         if ( filter_input(INPUT_POST, "arrival_or_departure") == "arrival") {
                 $endpoint = "arrivals";
@@ -103,12 +102,12 @@ if($count < 4 || $time > 60 || $kirby->user()){
     
 }else{
     if($count > 4){
-        // header("Location: " . $site->children()->findByURI('error-time')->url());
-        exit("limit reached");
+        header("Location: " . $site->children()->findByURI('error-time')->url());
+        exit();
     }
     if($time > 60){
-        // header("Location: " . $site->children()->findByURI('error-limit')->url());
-        exit("time limit");
+        header("Location: " . $site->children()->findByURI('error-limit')->url());
+        exit();
     }
 }
 
