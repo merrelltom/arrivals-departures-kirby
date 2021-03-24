@@ -11,7 +11,7 @@ if(isset($_COOKIE['FormSubmitted'])){
 }
 
 if(isset($_COOKIE['SubmitCount'])){
-    $count  =  $_COOKIE['FormSubmitted'];
+    $count  =  $_COOKIE['SubmitCount'];
 }
 
 if($count < 4 || $time > 60 || $kirby->user()){
