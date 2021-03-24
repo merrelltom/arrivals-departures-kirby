@@ -8,9 +8,9 @@
     }
     // if($site->automateSubmissions() == true){
         if (time() >= strtotime($openTime) && time() >= strtotime($closeTime)){
-            $open = true;
-        }else{
             $open = false;
+        }else{
+            $open = true;
         }
     // }
 
