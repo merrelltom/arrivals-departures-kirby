@@ -1,8 +1,8 @@
 <?php 
     $open = true;
-    $currentTime = time();
-    $openTime = $site->openTime();
-    $closeTime = $site->closeTime();
+    $currentTime = time()->toDate('c');
+    $openTime = $site->openTime()->toDate('c');
+    $closeTime = $site->closeTime()->toDate('c');
     // if($site->submissionsOpen() == false){
     //     $open = false;
     // }
@@ -20,21 +20,21 @@
     if($open == true):
         echo 'open';
     endif;   
-    echo 'hr';
+    echo '<hr>';
     echo 'Current Time: ';    
     echo  $currentTime;
-    echo 'hr';
+    echo '<hr>';
     echo 'Open Time: ';    
     echo  $openTime;   
-    echo 'hr';
+    echo '<hr>';
     echo 'Close Time: ';
     echo  $closeTime; 
-    echo 'hr';
+    echo '<hr>';
     echo 'Submissions open setting: ';
     echo  $site->submissionsOpen(); 
     echo 'Automate setting: ';
     echo  $site->automateSubmissions();     
-    echo 'hr';
+    echo '<hr>';
     echo 'Open result: ';    
     echo $open;           
 ?>
