@@ -12,7 +12,6 @@ if(isset($_COOKIE['FormSubmitted'])){
 
 if(isset($_COOKIE['SubmitCount'])){
     $count  =  $_COOKIE['FormSubmitted'];
-    header("Location: " . $site->children()->findByURI('time-error')->url());
 }
 
 if($count < 4 || $time > 60 || $kirby->user()){
