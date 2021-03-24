@@ -33,16 +33,11 @@ tabs:
                     type: textarea
                     size: medium
                     buttons: false
-                closedToggle:
-                    label: Show Closed Banner
-                    type: toggle
                 closedBanner:
                     label: Introduction Banner
                     type: textarea
                     size: small
                     buttons: true
-                    when:
-                        closedToggle: true
                 showVideo:
                     label: Show Video
                     type: toggle

@@ -18,16 +18,11 @@ tabs:
           formFields:
             type: fields
             fields:
-                submissionsOpen:
-                    label: Submissions on or off?
-                    type: toggle
                 closedText:
                     label: Closed Text
                     type: textarea
                     size: small
                     buttons: false
-                    when:
-                        submissionsOpen: false
                 introductionText:
                     label: Introduction Text
                     type: textarea

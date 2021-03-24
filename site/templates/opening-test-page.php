@@ -8,7 +8,6 @@
     $open = $site->submissionsOpen()->toBool();
 
     if($site->automateSubmissions()->toBool() == true){
-        echo 'peea';
         if (time() >= strtotime($openTime) && time() <= strtotime($closeTime)){
             $open = true;
         }else{
@@ -41,6 +40,9 @@
     endif;
     if($open == true):
         echo 'open';
-    endif;       
+    endif;     
+    echo '<hr>';
+    echo 'Controller result: ';  
+    echo $submissionsOpen;    
 ?>
 </pre>
