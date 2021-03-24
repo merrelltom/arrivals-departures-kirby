@@ -30,17 +30,20 @@ columns:
     submissionsOpen:
      label: Submissions on or off?
      type: toggle 
-     width: 1/2   
+     width: 2/2   
+     help: 'This setting will override any timed automation'
     automateSubmissions:
      label: Automate submission times?
      type: toggle 
-     width: 1/2   
+     width: 1/3   
     openTime:
-     label: Open From
-     type: time   
+     label: Open From (GMT)
+     type: time
+     width: 1/3   
     closeTime:
-     label: Closed From
-     type: time              
+     label: Closed From (GMT)
+     type: time  
+     width: 1/3            
  - width: 2/2
    fields:
     footer:

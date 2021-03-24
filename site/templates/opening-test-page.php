@@ -5,23 +5,15 @@
     $currentTime = date("H:i");
     $openTime = $site->openTime()->toDate('H:i');
     $closeTime = $site->closeTime()->toDate('H:i');
-    if($site->submissionsOpen() == false){
-        // $open = false;
-    }
-    // if($site->automateSubmissions() == true){
+    if($site->automateSubmissions() == true){
         if (time() >= strtotime($openTime) && time() <= strtotime($closeTime)){
             $open = true;
         }else{
             $open = false;
         }
-    // }
-
-    // if($open == false):
-    //     echo 'closed';
-    // endif;
-    // if($open == true):
-    //     echo 'open';
-    // endif;   
+    }
+    $open = $site->submissionsOpen();
+  
     echo '<hr>';
     echo 'Time: ';    
     echo  time();
