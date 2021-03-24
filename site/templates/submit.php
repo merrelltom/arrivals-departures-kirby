@@ -12,6 +12,9 @@ if(isset($_COOKIE['FormSubmitted'])){
 
 if(isset($_COOKIE['SubmitCount'])){
     $count  =  $_COOKIE['SubmitCount'];
+    if($count > 4){
+        exit("limit reached");
+    } 
 }
 
 if($count < 4 || $time > 60 || $kirby->user()){
