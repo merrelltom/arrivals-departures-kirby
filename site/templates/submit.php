@@ -68,10 +68,10 @@ if($count < 4 && $time > 60 && $submissionsOpen == true || $kirby->user()){
             if ( isset( $_POST['story'] )){
                 $payload_array["story"] = filter_input(INPUT_POST, "story");
             }
-            if ($submissionsOpen) {
-                $payload_array["moderated"] = 0;
-            } else {
+            if ($strictModeration) {
                 $payload_array["moderated"] = 1;
+            } else {
+                $payload_array["moderated"] = 0;
             }
 
             $payload = json_encode($payload_array);
