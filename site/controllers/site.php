@@ -12,7 +12,7 @@ return function ($page, $pages, $site, $kirby) {
     $SubmissionsOpen  = $site->submissionsOpen()->toBool();
 
     if($site->automateSubmissions()->toBool() == true){
-        if (time() >= strtotime($openTime) && time() <= strtotime($closeTime)){
+        if (strtotime($currentTime) >= strtotime($openTime) && strtotime($currentTime) <= strtotime($closeTime)){
             $SubmissionsOpen = true;
         }else{
             $SubmissionsOpen = false;
