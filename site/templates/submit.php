@@ -6,6 +6,7 @@ $months = array("JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "
 $time = 90;
 $count = 0; //variable used in submission count cookie 
 $submissionsOpen = $submissionsOpen; // this Bool is set in the site controller --> site/controllers/site.php
+$strictModeration = $site->strictModeration()->toBool();
 
 if(isset($_COOKIE['FormSubmitted'])){
     $time = time() - $_COOKIE['FormSubmitted'];
