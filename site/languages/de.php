@@ -5,7 +5,7 @@ return [
     'default' => false,
     'direction' => 'ltr',
     'locale' => [
-        'en_DE'
+        'de-CH'
     ],
     'name' => 'Deutsch',
     'translations' => [

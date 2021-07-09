@@ -47,6 +47,18 @@ return [
       // return response with correct header type
       return new Kirby\Cms\Response($email_text, 'application/json');
     }
+  ],
+  [
+    'pattern' => 'logout',
+    'action'  => function() {
+
+      if ($user = kirby()->user()) {
+        $user->logout();
+      }
+
+      go('home');
+
+    }
   ]
 ]
 ];
