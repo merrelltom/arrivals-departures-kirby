@@ -17,7 +17,7 @@
   <meta name="description" content="<?= $site->seoDescription();?>">
   <?php endif;?>
 
-  <?= css(['assets/css/style-1.6.css', '@auto']) ?>
+  <?= css(['assets/css/style.css', '@auto']) ?>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-706CG9S90F"></script>
     <script>
@@ -39,7 +39,8 @@
             </h1>
             <div class="col-lg-4">
                 <div class="menu-button-container">
-                    <button class="menu-button" aria-hidden="true" onclick="toggleMenu();">
+                    <button class="menu-button menuToggle" aria-expanded="false" role="button">
+                        <span class="visuallyhidden">Menu</span>
                         <div class="menu-button-inner">
                             <span class="menu-button-bar"></span>
                             <span class="menu-button-bar"></span>
@@ -47,15 +48,16 @@
                         </div>
                     </button>
                 </div>
+                <nav role="navigation">
+                    <ul id="menu" class="main-menu" aria-label="Main Navigation">
+                        <?php foreach ($site->children()->listed() as $item): ?>
+                            <?= $item->title()->link() ?>
+                        <?php endforeach ?>
+                        <br><br>
+                        <button class="lg-button" onclick="toggleForm(this);">Add a name to the boards</button>
+                        <button class="lg-button visuallyhidden menuToggle">Close Menu</button>
+                    </ul>
+                </nav>
             </div>
         </div>
     </header>
-
-
-    <nav id="menu" class="main-menu" aria-label="Main Navigation">
-            <?php foreach ($site->children()->listed() as $item): ?>
-                <?= $item->title()->link() ?>
-            <?php endforeach ?>
-        <br><br>
-        <button class="lg-button" onclick="toggleForm(this);">Add a name to the boards</button>
-    </nav>

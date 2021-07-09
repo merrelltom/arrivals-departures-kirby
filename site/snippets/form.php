@@ -9,7 +9,7 @@ $open = $submissionsOpen; // Bool set in site controller decides whether submiss
 if (!$kirby->user()){ }else{ $open = true; } ?>
 
 
-    <header class="header wrapper">
+    <header class="header wrapper visuallyhidden">
         <div class="row">
             <h1 class="site-title col-xs-12 col-lg-8">
                 <a class="logo" title="Arrivals + Departures" href="<?= $site->url() ?>">Arrivals +<br>Departures</a>
@@ -22,7 +22,7 @@ if (!$kirby->user()){ }else{ $open = true; } ?>
             <?php if( $open  == true ):?>
             <section class="form-intro row">
                 <div class="col-xs-12 ">
-                    <h2 class="section-title form-title"><?= $form->title();?></h2>
+                    <h2 id="form-title" class="section-title form-title"  tabindex="0"><?= $form->title();?></h2>
                     <div class="body-text">
                         <?= $form->introductionText()->kt();?>
                     </div>
@@ -80,7 +80,6 @@ if (!$kirby->user()){ }else{ $open = true; } ?>
                         <?php for($i = 01; $i < 32; $i++){?>
                             <option value="<?= $i;?>"><?= $i;?></option>
                         <?php }?>
-
 
                     </select>
                     <label class="visuallyhidden" for="ad_day">Day</label>

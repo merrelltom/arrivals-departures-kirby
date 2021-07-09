@@ -1,0 +1,665 @@
+/*
+================================================================
+LAYOUT
+================================================================
+*/
+
+
+.header{
+    padding-top: 20px;
+}
+
+body{
+    display: flex;
+    flex-flow: column;
+    min-height: 100vh;
+}
+
+.page{
+    flex:1;
+}
+
+.main{
+    padding: 60px 0 60px;
+}
+
+.page-section{
+    padding: $flexboxgrid-outer-margin 0 $flexboxgrid-outer-margin;
+}
+
+.page-banner{
+    padding: $flexboxgrid-outer-margin 0 $flexboxgrid-outer-margin;
+    margin: $flexboxgrid-outer-margin 0 $flexboxgrid-outer-margin;
+}
+
+.border-top{
+    border-top: 1px solid black;
+}
+
+.padded{
+    padding: 15px;
+}
+
+/*
+================================================================
+COLOURS
+================================================================
+*/
+
+.bg-yellow{
+    background-color: $yellow;
+}
+
+.bg-orange{
+    background-color: $orange;
+    a:link, a:visited{
+        color: black;
+        text-decoration: underline;
+    }
+}
+
+
+
+/*
+================================================================
+FOOTER
+================================================================
+*/
+
+.site-footer{
+    padding: $flexboxgrid-outer-margin 0 $flexboxgrid-outer-margin;
+}
+
+.top-footer{
+    padding-bottom: 3rem;
+}
+
+.footer-content{
+    padding: .75rem 0 3rem;
+}
+
+.site-footer li{
+    padding: .75rem 0 .5rem;
+    border-bottom: 1px solid black;
+}
+.site-footer li:first-child{
+    padding-top: 0;
+}
+
+.partners-title{
+    font-size:.75rem;
+    padding-top:.75rem;
+    border-top:1px solid black;
+    p{
+        padding: 0;
+    }
+}
+
+.logo-row{
+    align-items: baseline;
+    padding-top:.75rem;
+    padding-bottom: 1.5rem;
+}
+
+.logo-container{
+    margin:0;
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    padding-right: 15px;
+    display: inline-block;
+    img{
+        width: 100%;
+        max-width: 170px;
+     }
+}
+
+.logo-container.small{
+   width: 100px;
+}
+
+.logo-container.medium{
+    width: 110px;
+}
+
+.logo-container.large{
+    width: 150px;
+}
+
+/*
+================================================================
+HOME PAGE
+================================================================
+*/
+
+.introduction-text{
+    font-size: 1.125rem;
+    padding-bottom: 1rem;
+}
+
+.board-buttons .button-container{
+    display: inline-block;
+    padding-bottom: .25em;
+    margin-right: .25em;
+    width:230px;
+    a{
+        width: 100%;
+    }
+}
+
+
+
+/*
+================================================================
+BOARDS
+================================================================
+*/
+
+.boards-wrapper{
+    max-width: 100000px;
+}
+
+.board-section{
+    background: $lightBlack;
+}
+
+.board-header{
+    padding: 2rem 0 50px;
+}
+
+.board-title{
+    text-transform: uppercase;
+    color: $yellow;
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+.names-list{
+    list-style: none;
+    margin:0;
+    padding:0 0 20px;
+    text-indent: 0;
+}
+
+.names-list-item{
+    border-top:1px solid white;
+    padding: 20px 0 20px;
+    font-family: 'Dot Mono', monospace;
+    color: white;
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+.names-list-item .date, .names-list-item .name{
+    width:100%;
+    margin-bottom: 1rem;
+    background: black;
+    display: block;
+    padding: 8px 5px 5px 8px;
+    word-break: break-all;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 1px;
+
+    box-shadow:
+
+        0 .06em 0 rgba(150, 150, 150, .1);
+}
+
+.names-list-item .name{
+    margin-bottom: 0;
+}
+
+
+.board{
+    .date, .name{
+        letter-spacing: 0px;
+        span{
+            opacity: 0;
+            width:1em;
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+            animation:flip .01s linear;
+            animation-fill-mode: forwards;
+
+        }
+        @for $i from 0 through 224{
+          .letter-#{$i + 1}{
+            animation-delay:1s + $i/12;
+          }
+        }
+    }
+}
+
+.word{
+    display: inline-block;
+}
+
+/*
+================================================================
+BOARDS LETTER ANIMATIONS
+================================================================
+*/
+
+@keyframes flip{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+
+
+
+/*
+================================================================
+FORM OVERLAY
+================================================================
+*/
+
+
+.form-container{
+    max-width: 550px;
+}
+
+.form--open .form-overlay, .form-overlay:focus-within{
+        right:0;
+        transition: right 300ms 50ms ease-in-out;
+}
+
+.form-overlay{
+    position: fixed;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    top:0;
+    right:-100vw;
+    width:100vw;
+    max-width: 800px;
+    height:100vh;
+    transition: right 300ms 50ms ease-in-out;
+    background:white;
+    z-index:40;
+}
+
+
+
+/*
+================================================================
+VIDEO
+================================================================
+*/
+
+.video-wrapper{
+    width: 100%;
+    padding-bottom: 56.3%;
+    position: relative;
+    iframe{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top:0;
+        left:0;
+    }
+    .youtube-poster-image{
+        position: absolute;
+        width:100%;
+        height: 100%;
+        background: $yellow;
+        cursor: pointer;
+        img{
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+        .youtube-play-button{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 60px;
+            svg{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+.youtube-play-button:hover{
+    opacity: .8;
+}
+
+.playing{
+    .youtube-poster-image{
+        display: none;
+    }
+}
+
+.caption{
+    padding-top: 1em;
+}
+
+/*
+================================================================
+VENUE LIST
+================================================================
+*/
+
+.sub-intro-box{
+    padding-right: 30px;
+}
+
+.venue-list{
+    padding-top: 3em;
+}
+
+.venue-list li{
+    padding: 20px 0px 18px;
+    border-top: 1px solid black;
+    font-size: 1.5rem;
+    a{
+        display: flex;
+        width:100%;
+        .name{
+
+            padding-left:15px;
+        }
+        .arrow{
+            width:30px;
+            line-height: 1.3;
+        }
+    }
+}
+
+
+/*
+================================================================
+VENUE
+================================================================
+*/
+
+.venue-details{
+    margin-bottom: 3rem;
+}
+
+.details{
+    padding: 1.5rem 0 1.5rem;
+    h3{
+        font-weight: bold;
+        padding: 0;
+        margin: 0;
+    }
+    p{
+        padding-bottom: 1.5rem;
+    }
+}
+
+.event-section{
+    width:100%;
+//    padding-left: 5px;
+    margin-top: -2px;
+}
+
+.event{
+    padding-bottom: 3rem;
+    p{
+        padding: 0 0 1em;
+    }
+    .event-type, img{
+        padding-bottom: 1em;
+        display: block;
+        text-transform: uppercase;
+    }
+    .event-title{
+        font-size: 1.125rem;
+        padding-bottom: 1rem;
+//        text-transform: uppercase;
+    }
+}
+
+.event-embed{
+    padding-bottom: 1em;
+    div{
+        display: none;
+    }
+}
+
+/*
+================================================================
+FAQS
+================================================================
+*/
+
+.questions{
+
+}
+
+.question{
+    font-size: 1.125rem;
+    padding:20px 0 20px;
+    border-top: 1px solid black;
+    .question-title{
+        font-weight: bold;
+    }
+    .answer{
+        padding-top: 1em;
+    }
+    .answer p{
+        font-size: 1em;
+    }
+}
+
+
+/*
+================================================================
+MAP
+================================================================
+*/
+
+#map{
+    min-height: 500px;
+    height:45vw;
+}
+
+.map-main, .map-section{
+    padding-bottom: 0;
+}
+
+.map-info-container{
+    min-height: 100px;
+    min-width: 150px;
+    padding-bottom: 10px;
+    h2{
+        font-size:1.5rem;
+        padding:10px 0 10px;
+    }
+    .type{
+        text-transform: uppercase;
+    }
+    .date{
+        padding-bottom: 10px;
+        display: block;
+    }
+    a:link{
+        text-decoration: underline;
+    }
+}
+
+
+/*
+================================================================
+RESROUCES
+================================================================
+*/
+
+.block-link{
+    transition: 300ms transform ease-in-out;
+    display: block;
+    &:hover{
+        color: black;
+        transform: scaleX(1.02) scaleY(1.02);
+        transition: 300ms transform ease-in-out;
+    }
+}
+
+
+.resource{
+    margin-bottom: 20px;
+    .resource-type{
+        padding-bottom: 2rem;
+    }
+    p{
+        padding-bottom: 1rem;
+    }
+    .button-text{
+        padding-top: 2rem;
+        display: block;
+    }
+}
+
+
+
+/*
+================================================================
+MODERATION PAGE
+================================================================
+*/
+
+.moderation-title{
+    hr{
+        border-top: 2px solid black;
+    }
+}
+
+.moderation-row{
+    .radio-wrapper label .label{
+        width: auto;
+    }
+}
+
+
+/*
+================================================================
+ARCHIVE PAGE
+================================================================
+*/
+
+.archive-list-item{
+    padding: 20px 0 20px;
+    border-top: 1px solid black;
+}
+
+.story-link{
+    float:right;
+
+}
+
+/*
+================================================================
+STORIES PAGE
+================================================================
+*/
+
+.story{
+    border-radius:15px;
+    //border:2px solid $yellow;
+}
+
+.story-cat{
+    padding:19px 15px 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.story-name{
+    border-top:2px solid white;
+    border-bottom:2px solid white;
+    padding: 19px 15px 15px;
+//    background: rgba(255,255,255,.8);
+}
+
+.story-date{
+    padding: 15px;
+    font-weight: 600;
+}
+
+.story-text{
+    padding: 15px;
+    border-bottom: 2px solid white;
+    white-space: pre-line;
+}
+
+.story.departure{
+    background-color: $orange;
+}
+
+
+/*
+================================================================
+PARTNERS PAGE
+================================================================
+*/
+
+.partner-logo{
+    width:90%;
+    height:100%;
+    object-fit: contain;
+    font-family: 'object-fit: contain; object-position:bottom left;';
+    object-position: bottom left;
+
+}
+
+.logo-wrapper{
+    width:100%;
+    max-width: 220px;
+    height:90px;
+    position: relative;
+    margin: 1rem 0 1.5rem;
+}
+
+
+/*
+================================================================
+COOKIE NOTICE
+================================================================
+*/
+
+#cookieNotice{
+    background: $yellow;
+    color: black;
+    width:100%;
+    padding: 10px 20px 10px;
+    position: fixed;
+    top: 100vh; /* Fallback for browsers that do not support Custom Properties */
+    top: calc(var(--vh, 1vh) * 100);
+    left:0;
+    font-family: "New Rail Alphabet", sans-serif;
+    font-size: 12px;
+    line-height: 24px;
+    transform: translate(0%,00%);
+    animation: slideUp 300ms;
+    animation-delay: 2000ms;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    .message{
+        display: inline-block;
+        padding-right: .5em;
+    }
+    .learn-more{
+        padding: 0 .75em 0 0;
+        color:black;
+        text-decoration: underline;
+        display: inline-block;
+    }
+    .button{
+        display: inline-block;
+        max-width: 150px;
+    }
+}
+
+@keyframes slideUp{
+    from{
+        transform: translate(0,0);
+    }
+    to{
+        transform: translate(0,-100%);
+    }
+}

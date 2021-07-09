@@ -41,6 +41,9 @@ tabs:
                       template: image
                     image:
                       ratio: 2/1
+                soundCloudEmbed:
+                    label: Soundcloud embed code
+                    type: text
                 eventDescription:
                     label: Description
                     type: textarea

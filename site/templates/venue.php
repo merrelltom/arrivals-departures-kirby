@@ -57,6 +57,11 @@
                                         <?= $image->thumb(array('width' => 2000))->url();?>"
                                          sizes="100vw, (min-width: 640px) 33vw, (min-width: 1000px) 25vw" >
                                     <?php }?>
+                                    <?php if($event->soundCloudEmbed()->length() > 0):?>
+                                        <div class="event-embed">
+                                            <?= $event->soundCloudEmbed();?>
+                                        </div>
+                                    <?php endif; ?>
                                     <h3 class="event-title"><?= $event->eventTitle();?></h3>
                                     <p class="event-date">
                                         <?= $event->eventDate() . '</br>' . $event->eventTime();?>

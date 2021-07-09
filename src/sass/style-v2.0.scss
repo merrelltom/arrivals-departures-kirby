@@ -1,0 +1,52 @@
+/* 	
+================================================================
+Theme Name: Tom Merrell Studio
+Author: Tom Merrell Studio
+Author URI: http://www.tommerrell.com
+================================================================  
+*/
+
+// Setup:
+// sass --watch sass:css --style compressed
+
+
+
+// Base
+
+@import "base/variables";
+@import "base/mixins";
+@import "base/reset";
+
+// Components
+@import "components/utilities";
+@import "components/typography";
+@import "components/buttons";
+@import "components/navigation";
+/*@import "components/cookies";*/
+@import "components/grid";
+@import "components/flickity";
+@import "components/images";
+@import "components/forms";
+@import "components/pages";
+
+// Responsive
+@import "responsive/mobile";
+@import "responsive/large-mobile";
+@import "responsive/tablet";
+@import "responsive/desktop";
+@import "responsive/large-desktop";
+@import "responsive/extra-large-desktop";
+ 
+
+
+//@media screen and (max-aspect-ratio: 6/7){ @import "responsive/portrait";}
+
+
+/*@media only screen and (min-width: 479px) { @import "responsive/large-mobile";}
+@media only screen and (min-width: 600px) { @import "responsive/mini-tablet";}
+@media only screen and (min-width: 720px) { @import "responsive/tablet";}
+@media only screen and (min-width: 950px) { @import "responsive/desktop";}
+@media only screen and (min-width: 1200px) { @import "responsive/medium-desktop";}
+@media only screen and (min-width: 1500px) and (min-height: 950px) { @import "responsive/large-desktop";}
+@media screen and (max-aspect-ratio: 6/7){ @import "responsive/portrait";}
+@media only screen and (max-height: 500px) {@import "responsive/short";}*/

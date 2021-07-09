@@ -69,12 +69,14 @@
             <div class="wrapper board-buttons-wrapper">
                 <div class="row">
                     <div class="col-xs-12">
-                            <a title="Add a name to the board" class="button icon-button" onclick="toggleForm(this);"><img src="<?= $site->url()?>/assets/icons/add.svg"/></a>
+                            <a title="Add a name to the board" class="button icon-button" onclick="toggleForm(this);">
+                            <img src="<?= kirby()->urls()->assets().'/icons/add.svg' ;?>"/>
+                            </a>
                             <a title="Share on twitter" class="button icon-button" href="https://twitter.com/intent/tweet?url=<?= $page->url(); ?>" target="_blank">
-                                <img src="<?= $site->url()?>/assets/icons/twitter.svg"/>
+                                <img src="<?= kirby()->urls()->assets().'/icons/twitter.svg' ;?>"/>
                             </a>
                             <a title="Share on facebook" class="button icon-button" href="https://www.facebook.com/sharer/sharer.php?u=<?= $page->url(); ?>" target="_blank">
-                                <img src="<?= $site->url()?>/assets/icons/facebook.svg"/>
+                            <img src="<?= kirby()->urls()->assets().'/icons/facebook.svg' ;?>"/>
                             </a>
                         </div>
                     </div>

@@ -1,0 +1,346 @@
+/*  
+================================================================
+MD GRID
+================================================================  
+*/
+
+// Set the gutter between columns.
+$flexboxgrid-gutter-width-md: 20px !default;
+
+// Set margin for the container sides.
+$flexboxgrid-outer-margin-md: 40px !default;
+
+// Set gutters
+$gutter-compensation-md: $flexboxgrid-gutter-width-md * .5 * -1;
+$half-gutter-width-md: $flexboxgrid-gutter-width-md * .5;
+
+
+
+@mixin flexboxgrid-sass-col-common-md {
+  box-sizing: border-box;
+
+  // split @include flex(0, 0, auto) into individual props
+  @include flex-grow(0);
+  @include flex-shrink(0);
+
+  // we leave @include flex-basis(auto) out of common because
+  // in some spots we need it and some we dont
+  // more why here: https://github.com/kristoferjoseph/flexboxgrid/issues/126
+
+  padding-right: $half-gutter-width-md;
+  padding-left: $half-gutter-width-md;
+}
+
+
+  $name: nth($md, 1);
+  $size: nth($md, 2);
+
+  @media only screen and (min-width: $size) {    
+      
+    .wrapper {
+      padding-right: $flexboxgrid-outer-margin-md;
+      padding-left: $flexboxgrid-outer-margin-md;
+    }  
+      
+    .container-fluid {
+      padding-right: $flexboxgrid-outer-margin-md;
+      padding-left: $flexboxgrid-outer-margin-md;
+    }
+
+    .row {
+      box-sizing: border-box;
+      @include flexbox();
+      @include flex(0, 1, auto);
+      @include flex-direction(row);
+      @include flex-wrap(wrap);
+      margin-right: $gutter-compensation-md;
+      margin-left: $gutter-compensation-md;
+    }
+
+    .grid{
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: $gutter-compensation-md;
+      margin-left: $gutter-compensation-md;
+    }
+      
+    [id^='col-xs'] {
+      @include flexboxgrid-sass-col-common-md;
+      @include flex-basis(auto);
+    }
+      
+    .col-#{$name} {
+      @include flexboxgrid-sass-col-common-md;
+      @include flex-basis(auto);
+    }
+    @for $i from 1 through $flexboxgrid-grid-columns {
+      .col-#{$name}-#{$i} {
+        @include flexboxgrid-sass-col-common-md;
+        @include flex-basis(100% / $flexboxgrid-grid-columns * $i);
+        width: 100% / $flexboxgrid-grid-columns * $i;
+      }
+    }
+    @for $i from 0 through $flexboxgrid-grid-columns {
+      .col-#{$name}-offset-#{$i} {
+        @include flexboxgrid-sass-col-common-md;
+        @if $i == 0 {
+          margin-left: 0;
+        } @else {
+          margin-left: 100% / $flexboxgrid-grid-columns * $i;
+        }
+      }
+    }
+    .col-#{$name} {
+      @include flex-grow(1);
+      @include flex-basis(0);
+      max-width: 100%;
+    }
+    .start-#{$name} {
+      @include justify-content(flex-start);
+      text-align: left;
+    }
+
+    .center-#{$name} {
+      @include justify-content(center);
+      text-align: center;
+    }
+
+    .end-#{$name} {
+      @include justify-content(flex-end);
+      text-align: right;
+    }
+
+    .top-#{$name} {
+      @include align-items(flex-start);
+    }
+
+    .middle-#{$name} {
+      @include align-items(center);
+    }
+
+    .bottom-#{$name} {
+      @include align-items(flex-end);
+    }
+
+    .around-#{$name} {
+      @include justify-content(space-around);
+    }
+
+    .between-#{$name} {
+      @include justify-content(space-between);
+    }
+
+    .first-#{$name} {
+      order: -1;
+    }
+
+    .last-#{$name} {
+      order: 1;
+    }
+
+
+
+
+/*  
+================================================================
+UTILITY CLASSES
+================================================================  
+*/
+
+
+.#{$name}-visuallyhidden { 
+  position: absolute; 
+  overflow: hidden; 
+  clip: rect(0 0 0 0); 
+  height: 1px; width: 1px; 
+  margin: -1px; padding: 0; border: 0; 
+}
+
+.#{$name}-hide {
+   display: none;
+}
+
+.#{$name}-show {
+   display: inline-block;
+}
+
+.#{$name}-align-right{
+    text-align: right;
+}
+
+
+/*  
+================================================================
+HEADER
+================================================================  
+*/
+
+.header{
+    padding-top:40px;
+}
+
+
+button.header-add-name-button{
+    background:white;
+    position: fixed;
+    top:40px;
+    right:90px;
+    z-index: 29;
+    width:250px;
+    display: block;
+}
+
+
+/*  
+================================================================
+TYPOGRAPHY
+================================================================  
+*/
+
+
+h2.section-title, .body-text h2{
+    font-weight: normal;
+    font-size: 2rem;
+    padding-bottom: 2rem;
+}
+
+
+
+/*  
+================================================================
+MENU
+================================================================  
+*/
+
+.main-menu{
+    width:500px;
+    padding:100px 40px;
+}
+
+ 
+
+.menu--open .main-menu{
+    opacity: 1;
+}
+    
+    
+/*  
+================================================================
+BOARDS
+================================================================  
+*/
+
+.board-section{
+    background: white;
+    padding-top:30px;
+}
+
+.board-header{
+    padding:5px 5px 2rem;
+}
+.board{
+    background: rgb(30, 30, 30);
+    padding:1.25rem;
+    margin-bottom: 1rem;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    	box-shadow: 
+		inset 0 -.03em 0 rgba(0, 0, 0, .1), 
+		inset 0 -.6em 0 rgba(0, 0, 0, .1), 
+		inset .6em 0 .12em rgba(0, 0, 0, .1), 
+		inset -.6em 0 .12em rgba(0, 0, 0, .1),	
+		0 .06em 0 rgba(0, 0, 0, .2); 
+}
+
+.board-title{
+    text-transform: uppercase;
+    color: $yellow;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.board-column-heading{
+    font: "New Rail Alphabet", sans-seif;
+    font-size:.875rem;
+    color: $yellow;
+    padding: 5px;
+    width: 192.61px;
+    display:inline-block;
+    font-weight:bold;
+}
+
+
+
+.names-list{
+    list-style: none;
+    margin:0;
+    padding:0 0 0px;
+    text-indent: 0;
+}
+
+.names-list-item{
+    border-top:0px solid white;
+    padding: 0;
+    font-size: 1.325rem;
+    line-height: 1.5;
+    display: flex;
+}
+
+.board-item-wrapper{
+    padding: 5px;
+}
+
+.board-item-wrapper:nth-child(2){
+    flex: 1;
+}
+
+.names-list-item .date, .names-list-item .name{
+    margin-bottom: 0;
+    background: black;
+    display: block;
+    padding: 8px 5px 5px 8px;
+    word-break: break-all;
+}
+
+.names-list-item .name{
+    margin-bottom: 0;
+}
+
+
+/*  
+================================================================
+FORM
+================================================================  
+*/
+
+h2.form-title{
+//    border-bottom: 1px solid black;
+//    padding-bottom: 1rem;
+//    margin-bottom: 1.125rem;
+}
+
+
+
+/*  
+================================================================
+LOGOS
+================================================================  
+*/
+
+
+
+
+/*  
+================================================================
+COOKIE NOTICE
+================================================================  
+*/
+
+#cookieNotice{
+    padding: 10px 40px 10px;
+}
+
+
+
+} /* End Media Query */

@@ -48,25 +48,25 @@
                 <div class="logo-row row">
                     <div class="col-xs-12">
                         <figure class="logo-container medium">
-                            <img src="<?= $site->url();?>/assets/logos/ww-logo-1.png" alt="Without Walls" />
+                            <img src="<?= kirby()->urls()->assets().'/logos/ww-logo-1.png' ;?>" alt="Without Walls" />
                         </figure>
                         <figure class="logo-container medium">
-                            <img src="<?= $site->url();?>/assets/logos/artsadmin.svg" alt="Artsadmin" />
+                            <img src="<?= kirby()->urls()->assets().'/logos/artsadmin.svg' ;?>" alt="Artsadmin" />
                         </figure>
                         <figure class="logo-container small">
-                            <img src="<?= $site->url();?>/assets/logos/n-n_logo_vector_black.svg" alt="Norfolk and Norwich Festival" />
+                            <img src="<?= kirby()->urls()->assets().'/logos/n-n_logo_vector_black.svg' ;?>" alt="Norfolk and Norwich Festival" />
                         </figure>
                         <figure class="logo-container medium">
-                            <img src="<?= $site->url();?>/assets/logos/freedom.png" alt="Freedom Festival Arts Trust" />
+                            <img src="<?= kirby()->urls()->assets().'/logos/freedom.png' ;?>" alt="Freedom Festival Arts Trust" />
                         </figure>
                         <figure class="logo-container large">
-                            <img src="<?= $site->url();?>/assets/logos/grant_eps_black.svg" alt="Arts Council" />
+                            <img src="<?= kirby()->urls()->assets().'/logos/grant_eps_black.svg' ;?>" alt="Arts Council" />
                         </figure>
                         <figure class="logo-container medium">
-                            <img src="<?= $site->url();?>/assets/logos/ctc-cti-black-2.svg" alt="Create to Connect > Create to Impact" />
+                            <img src="<?= kirby()->urls()->assets().'/logos/ctc-cti-black-2.svg' ;?>" alt="Create to Connect > Create to Impact" />
                         </figure>
                         <figure class="logo-container large">
-                            <img src="<?= $site->url();?>/assets/logos/creative-europe.png" alt="Creative Europe" />
+                            <img src="<?= kirby()->urls()->assets().'/logos/creative-europe.png' ;?>" alt="Creative Europe" />
                         </figure>
                     </div>
                     
@@ -94,7 +94,7 @@
 
 <?= js('https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js') ?>
 <?= js('assets/js/plugins.js') ?>
-<?= js('assets/js/script-v1.0.js') ?>
+<?= js('assets/js/script.js') ?>
 <?= js('assets/js/cookieValidate-v1.2.js') ?>
 
 <script>

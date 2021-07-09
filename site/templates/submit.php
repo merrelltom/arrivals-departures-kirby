@@ -17,9 +17,10 @@ if(isset($_COOKIE['SubmitCount'])){
 }
 
 if($count < 4 && $time > 60 && $submissionsOpen == true){
-    echo 'open';
+   // echo 'open';
 }else{
-    echo 'closed';
+    header("Location: " . $site->children()->findByURI('error-closed')->url());
+    exit();
 }
 
 

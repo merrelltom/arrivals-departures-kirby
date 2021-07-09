@@ -1,0 +1,39 @@
+/*  
+================================================================
+RESPONSIVE BREAKPOINTS
+================================================================  
+*/
+
+// Set the number of columns
+$flexboxgrid-grid-columns: 12 !default;
+
+/*// Create or remove breakpoints for your project
+// Syntax:
+// name SIZErem,
+$responsive-breakpoints:
+  sm 48em 46rem,
+  md 62em 61rem,
+  lg 75em 71rem
+;*/
+
+$sm: sm, 600px; // 608px
+$md: md, 768px;	// 768px
+$lg: lg, 1000px; // 1072px
+$xl: xl, 1400px; // 1600px
+$xxl: xxl, 1575px; // 1600px
+
+// Max wrapper width
+$flexboxgrid-max-width: 1500px !default;
+
+
+
+
+/*  
+================================================================
+COLOURS
+================================================================  
+*/
+
+$yellow: #F1F900;
+$lightBlack: #252523;
+$orange: rgb(255, 131, 0);

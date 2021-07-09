@@ -46,5 +46,8 @@
     echo '<hr>';
     echo 'Controller result: ';  
     echo $submissionsOpen;    
+    echo '<hr>';
+    echo 'Strict Moderation: ';   
+    echo  $site->strictModeration()->toBool();      
 ?>
 </pre>
