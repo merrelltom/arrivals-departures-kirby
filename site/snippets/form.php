@@ -31,21 +31,21 @@ if (!$kirby->user()){ }else{ $open = true; } ?>
             <form class="row form" action="<?= $site->children()->findByURI('submit')->url();?>" method="post" id="name-submission-form" name="name-submission-form" validate>
                 <input type="text" name="valid" id="valid" class="visuallyhidden">
                 <fieldset class="form-item col-xs-12">
-                    <h3 class="fieldset-title" aria-hidden="true">Arrival or Departure?</h3>
+                    <h3 class="fieldset-title" aria-hidden="true"><?php echo t('Arrival or Departure?');?></h3>
                     <legend class="visuallyhidden">
-                        <h3 class="fieldset-title">Arrival or Departure?</h3>
+                        <h3 class="fieldset-title"><?php echo t('Arrival or Departure?');?></h3>
                         <?php if($form->arrivalDepartureInstructions()): $form->arrivalDepartureInstructions()->kt(); endif;?>?>
                     </legend>
                     <div class="radio-wrapper">
                         <div>
                             <input type="radio" id="arrival" name="arrival_or_departure" value="arrival" required>
-                            <label for="arrival"><span class="label">Arrival (birth)</span></label>
+                            <label for="arrival"><span class="label"><?php echo t('Arrival (birth)');?></span></label>
                         </div>
                     </div>
                     <div class="radio-wrapper">
                         <div>
                             <input type="radio" id="departure" name="arrival_or_departure" value="departure" required>
-                            <label for="departure"><span class="label">Departure (death)</span></label>
+                            <label for="departure"><span class="label"><?php echo t('Departure (death)');?></span></label>
                         </div>
                     </div>
                     <?php if($form->arrivalDepartureInstructions()):?>
@@ -56,11 +56,11 @@ if (!$kirby->user()){ }else{ $open = true; } ?>
                 </fieldset>
 
                 <fieldset class="form-item col-xs-12">
-                    <label class="fieldset-title" for="ad_name">Name</label>
+                    <label class="fieldset-title" for="ad_name"><?php echo t('Name');?></label>
                     <legend class="visuallyhidden">
                         <?php if($form->nameInstructions()): $form->nameInstructions()->kt(); endif;?>?>
                     </legend>
-                    <input id="ad_name" name="ad_name" type="text" placeholder="Enter Name..."
+                    <input id="ad_name" name="ad_name" type="text" placeholder="<?php echo t('Name');?>..."
                            pattern="[A-Za-z- ]{1,24}" title="Max. 24 characters, letters and hyphens only" required/>
                     <?php if($form->nameInstructions()):?>
                     <div aria-hidden="true" class="small-text">
@@ -70,37 +70,37 @@ if (!$kirby->user()){ }else{ $open = true; } ?>
                 </fieldset>
 
                 <fieldset class="form-item col-xs-12">
-                    <h3 class="fieldset-title" aria-hidden="true">Date</h3>
+                    <h3 class="fieldset-title" aria-hidden="true"><?php echo t('Date');?></h3>
                     <legend class="visuallyhidden">
                         <h3 class="fieldset-title">Date</h3>
                         <?php if($form->dateInstructions()): $form->dateInstructions()->kt(); endif;?>?>
                     </legend>
-                    <select id="ad_day" name="ad_day" type="number" min="1" max="31" placeholder="Day">
-                        <option value="0">Day</option>
+                    <select id="ad_day" name="ad_day" type="number" min="1" max="31" placeholder="<?php echo t('Day');?>">
+                        <option value="0"><?php echo t('Day');?></option>
                         <?php for($i = 01; $i < 32; $i++){?>
                             <option value="<?= $i;?>"><?= $i;?></option>
                         <?php }?>
 
                     </select>
-                    <label class="visuallyhidden" for="ad_day">Day</label>
+                    <label class="visuallyhidden" for="ad_day"><?php echo t('Day');?></label>
                     <select id="ad_month" name="ad_month" placeholder="Month">
-                        <option value="0">Month</option>
-                        <option value="1">January</option>
-                        <option value="2">February</option>
-                        <option value="3">March</option>
-                        <option value="4">April</option>
-                        <option value="5">May</option>
-                        <option value="6">June</option>
-                        <option value="7">July</option>
-                        <option value="8">August</option>
-                        <option value="9">September</option>
-                        <option value="10">October</option>
-                        <option value="11">November</option>
-                        <option value="12">December</option>
+                        <option value="0"><?php echo t('Month');?></option>
+                        <option value="2"><?php echo t('February');?></option>
+                        <option value="3"><?php echo t('March');?></option>
+                        <option value="1"><?php echo t('January');?></option>
+                        <option value="4"><?php echo t('April');?></option>
+                        <option value="5"><?php echo t('May');?></option>
+                        <option value="6"><?php echo t('June');?></option>
+                        <option value="7"><?php echo t('July');?></option>
+                        <option value="8"><?php echo t('August');?></option>
+                        <option value="9"><?php echo t('September');?></option>
+                        <option value="10"><?php echo t('October');?></option>
+                        <option value="11"><?php echo t('November');?></option>
+                        <option value="12"><?php echo t('December');?></option>
                     </select>
-                    <label class="visuallyhidden" for="ad_month">Select Month</label>
+                    <label class="visuallyhidden" for="ad_month">Select <?php echo t('Month');?></label>
                     <input id="ad_year" name="ad_year" type="text" placeholder="Year"
-                           pattern="[0-9]{4}" title="Four digit date" required/> <label class="visuallyhidden" for="ad_day">Year</label>
+                           pattern="[0-9]{4}" title="Four digit date" required/> <label class="visuallyhidden" for="ad_day"><?php echo t('Year');?></label>
 
                     <?php if($form->dateInstructions()):?>
                     <div aria-hidden="true" class="small-text">
@@ -110,7 +110,7 @@ if (!$kirby->user()){ }else{ $open = true; } ?>
                 </fieldset>
 
                 <fieldset class="form-item col-xs-12">
-                    <label class="fieldset-title" for="ad_location">Location <small class="small">(Optional)</small></label>
+                    <label class="fieldset-title" for="ad_location"><?php echo t('Location');?> <small class="small">(<?php echo t('Optional');?>)</small></label>
                     <legend class="visuallyhidden">
                         <?php if($form->locationInstructions()): $form->locationInstructions()->kt(); endif;?>?>
                     </legend>
@@ -124,7 +124,7 @@ if (!$kirby->user()){ }else{ $open = true; } ?>
                 </fieldset>
 
                 <fieldset class="form-item col-xs-12">
-                    <label class="fieldset-title" for="ad_location">Story <small class="small">(Optional)</small></label>
+                    <label class="fieldset-title" for="ad_location"><?php echo t('Story');?> <small class="small">(<?php echo t('Optional');?>)</small></label>
                     <legend class="visuallyhidden">
                         <?php if($form->storyInstructions()): $form->storyInstructions()->kt(); endif;?>?>
                     </legend>
@@ -137,7 +137,7 @@ if (!$kirby->user()){ }else{ $open = true; } ?>
                 </fieldset>
 
                 <fieldset class="form-item col-xs-12">
-                    <label class="fieldset-title" for="email">Email <small class="small">(Optional)</small></label>
+                    <label class="fieldset-title" for="email"><?php echo t('Email');?> <small class="small">(<?php echo t('Optional');?>)</small></label>
                     <legend class="visuallyhidden">
                         <?php if($form->emailInstructions()): $form->emailInstructions()->kt(); endif;?>?>
                     </legend>
@@ -149,7 +149,7 @@ if (!$kirby->user()){ }else{ $open = true; } ?>
                     <div class="small-checkbox-wrapper">
                         <div>
                             <input type="checkbox" id="signup" name="signup" value="signup">
-                            <label for="signup"><span class="label">Add me to the mailing list</span></label>
+                            <label for="signup"><span class="label"><?php echo t('Add me to the mailing list');?></span></label>
                         </div>
                     </div>
                     <?php endif;?>
@@ -163,7 +163,7 @@ if (!$kirby->user()){ }else{ $open = true; } ?>
             <?php else : ?>
             <section class="form-intro row">
                 <div class="col-xs-12 ">
-                    <h2 class="section-title form-title">Submissions</h2>
+                    <h2 class="section-title form-title"><?php echo t('Submissions');?></h2>
                     <div class="body-text">
                         <?= $form->closedText()->kt();?>
                         <form class="validate" action="<?= $site->mailingListSignUpURL();?>" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>

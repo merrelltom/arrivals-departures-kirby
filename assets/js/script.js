@@ -7,6 +7,7 @@ var tm_form = document.getElementById("form-overlay");
 var tm_form_inner = document.getElementById("form-title");
 var tm_menu = document.getElementById("menu");
 var tm_menu_toggles = document.querySelectorAll('.menuToggle');
+var tm_dropdown_buttons = document.querySelectorAll('.dropdown-button-toggle');
 
 // IOS VH Fix
 let vh = window.innerHeight * 0.01;
@@ -115,6 +116,25 @@ document.addEventListener('click', function (event) {
         }
         content.classList.toggle('visuallyhidden');
 });
+
+/*
+================================================================
+DROPDOWN BUTTONS
+================================================================
+*/
+
+for (var i = 0; i < tm_dropdown_buttons.length; i++) {
+    tm_dropdown_buttons[i].addEventListener('click', function(event){
+        var parent = this.parentNode;
+        if( parent.classList.contains("active")){
+            parent.classList.remove("active");
+            this.setAttribute('aria-expanded', 'false');
+        }else{
+            parent.classList.add("active");
+            this.setAttribute('aria-expanded', 'true');
+        }
+    });
+}
 }();
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.
 !function() {

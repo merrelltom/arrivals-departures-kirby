@@ -32,29 +32,35 @@ columns:
      type: toggle 
      width: 2/2   
      help: 'This setting will be overridden by any automation set below'
+     translate: false
     automateSubmissions:
      label: Automate submission times?
      type: toggle 
      width: 1/4   
+     translate: false
     openTime:
      label: Open From
      type: time
-     width: 1/4   
+     width: 1/4  
+     translate: false 
     closeTime:
      label: Closed From
      type: time  
-     width: 1/4   
+     width: 1/4  
+     translate: false 
     timeDifference:
      label: Time difference (from GMT)
      type: number
      min: -12
      max: 14  
-     width: 1/4        
+     width: 1/4  
+     translate: false      
     strictModeration:
      label: Strict Moderation
      type: toggle 
      width: 2/2   
-     help: 'Strict moderation will put ALL names in the moderation queue'              
+     help: 'Strict moderation will put ALL names in the moderation queue' 
+     translate: false             
  - width: 2/2
    fields:
     footer:

@@ -96,3 +96,91 @@ button:active,  a.button:active {
 .icon-button:hover, a.icon-button:hover{
     background: $yellow;
 }
+
+
+/*  
+================================================================
+DROPDOWN BUTTON
+================================================================  
+*/
+
+.dropdown-button-group{
+    position: relative;
+    button{
+        border-radius: 18px;
+        display: inline-block;
+        border: 2px solid  $lightBlack;
+        //height: 36px;
+        font-size: 1.2em;
+        padding: 8px 20px 5px;
+        background-color: white;
+        z-index: 1;
+        &:hover, &:focus{
+            background-color: $lightBlack;
+            color: white;
+            .down-angle{
+                border-color: white  transparent transparent transparent;
+            }
+        }
+    }
+    .dropdown-button-content{
+        border: 2px solid black;
+        border-radius: 5px;
+        top: 40px;
+        right: 0px;
+        position: absolute;
+        width: 150px;
+        font-size: 1.2em;
+        background: white;
+        display: none;
+        z-index: 0;
+        transition: all 300ms ease-in-out;
+        a{
+            padding: 5px 10px 3px;
+            display: block;
+            border-bottom: 2px solid  $lightBlack;
+            &:hover{
+                background-color: $lightBlack;
+                color: white;
+                .tick{
+                    border-color: white;
+                }
+            }
+        }
+        li:last-child{
+            a{
+                border-bottom: none;
+            }
+        }
+    }
+}
+
+.dropdown-button-group.active{
+    .dropdown-button-content{
+        display: block;
+    }
+}
+
+.down-angle{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 5.5px 0 5.5px;
+    border-color:  $lightBlack transparent transparent transparent;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -1px;
+}
+
+.tick{
+    width: 18px;
+    height: 9px;
+    border-left: 2px solid  $lightBlack;
+    border-bottom: 2px solid  $lightBlack;
+    transform: rotate(-45deg);
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    left: 9px;
+    top: 9px;
+}

@@ -6,11 +6,11 @@
             <div class="wrapper">
                 <div class="row">
                     <div class="introduction-text col-xs-12 col-md-6">
-                        An interactive public installation about birth, death and the journey in-between by YARA&nbsp;+&nbsp;DAVINA.
+                    <?php echo t('bannerText');?>
                     </div>
                     <div class="col-xs-12 col-md-6 col-lg-6 md-align-right">
                         <div class="button-container">
-                            <button class="sm-button" data-link="<?= $site->url();?>/submission-form" onclick="toggleForm(this);">Add a name to the boards</button>
+                            <button class="sm-button" data-link="<?= $site->url();?>/submission-form" onclick="toggleForm(this);"><?php echo t('Add a name to the boards') ?></button>
                         </div>
                     </div>
 
@@ -39,7 +39,7 @@
                         <h2 class="board-title">Arrivals</h2>
                     </header>
                     <div class="xs-hide md-show" aria-hidden="true">
-                        <span class="board-column-heading" >Date</span><span class="board-column-heading">Name</span>
+                        <span class="board-column-heading" ><?php echo t('date');?></span><span class="board-column-heading"><?php echo t('name');?></span>
                     </div>
                     <ol class="names-list">
                         <?php snippet('arrivals-board');?>
@@ -53,7 +53,7 @@
                         <h2 class="board-title">Departures</h2>
                     </header>
                     <div class="xs-hide md-show" aria-hidden="true">
-                        <span class="board-column-heading" >Date</span><span class="board-column-heading">Name</span>
+                        <span class="board-column-heading" ><?php echo t('date');?></span><span class="board-column-heading"><?php echo t('name');?></span>
                     </div>
                     <ol class="names-list">
                        <?php snippet('departures-board');?>
@@ -69,7 +69,7 @@
             <div class="wrapper board-buttons-wrapper">
                 <div class="row">
                     <div class="col-xs-12">
-                            <a title="Add a name to the board" class="button icon-button" onclick="toggleForm(this);">
+                            <a title="<?php echo t('Add a name to the board');?>" class="button icon-button" onclick="toggleForm(this);">
                             <img src="<?= kirby()->urls()->assets().'/icons/add.svg' ;?>"/>
                             </a>
                             <a title="Share on twitter" class="button icon-button" href="https://twitter.com/intent/tweet?url=<?= $page->url(); ?>" target="_blank">
@@ -208,7 +208,7 @@
         <section class="about-section page-section">
             <div class="wrapper">
                 <div class="row">
-                    <h2 class="section-title col-xs-12 col-md-4">About</h2>
+                    <h2 class="section-title col-xs-12 col-md-4"><?php echo t('about');?></h2>
                     <div class="section-content col-xs-12 col-md-8">
                         <?php
                         foreach($page->blocks()->toBuilderBlocks() as $block):
@@ -246,7 +246,7 @@
         <section class="page-section">
             <div class="wrapper">
                 <div class="row">
-                    <h2 class="section-title col-xs-12 col-md-4">Programme</h2>
+                    <h2 class="section-title col-xs-12 col-md-4"><?php echo t('Programme');?></h2>
                     <div class="section-content col-xs-12 col-md-8">
                         <div class="introduction">
                             <?= $page->programmeIntro()->kt();?>

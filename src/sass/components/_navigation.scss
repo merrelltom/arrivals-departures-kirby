@@ -1,29 +1,50 @@
-//button.menu-button{
-//    position: fixed;
-//    top:0;
-//    right:0;
-//    padding:20px;
-//    width:76px;
-//    z-index: 40;
-//    border: none;
-//    svg{
-//        width:100%;
-//    }
-//}
+/*  
+================================================================
+BUTTONS CONTANIER
+================================================================  
+*/
+
+.header-buttons{
+    text-align: right;
+}
 
 .menu-button-container{
-    width:100%;
-    position: relative;
-    display: flex;
-    justify-content: flex-end;
+    width: 36px;
+    nav{
+        position: fixed;
+        z-index: 40;
+    }
 }
+
+.language-selector-container, .menu-button-container{
+    // width: 36px;
+    height: 36px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 5px;
+}
+
+.language-selector-container{
+    width: 81px;
+    .dropdown-button-wrapper{
+        position: fixed;
+        z-index: 40;
+    }
+}
+
+/*  
+================================================================
+MENU BUTTON
+================================================================  
+*/
+
 
 button.menu-button{
     border:1px solid red;
-    position: fixed;
     padding:0px;
     width:36px;
     z-index: 40;
+    position: fixed;
     border: none;
     svg{
         width:100%;
@@ -115,6 +136,27 @@ button.menu-button:hover, button.menu-button:focus {
 button.header-add-name-button{
     display: none;
 }
+
+
+/*  
+================================================================
+LANGUAGE SELECTOR
+================================================================  
+*/
+
+.language-selector-container{
+    .dropdown-button-content{
+        a{
+            padding-left: 1.5em;
+            position: relative;
+        }
+    }
+}
+
+.language-selector-button{
+    text-transform: capitalize;
+}
+
 
 
 /*  

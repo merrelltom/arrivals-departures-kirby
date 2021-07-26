@@ -44,7 +44,7 @@
                         <div class="event-section">
                             
                             <div class="row">
-                                <h2 class="section-title event-title col-xs-12">Events</h2>                    
+                                <h2 class="section-title event-title col-xs-12"><?php echo t('Events');?></h2>                    
                                 <?php foreach($events as $event):?>
                                 <div class="event col-xs-12 col-sm-6 col-md-4 col-lg-4"?>
                                     <?php 

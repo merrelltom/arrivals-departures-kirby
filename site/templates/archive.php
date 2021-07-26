@@ -9,7 +9,7 @@
                         <?= $page->pageIntroduction()->kt(); ?>
                     </div>
                     <br>
-                    <a href="#departures" class="section-title col-xs-12 md-hide">> Skip to Departures</a><br><br>
+                    <a href="#departures" class="section-title col-xs-12 md-hide">> <?php echo t('Skip to Departures');?></a><br><br>
                 </div>
             </div>
         </section>

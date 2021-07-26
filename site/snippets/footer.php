@@ -6,13 +6,13 @@
             <div class="top-footer large-text col-xs-12 col-lg-6">
                 <p><?= $site->footerCallToAction();?></p>
                 <div class="button-container">
-                    <button class="lg-button" onclick="toggleForm(this);">Add a name to the boards</button>
+                    <button class="lg-button" onclick="toggleForm(this);"><?php echo t('Add a name to the boards');?></button>
                 </div>            
             </div>
         </div>
         <div class="row">
             <div class="col-xs-12 col-md-6 col-lg-3 footer-col">
-                <h3 class="footer-title">Main Menu</h3>
+                <h3 class="footer-title"><?php echo t('Menu');?></h3>
                 <nav class="footer-nav footer-content">
                     <ul>
                     <?php foreach ($site->children()->listed() as $item): ?>
@@ -22,7 +22,7 @@
                 </nav>
             </div>
             <div class="col-xs-12 col-md-6 col-lg-3 footer-col">
-                <h3 class="footer-title">Other Information</h3>
+                <h3 class="footer-title"><?php echo t('Other Information');?></h3>
                 <nav class="footer-nav footer-content">
                     <ul>
                     <?php $footerLinks = $site->footerNavigation()->toPages(); 

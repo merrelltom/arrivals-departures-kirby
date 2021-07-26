@@ -20,7 +20,7 @@
         'messageLocales': {
             'it': 'Utilizziamo i cookie per essere sicuri che tu possa avere la migliore esperienza sul nostro sito.  ',
             'en': 'We use cookies to make sure you can have the best experience on our website. ',
-            'de': 'Wir verwenden Cookies um sicherzustellen dass Sie das beste Erlebnis auf unserer Website haben. ',
+            'de': 'Wir setzen Cookies ein, um die Benutzerfreundlichkeit zu garantieren. ',
             'fr': 'Nous utilisons des cookies afin d\'être sûr que vous pouvez avoir la meilleure expérience sur notre site.  '
         },
 
