@@ -1,0 +1,135 @@
+/*  
+================================================================
+XL GRID
+================================================================  
+*/
+
+$name: nth($xl, 1);
+$size: nth($xl, 2);
+
+@media only screen and (min-width: $size) {
+
+  .col-#{$name} {
+    @include flexboxgrid-sass-col-common;
+    @include flex-basis(auto);
+  }
+  @for $i from 1 through $flexboxgrid-grid-columns {
+    .col-#{$name}-#{$i} {
+      @include flexboxgrid-sass-col-common;
+      @include flex-basis(100% / $flexboxgrid-grid-columns * $i);
+      width: 100% / $flexboxgrid-grid-columns * $i;
+    }
+  }
+  @for $i from 0 through $flexboxgrid-grid-columns {
+    .col-#{$name}-offset-#{$i} {
+      @include flexboxgrid-sass-col-common;
+      @if $i == 0 {
+        margin-left: 0;
+      } @else {
+        margin-left: 100% / $flexboxgrid-grid-columns * $i;
+      }
+    }
+  }
+  .col-#{$name} {
+    @include flex-grow(1);
+    @include flex-basis(0);
+    max-width: 100%;
+  }
+  .start-#{$name} {
+    @include justify-content(flex-start);
+    text-align: left;
+  }
+
+  .center-#{$name} {
+    @include justify-content(center);
+    text-align: center;
+  }
+
+  .end-#{$name} {
+    @include justify-content(flex-end);
+    text-align: right;
+  }
+
+  .top-#{$name} {
+    @include align-items(flex-start);
+  }
+
+  .middle-#{$name} {
+    @include align-items(center);
+  }
+
+  .bottom-#{$name} {
+    @include align-items(flex-end);
+  }
+
+  .around-#{$name} {
+    @include justify-content(space-around);
+  }
+
+  .between-#{$name} {
+    @include justify-content(space-between);
+  }
+
+  .first-#{$name} {
+    order: -1;
+  }
+
+  .last-#{$name} {
+    order: 1;
+  }
+
+
+
+/*  
+================================================================
+UTILITY CLASSES
+================================================================  
+*/
+
+
+.#{$name}-visuallyhidden { 
+position: absolute; 
+overflow: hidden; 
+clip: rect(0 0 0 0); 
+height: 1px; width: 1px; 
+margin: -1px; padding: 0; border: 0; 
+}
+
+.#{$name}-hide {
+ display: none;
+}
+
+.#{$name}-show {
+ display: inline-block;
+}
+
+
+/*  
+================================================================
+BOARDS
+================================================================  
+*/
+
+
+.board-section{
+  padding-top: 0px 0px 0;
+}
+
+.boards-wrapper{
+  padding: 0 20px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10px;
+  max-width: 2500px;
+}
+
+.board-buttons{
+  padding-top: 0;
+}
+
+.board-buttons-wrapper{
+  max-width: 2500px;
+  padding-left: 20px;
+}
+
+} /* End Media Query */
