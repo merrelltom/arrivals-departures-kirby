@@ -112,7 +112,7 @@ BOARDS
 
 
 .board-section{
-  padding-top: 0px 0px 0;
+  padding-top: 20px;
 }
 
 .boards-wrapper{
@@ -131,5 +131,9 @@ BOARDS
   max-width: 2500px;
   padding-left: 20px;
 }
+
+.names-list-item{
+    font-size: 1.15em;
+  }
 
 } /* End Media Query */
