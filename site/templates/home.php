@@ -23,7 +23,7 @@
         <section class="introduction-banner page-section bg-orange">
             <div class="wrapper">
                 <div class="row">
-                    <div class="introduction-text col-xs-12 col-md-6">
+                    <div class="introduction-text col-xs-12">
                         <?= $page->closedBanner()->kt();?>
                     </div>
                 </div>
