@@ -21,7 +21,7 @@ return [
         'Name' => 'Name',
         'About' => 'About', 
         'Programme' => 'Programme', 
-        'Other Information' => '',
+        'Other Information' => 'Other Information',
         'cookieText' => 'We use cookies to make sure you can have the best experience on our website.',
         'Arrival or Departure?' => 'Arrival or Departure?',
         'Arrival (birth)' => 'Arrival (birth)',

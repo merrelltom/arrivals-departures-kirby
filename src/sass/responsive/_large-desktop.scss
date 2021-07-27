@@ -110,7 +110,33 @@ UTILITY CLASSES
 }
 
 
+/*  
+================================================================
+BOARDS
+================================================================  
+*/
 
+
+.board-section{
+  padding: 30px 30px 0;
+}
+
+.boards-wrapper{
+  padding: 0 30px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 15px;
+  max-width: 2500px;
+}
+
+.board-buttons{
+  padding-top: 0;
+}
+
+.board-buttons-wrapper{
+  max-width: 2500px;
+  padding-left: 30px;
+}
 
 
 } /* End Media Query */
