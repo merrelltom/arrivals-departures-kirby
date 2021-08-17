@@ -41,7 +41,7 @@
                 <div class="header-buttons">
                     <?php 
                         $languages = $kirby->languages();
-                        if($languages->count() > 10):
+                        if($languages->count() > 1):
                     ?>
                         <div class="language-selector-container">
                             <div class="dropdown-button-wrapper">
