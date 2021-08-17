@@ -126,7 +126,10 @@ RADIO BUTTONS
 
 .radio-wrapper{
     margin-bottom: .75rem;
-    &:focus-within{
+}
+
+.keyboard-focus{
+    .radio-wrapper:focus-within{
         outline: none;
         outline: 3px solid orange;
 
@@ -359,7 +362,9 @@ select {
 //   background-image: url(...);   /* Add custom arrow */
 }
 
-select:focus{
-    outline: 3px solid orange;
+.keyboard-focus{
+    select:focus{
+        outline: 3px solid orange;
 
+    }
 }
