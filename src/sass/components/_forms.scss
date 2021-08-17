@@ -35,8 +35,10 @@ textarea{
     min-height:200px;
 }
 
-input:focus, textarea:focus, label:focus{
-    outline: 3px solid orange;
+.keyboard-focus{
+    input:focus, textarea:focus, label:focus{
+        outline: 3px solid orange;
+    }
 }
 
 .form fieldset{
