@@ -44,6 +44,7 @@ return [
         'December' => 'December',
         'Year' => 'Year',
         'Location' => 'Location',
+        'Optional' => 'Optional',
         'Story' => 'Story',
         'Email' => 'Email',
         'Add me to the mailing list' => 'Add me to the mailing list',

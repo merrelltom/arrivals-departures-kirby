@@ -85,9 +85,9 @@ if (!$kirby->user()){ }else{ $open = true; } ?>
                     <label class="visuallyhidden" for="ad_day"><?php echo t('Day');?></label>
                     <select id="ad_month" name="ad_month" placeholder="Month">
                         <option value="0"><?php echo t('Month');?></option>
+                        <option value="1"><?php echo t('January');?></option>
                         <option value="2"><?php echo t('February');?></option>
                         <option value="3"><?php echo t('March');?></option>
-                        <option value="1"><?php echo t('January');?></option>
                         <option value="4"><?php echo t('April');?></option>
                         <option value="5"><?php echo t('May');?></option>
                         <option value="6"><?php echo t('June');?></option>
