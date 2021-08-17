@@ -16,6 +16,14 @@ if(isset($_COOKIE['SubmitCount'])){
     $count  =  $_COOKIE['SubmitCount'];
 }
 
+// if($count < 4 && $time > 60 && $submissionsOpen == true){
+//    // echo 'open';
+// }else{
+//     header("Location: " . $site->children()->findByURI('error-closed')->url());
+//     exit();
+// }
+
+
 if($count < 4 && $time > 60 && $submissionsOpen == true || $kirby->user()){
     if ($_POST && ! filter_input(INPUT_POST, "valid")) {
         if ( filter_input(INPUT_POST, "arrival_or_departure") == "arrival") {

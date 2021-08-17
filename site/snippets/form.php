@@ -28,7 +28,7 @@ if (!$kirby->user()){ }else{ $open = true; } ?>
                     </div>
                 </div>
             </section>
-            <form class="row form" action="<?= $site->children()->findByURI('submit')->url('en');?>" method="post" id="name-submission-form" name="name-submission-form" validate>
+            <form class="row form" action="<?= $site->children()->findByURI('submit')->url();?>" method="post" id="name-submission-form" name="name-submission-form" validate>
                 <input type="text" name="valid" id="valid" class="visuallyhidden">
                 <fieldset class="form-item col-xs-12">
                     <h3 class="fieldset-title" aria-hidden="true"><?php echo t('Arrival or Departure?');?></h3>
